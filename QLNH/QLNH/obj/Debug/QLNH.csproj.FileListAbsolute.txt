@@ -1,0 +1,10 @@
+F:\vs2019\SE-109-Project\QLNH\QLNH\bin\Debug\QLNH.exe.config
+F:\vs2019\SE-109-Project\QLNH\QLNH\bin\Debug\QLNH.exe
+F:\vs2019\SE-109-Project\QLNH\QLNH\bin\Debug\QLNH.pdb
+F:\vs2019\SE-109-Project\QLNH\QLNH\obj\Debug\QLNH.csprojAssemblyReference.cache
+F:\vs2019\SE-109-Project\QLNH\QLNH\obj\Debug\QLNH.Properties.Resources.resources
+F:\vs2019\SE-109-Project\QLNH\QLNH\obj\Debug\QLNH.csproj.GenerateResource.cache
+F:\vs2019\SE-109-Project\QLNH\QLNH\obj\Debug\QLNH.exe
+F:\vs2019\SE-109-Project\QLNH\QLNH\obj\Debug\QLNH.pdb
+F:\vs2019\SE-109-Project\QLNH\QLNH\obj\Debug\QLNH.Forms.LoginForm.resources
+F:\vs2019\SE-109-Project\QLNH\QLNH\obj\Debug\QLNH.Forms.MainForm.resources
