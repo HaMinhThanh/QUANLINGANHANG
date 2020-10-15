@@ -9,13 +9,11 @@ using System.Windows.Forms;
 
 namespace QLNH.Forms
 {
-    public partial class MainForm : Form
+    public partial class QuyDinhForm : Form
     {
-        public MainForm()
+        public QuyDinhForm()
         {
             InitializeComponent();
         }
-
-       
     }
 }

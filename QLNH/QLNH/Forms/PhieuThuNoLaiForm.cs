@@ -7,15 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace QLNH.Forms
+namespace QLNH
 {
-    public partial class MainForm : Form
+    public partial class PhieuThuNoLaiForm : Form
     {
-        public MainForm()
+        public PhieuThuNoLaiForm()
         {
             InitializeComponent();
         }
-
-       
     }
 }

@@ -65,6 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\BaoCaoQuyetToanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaoCaoQuyetToanForm.Designer.cs">
+      <DependentUpon>BaoCaoQuyetToanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DonMGGHForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DonMGGHForm.Designer.cs">
+      <DependentUpon>DonMGGHForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,8 +89,41 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HSChoVayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HSChoVayForm.Designer.cs">
+      <DependentUpon>HSChoVayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HSPhatTienVayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HSPhatTienVayForm.Designer.cs">
+      <DependentUpon>HSPhatTienVayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HSTheoDoiQuanLiVonVayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HSTheoDoiQuanLiVonVayForm.Designer.cs">
+      <DependentUpon>HSTheoDoiQuanLiVonVayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PhieuThuNoLaiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PhieuThuNoLaiForm.Designer.cs">
+      <DependentUpon>PhieuThuNoLaiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuyDinhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuyDinhForm.Designer.cs">
+      <DependentUpon>QuyDinhForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\HSChoVayForm.resx">
+      <DependentUpon>HSChoVayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

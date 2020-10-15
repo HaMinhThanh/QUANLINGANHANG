@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace QLNH.Forms
+namespace QLNH
 {
-    public partial class MainForm : Form
+    public partial class HSChoVayForm : Form
     {
-        public MainForm()
+        public HSChoVayForm()
         {
             InitializeComponent();
         }
 
-       
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
