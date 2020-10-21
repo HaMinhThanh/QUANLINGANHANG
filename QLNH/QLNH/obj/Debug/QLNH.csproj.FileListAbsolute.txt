@@ -19,3 +19,10 @@ C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.csproj.G
 C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.csproj.CoreCompileInputs.cache
 C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.exe
 C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.pdb
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.HSChoVayForm.resources
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.KhachHang.resources
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.HSPhatTienVayForm.resources
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.DonMGGHForm.resources
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.HSTheoDoiQuanLiVonVayForm.resources
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.PhieuThuNoLaiForm.resources
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.Forms.QuyDinhForm.resources
