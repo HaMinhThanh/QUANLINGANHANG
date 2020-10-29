@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QLNH
 {
-    public partial class BaoCaoQuyetToanForm : Form
+    public partial class TaiSanTheChapForm : Form
     {
-        public BaoCaoQuyetToanForm()
+        public TaiSanTheChapForm()
         {
             InitializeComponent();
         }

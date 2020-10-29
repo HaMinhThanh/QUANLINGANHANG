@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace QLNH
 {
-    public partial class DonMGGHForm : Form
+    public partial class ThanhLyHopDongForm : Form
     {
-        public DonMGGHForm()
+        public ThanhLyHopDongForm()
         {
             InitializeComponent();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
         {
 
         }

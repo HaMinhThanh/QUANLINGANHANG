@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace QLNH
 {
-    public partial class DonMGGHForm : Form
+    public partial class QuyetToanForm : Form
     {
-        public DonMGGHForm()
+        public QuyetToanForm()
         {
             InitializeComponent();
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -23,6 +23,7 @@ C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.HSChoVay
 C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.KhachHang.resources
 C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.HSPhatTienVayForm.resources
 C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.DonMGGHForm.resources
-C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.HSTheoDoiQuanLiVonVayForm.resources
 C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.PhieuThuNoLaiForm.resources
 C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.Forms.QuyDinhForm.resources
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.ChiTieuBoSungForm.resources
+C:\Users\minht\OneDrive\Desktop\QUANLINGANHANG\QLNH\QLNH\obj\Debug\QLNH.TaiSanTheChapForm.resources
