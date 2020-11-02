@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataModel
+{
+    public class YeuCauChinhSuaHopDong
+    {
+        public HopDongChoVay HopDong { get; set; }
+        public NhanVienTinDung NVTiepNhan { get; set; }
+        public DateTime NgayTiepNhan { get; set; }
+        public KetQuaXetDuyet KQXetDuyet { get; set; }
+    }
+}
