@@ -8,6 +8,7 @@ namespace DataModel
 {
     public class DieuKhoanChoVay
     {
+        public string UUID { get; set; }
         public string MaDieuKhoan { get; set; }
         public string MoTa { get; set; }
     }

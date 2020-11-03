@@ -11,5 +11,7 @@ namespace DataModel
         public YeuCauChoVay YeuCauVay { get; set; }
         public List<DieuKhoanChoVay> DSDieuKhoan { get; set; }
         public NhanVienTinDung NVThietLap { get; set; }
+        public DateTime NgayThietLap { get; set; }
+        public double GiaTriConLai { get; set; }
     }
 }

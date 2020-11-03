@@ -1,0 +1,185 @@
+﻿CREATE TABLE tbTrangThaiHopDongVay (
+	MaTrangThai CHAR(36) NOT NULL,
+	TenTrangThai VARCHAR(128) NOT NULL,
+	MucRuiRo TINYINT NOT NULL,
+	PRIMARY KEY (MaTrangThai)
+)
+
+CREATE TABLE tbTrangThaiTaiSan (
+	MaTrangThai CHAR(36) NOT NULL,
+	TenTrangThai VARCHAR(128) NOT NULL,
+	MucDanhGia DECIMAL(15,13) NOT NULL
+	PRIMARY KEY (MaTrangThai)
+)
+
+CREATE TABLE tbDinhDanh (
+	MaDinhDanh CHAR(36) NOT NULL,
+	LoaiDinhDanh TINYINT NOT NULL,
+	GiaTri VARCHAR(64) NOT NULL
+	PRIMARY KEY (MaDinhDanh)
+)
+
+CREATE TABLE tbDieuKhoan (
+	MaDieuKhoan CHAR(36) NOT NULL,
+	MoTa VARCHAR(512) NOT NULL
+	PRIMARY KEY (MaDieuKhoan)
+)
+
+CREATE TABLE tbGiaoDich (
+	MaGiaoDich CHAR(36) NOT NULL,
+	LoaiGaoDich TINYINT NOT NULL,
+	GiaTri DECIMAL(32, 2) NOT NULL,
+	ThoiDiemThucHien DATETIME NOT NULL,
+	MoTa VARCHAR(512) NOT NULL
+	PRIMARY KEY (MaGiaoDich)
+)
+
+CREATE TABLE tbKhachHang (
+	MaKH CHAR(36) NOT NULL,
+	HoTen VARCHAR(128) NOT NULL,
+	NgaySinh DATE NOT NULL,
+	SDT VARCHAR(25) NOT NULL,
+	DiaChi VARCHAR(256) NOT NULL,
+	MaDinhDanh CHAR(36) NOT NULL
+	PRIMARY KEY (MaKH)
+	FOREIGN KEY (MaDinhDanh) REFERENCES tbDinhDanh(MaDinhDanh)
+)
+
+CREATE TABLE tbNhanVien (
+	MaNV CHAR(36) NOT NULL,
+	HoTen VARCHAR(128) NOT NULL,
+	TenDangNhap VARCHAR(64) NOT NULL,
+	MatKhau VARCHAR(64) NOT NULL,
+	NgaySinh DATE NOT NULL,
+	SDT VARCHAR(25) NOT NULL,
+	DiaChi VARCHAR(256) NOT NULL,
+	NgayVaoLam DATE NOT NULL,
+	MaDinhDanh CHAR(36) NOT NULL,
+	LoaiNhanVien TINYINT NOT NULL
+	PRIMARY KEY (MaNV)
+	FOREIGN KEY (MaDinhDanh) REFERENCES tbDinhDanh(MaDinhDanh)
+)
+
+CREATE TABLE tbKQXetDuyet (
+	MaKQXetDuyet CHAR(36) NOT NULL,
+	MaNVXetDuyet CHAR(36) NOT NULL,
+	coChapNhan BINARY NOT NULL,
+	LyDo VARCHAR(512)
+	PRIMARY KEY (MaKQXetDuyet)
+	FOREIGN KEY (MaNVXetDuyet) REFERENCES tbNhanVien(MaNV)
+)
+
+CREATE TABLE tbYeuCauChoVay (
+	MaYeuCau CHAR(36) NOT NULL,
+	MaKHYeuCau CHAR(36) NOT NULL,
+	MaNVTiepNhan CHAR(36) NOT NULL,
+	SoTienVay DECIMAL(32, 2) NOT NULL,
+	LaiSuat DECIMAL(7, 3) NOT NULL,
+	KiHan INT NOT NULL,
+	MaKQXetDuyet CHAR(36)
+	PRIMARY KEY (MaYeuCau)
+	FOREIGN KEY (MaKHYeuCau) REFERENCES tbKhachHang(MaKH),
+	FOREIGN KEY (MaNVTiepNhan) REFERENCES tbNhanVien(MaNV),
+	FOREIGN KEY (MaKQXetDuyet) REFERENCES tbKQXetDuyet(MaKQXetDuyet)
+)
+
+CREATE TABLE tbDieuKhoanHopDong (
+	MaYeuCau CHAR(36) NOT NULL,
+	MaDieuKhoan CHAR(36) NOT NULL
+	PRIMARY KEY (MaYeuCau, MaDieuKhoan)
+	FOREIGN KEY (MaYeuCau) REFERENCES tbYeuCauChoVay(MaYeuCau),
+	FOREIGN KEY (MaDieuKhoan) REFERENCES tbDieuKhoan(MaDieuKhoan)
+)
+
+CREATE TABLE tbHopDongVay (
+	MaHopDong CHAR(36) NOT NULL,
+	MaYeuCau CHAR(36) NOT NULL,
+	MaNVTiepNhan CHAR(36) NOT NULL,
+	NgayThietLap DATE NOT NULL,
+	GiaTriHienTai DECIMAL(32, 2) NOT NULL,
+	MaTrangThai CHAR(36)
+	PRIMARY KEY (MaHopDong)
+	FOREIGN KEY (MaHopDong) REFERENCES tbYeuCauChoVay(MaYeuCau),
+	FOREIGN KEY (MaNVTiepNhan) REFERENCES tbNhanVien(MaNV),
+	FOREIGN KEY (MaTrangThai) REFERENCES tbTrangThaiHopDongVay(MaTrangThai)
+)
+
+CREATE TABLE tbTaiSanTheChap (
+	MaTaiSan CHAR(36) NOT NULL,
+	MoTa VARCHAR(512) NOT NULL,
+	DinhGia DECIMAL(32, 2),
+	MaTrangThai CHAR(36) NOT NULL
+	PRIMARY KEY (MaTaiSan)
+	FOREIGN KEY (MaTrangThai) REFERENCES tbTrangThaiTaiSan(MaTrangThai)
+)
+
+CREATE TABLE tbGiayToChungThuc (
+	MaGiayToChungThuc CHAR(36) NOT NULL,
+	MaTaiSan CHAR(36) NOT NULL
+	PRIMARY KEY (MaGiayToChungThuc)
+	FOREIGN KEY (MaTaiSan) REFERENCES tbTaiSanTheChap(MaTaiSan)
+)
+
+CREATE TABLE tbHoatDong (
+	MaHoatDong CHAR(36) NOT NULL,
+	MaNVThucHien CHAR(36) NOT NULL,
+	ThoiDiemThucHien DATETIME NOT NULL,
+	MoTa VARCHAR(512) NOT NULL
+	PRIMARY KEY (MaHoatDong)
+	FOREIGN KEY (MaNVThucHien) REFERENCES tbNhanVien(MaNV)
+)
+
+CREATE TABLE tbHoatDongPhatTien (
+	MaHoatDong CHAR(36) NOT NULL,
+	MaHopDong CHAR(36) NOT NULL,
+	MaNVThucHien CHAR(36) NOT NULL,
+	ThoiDiemThucHien DATETIME NOT NULL,
+	MaGiaoDich CHAR(36) NOT NULL
+	PRIMARY KEY (MaHoatDong)
+	FOREIGN KEY (MaHopDong) REFERENCES tbHopDongVay(MaHopDong),
+	FOREIGN KEY (MaNVThucHien) REFERENCES tbNhanVien(MaNV),
+	FOREIGN KEY (MaGiaoDich) REFERENCES tbGiaoDich(MaGiaoDich)
+)
+
+CREATE TABLE tbHoatDongThuTien (
+	MaHoatDong CHAR(36) NOT NULL,
+	MaHopDong CHAR(36) NOT NULL,
+	MaKHThucHien CHAR(36) NOT NULL,
+	MaNVThucHien CHAR(36) NOT NULL,
+	ThoiDiemThucHien DATETIME NOT NULL,
+	MaGiaoDich CHAR(36) NOT NULL
+	PRIMARY KEY (MaHoatDong)
+	FOREIGN KEY (MaHopDong) REFERENCES tbHopDongVay(MaHopDong),
+	FOREIGN KEY (MaKHThucHien) REFERENCES tbKhachHang(MaKH),
+	FOREIGN KEY (MaNVThucHien) REFERENCES tbNhanVien(MaNV),
+	FOREIGN KEY (MaGiaoDich) REFERENCES tbGiaoDich(MaGiaoDich)
+)
+
+CREATE TABLE tbYeuCauChinhSuaHopDong (
+	MaYeuCauChinhSua CHAR(36) NOT NULL,
+	MaHopDong CHAR(36) NOT NULL,
+	MaNVTiepNhan CHAR(36) NOT NULL,
+	NgayTiepNhan DATE NOT NULL,
+	MaKQXetDuyet CHAR(36)
+	PRIMARY KEY (MaYeuCauChinhSua) 
+	FOREIGN KEY (MaHopDong) REFERENCES tbHopDongVay(MaHopDong),
+	FOREIGN KEY (MaNVTiepNhan) REFERENCES tbNhanVien(MaNV),
+	FOREIGN KEY (MaKQXetDuyet) REFERENCES tbKQXetDuyet(MaKQXetDuyet)
+)
+
+CREATE TABLE tbLoaiYeuCauChinhSua (
+	MaLoaiYeuCau CHAR(36) NOT NULL,
+	TenLoaiYeuCau VARCHAR(128) NOT NULL,
+	PRIMARY KEY (MaLoaiYeuCau)
+)
+
+CREATE TABLE tbChiTietYeuCauChinhSua (
+	MaYeuCauChinhSua CHAR(36) NOT NULL,
+	MaLoaiYeuCau CHAR(36) NOT NULL,
+	GiaTriSoThuc DECIMAL(20, 10),
+	GiaTriSoNguyen DECIMAL(20, 0)
+	PRIMARY KEY (MaYeuCauChinhSua, MaLoaiYeuCau)
+	FOREIGN KEY (MaYeuCauChinhSua) REFERENCES tbYeuCauChinhSuaHopDong(MaYeuCauChinhSua),
+	FOREIGN KEY (MaLoaiYeuCau) REFERENCES tbLoaiYeuCauChinhSua(MaLoaiYeuCau)
+)
+
