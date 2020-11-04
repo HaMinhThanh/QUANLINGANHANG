@@ -109,7 +109,7 @@ namespace DataAccessTier
                 SqlCommand cmd = new SqlCommand("INSERT INTO tbKhachHang VALUES (@MaKH, @HoTen, @NgaySinh, @SDT, @DiaChi, @MaDinhDanh)", conn);
 
                 cmd.Parameters.AddWithValue("@MaKH", entry.MaKH);
-                cmd.Parameters.AddWithValue("@HoTen", entry.MaKH);
+                cmd.Parameters.AddWithValue("@HoTen", entry.HoTen);
                 cmd.Parameters.AddWithValue("@NgaySinh", entry.NgaySinh);
                 cmd.Parameters.AddWithValue("@SDT", entry.SDT);
                 cmd.Parameters.AddWithValue("@DiaChi", entry.DiaChi);
