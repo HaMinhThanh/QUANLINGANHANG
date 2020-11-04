@@ -99,18 +99,20 @@ CREATE TABLE tbHopDongVay (
 	GiaTriHienTai DECIMAL(32, 2) NOT NULL,
 	MaTrangThai CHAR(36)
 	PRIMARY KEY (MaHopDong)
-	FOREIGN KEY (MaHopDong) REFERENCES tbYeuCauChoVay(MaYeuCau),
+	FOREIGN KEY (MaYeuCau) REFERENCES tbYeuCauChoVay(MaYeuCau),
 	FOREIGN KEY (MaNVTiepNhan) REFERENCES tbNhanVien(MaNV),
 	FOREIGN KEY (MaTrangThai) REFERENCES tbTrangThaiHopDongVay(MaTrangThai)
 )
 
 CREATE TABLE tbTaiSanTheChap (
 	MaTaiSan CHAR(36) NOT NULL,
+	MaYeuCau CHAR(36) NOT NULL,
 	MoTa VARCHAR(512) NOT NULL,
 	DinhGia DECIMAL(32, 2),
 	MaTrangThai CHAR(36) NOT NULL
 	PRIMARY KEY (MaTaiSan)
-	FOREIGN KEY (MaTrangThai) REFERENCES tbTrangThaiTaiSan(MaTrangThai)
+	FOREIGN KEY (MaTrangThai) REFERENCES tbTrangThaiTaiSan(MaTrangThai),
+	FOREIGN KEY (MaYeuCau) REFERENCES tbYeuCauChoVay(MaYeuCau)
 )
 
 CREATE TABLE tbGiayToChungThuc (

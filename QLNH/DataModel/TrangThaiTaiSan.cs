@@ -9,6 +9,6 @@ namespace DataModel
     {
         public string UUID { get; set; }
         public string TenTrangThai { get; set; }
-        public int MucDanhGia { get; set; }
+        public double MucDanhGia { get; set; }
     }
 }

@@ -41,8 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DieuKhoanHopDongBUS.cs" />
+    <Compile Include="DinhDanhBUS.cs" />
+    <Compile Include="GiaoDichBUS.cs" />
+    <Compile Include="GiayToChungThucBUS.cs" />
+    <Compile Include="HoatDongBUS.cs" />
+    <Compile Include="HoatDongPhatTienBUS.cs" />
+    <Compile Include="HoatDongThuTienBUS.cs" />
+    <Compile Include="HopDongVayBUS.cs" />
+    <Compile Include="KetQuaXetDuyetBUS.cs" />
     <Compile Include="KhachHangBUS.cs" />
+    <Compile Include="NhanVienBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaiSanTheChapBUS.cs" />
+    <Compile Include="TrangThaiKhoanVayBUS.cs" />
+    <Compile Include="TrangThaiTaiSanBUS.cs" />
+    <Compile Include="YeuCauChinhSuaBUS.cs" />
+    <Compile Include="YeuCauVayBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataAccessTier\DataAccessTier.csproj">

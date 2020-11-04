@@ -9,7 +9,7 @@ namespace DataModel
     public class GiaoDich
     {
         public string UUID { get; set; }
-        public DateTime NgayThucHien { get; set; }
+        public DateTime ThoiDiemThucHien { get; set; }
         public double GiaTri { get; set; }
         public string MoTa { get; set; }
     }
