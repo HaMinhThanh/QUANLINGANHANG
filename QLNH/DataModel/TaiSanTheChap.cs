@@ -11,7 +11,7 @@ namespace DataModel
         public string MaTSTC { get; set; }
         public string MoTa { get; set; }
         public double DinhGia { get; set; }
-        public int TrangThai { get; set; }
+        public TrangThaiTaiSan TrangThai { get; set; }
         public List<string> DSMaGiayToChungThuc { get; set; }
     }
 }

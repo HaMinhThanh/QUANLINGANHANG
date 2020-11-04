@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D505308C-0030-486B-933B-0B8E685EB302}</ProjectGuid>
+    <ProjectGuid>{F29178E0-11C9-4942-A6D1-A21251552FC0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccessTier</RootNamespace>
-    <AssemblyName>DataAccessTier</AssemblyName>
+    <RootNamespace>BusinessLogicTier</RootNamespace>
+    <AssemblyName>BusinessLogicTier</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,24 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBConnection.cs" />
-    <Compile Include="DieuKhoanHopDongDAO.cs" />
-    <Compile Include="DinhDanhDAO.cs" />
-    <Compile Include="GiayToChungThucDAO.cs" />
-    <Compile Include="HoatDongDAO.cs" />
-    <Compile Include="HoatDongPhatTienDAO.cs" />
-    <Compile Include="HoatDongThuTienDAO.cs" />
-    <Compile Include="HopDongVayDAO.cs" />
-    <Compile Include="KetQuaXetDuyetDAO.cs" />
-    <Compile Include="KhachHangDAO.cs" />
-    <Compile Include="NhanVienDAO.cs" />
+    <Compile Include="KhachHangBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlCommandTextBuilder.cs" />
-    <Compile Include="TaiSanTheChapDAO.cs" />
-    <Compile Include="YeuCauChinhSuaDAO.cs" />
-    <Compile Include="YeuCauVayDAO.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessTier\DataAccessTier.csproj">
+      <Project>{d505308c-0030-486b-933b-0b8e685eb302}</Project>
+      <Name>DataAccessTier</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataModel\DataModel.csproj">
       <Project>{72476cf8-15b9-4c20-b0c4-3f876ede094c}</Project>
       <Name>DataModel</Name>

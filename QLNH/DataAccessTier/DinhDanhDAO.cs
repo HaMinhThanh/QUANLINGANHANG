@@ -19,13 +19,14 @@ namespace DataAccessTier
             {
                 conn.Open();
             }
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tbDinhDanh WHERE MaDinhDanh = @MaDinhDanh");
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbDinhDanh WHERE MaDinhDanh = @MaDinhDanh", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaDinhDanh", MaDinhDanh);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
+                    result.MaDinhDanh = reader.GetString(0);
                     result.LoaiDinhDanh = (DinhDanh.DANH_SACH_LOAI_DINH_DANH)reader.GetInt32(1);
                     result.GiaTriDinhDanh = reader.GetString(2);
                 }

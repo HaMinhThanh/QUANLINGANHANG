@@ -13,5 +13,6 @@ namespace DataModel
         public NhanVienTinDung NVThietLap { get; set; }
         public DateTime NgayThietLap { get; set; }
         public double GiaTriConLai { get; set; }
+        public TrangThaiKhoanVay TrangThai { get; set; }
     }
 }

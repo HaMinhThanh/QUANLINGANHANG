@@ -13,16 +13,67 @@ namespace DataAccessTier
         public NhanVienDAO() : base() { }
         public NhanVien GetNhanVienByMaNV(string MaNV)
         {
-            NhanVien result = new NhanVienTinDung();
+            NhanVien result = new NhanVien();
             string MaDinhDanh = "";
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
             }
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tbNhanVien WHERE MaNV = @MaNV");
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbNhanVien WHERE MaNV = @MaNV", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaNV", MaNV);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    switch (reader.GetInt32(9))
+                    {
+                        case 1: result = new NhanVienTinDung(); break;
+                        case 2: result = new NhanVienKeToan(); break;
+                        case 3: result = new NhanVienXetDuyet(); break;
+                        case 4: result = new NhanVienQuanLy(); break;
+                        default: throw new Exception("Unknown Employee Type");
+                    }
+                    result.MaNV = reader.GetString(0);
+                    result.HoTen = reader.GetString(1);
+                    result.NgaySinh = reader.GetDateTime(4);
+                    result.SDT = reader.GetString(5);
+                    result.DiaChi = reader.GetString(6);
+                    result.NgayVaoLam = reader.GetDateTime(7);
+                    MaDinhDanh = reader.GetString(8);
+                }
+                reader.Close();
+
+                DinhDanhDAO tempAccessObj = new DinhDanhDAO();
+                if (!MaDinhDanh.Equals(""))
+                {
+                    result.DinhDanhNV = tempAccessObj.GetDinhDanhByMaDinhDanh(MaDinhDanh);
+                }
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
+
+        public NhanVien GetNhanVienByDangNhap(string TenDangNhap, string MatKhau)
+        {
+            NhanVien result = new NhanVien();
+            string MaDinhDanh = "";
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbNhanVien WHERE TenDangNhap = @TenDangNhap AND MatKhau = @MatKhau", conn);
+            try
+            {
+                cmd.Parameters.AddWithValue("@TenDangNhap", TenDangNhap);
+                cmd.Parameters.AddWithValue("@MatKhau", MatKhau);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
