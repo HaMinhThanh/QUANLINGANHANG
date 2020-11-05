@@ -44,6 +44,7 @@
     <Compile Include="DBConnection.cs" />
     <Compile Include="DieuKhoanHopDongDAO.cs" />
     <Compile Include="DinhDanhDAO.cs" />
+    <Compile Include="GiaoDichDAO.cs" />
     <Compile Include="GiayToChungThucDAO.cs" />
     <Compile Include="HoatDongDAO.cs" />
     <Compile Include="HoatDongPhatTienDAO.cs" />
@@ -55,6 +56,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlCommandTextBuilder.cs" />
     <Compile Include="TaiSanTheChapDAO.cs" />
+    <Compile Include="TrangThaiKhoanVayDAO.cs" />
+    <Compile Include="TrangThaiTaiSanDAO.cs" />
     <Compile Include="YeuCauChinhSuaDAO.cs" />
     <Compile Include="YeuCauVayDAO.cs" />
   </ItemGroup>

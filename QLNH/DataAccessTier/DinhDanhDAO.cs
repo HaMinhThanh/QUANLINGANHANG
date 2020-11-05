@@ -42,5 +42,33 @@ namespace DataAccessTier
             }
             return result;
         }
+
+        public bool AddDinhDanh(DinhDanh entry)
+        {
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if(entry.MaDinhDanh.Equals("")) entry.MaDinhDanh = Guid.NewGuid().ToString();
+            SqlCommand cmd = new SqlCommand("INSERT INTO tbDinhDanh VALUES(@MaDinhDanh, @LoaiDinhDanh, @GiaTri)", conn);
+            try
+            {
+                cmd.Parameters.AddWithValue("@MaDinhDanh", entry.MaDinhDanh);
+                cmd.Parameters.AddWithValue("@LoaiDinhDanh", (int) entry.LoaiDinhDanh);
+                cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTriDinhDanh);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't add new identity entry");
+                return true;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

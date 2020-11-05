@@ -21,5 +21,10 @@ namespace DataAccessTier
                 throw;
             }
         }
+
+        ~DBConnection()
+        {
+            conn.Close();
+        }
     }
 }

@@ -1,40 +1,35 @@
-﻿using System;
+﻿using DataModel;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using DataModel;
-using System.Data;
-using System.Data.SqlClient;
 
 namespace DataAccessTier
 {
-    public class KetQuaXetDuyetDAO : DBConnection
+    public class TrangThaiKhoanVayDAO : DBConnection
     {
-        public KetQuaXetDuyetDAO() : base() { }
-        public KetQuaXetDuyet GetKQXetDuyetByMaKQ(string MaKQ)
+        public TrangThaiKhoanVayDAO() : base() { }
+        public TrangThaiKhoanVay GetTrangThaiByMaTrangThai(string MaTrangThai)
         {
-            KetQuaXetDuyet result = new KetQuaXetDuyet();
-            string MaNV = "";
+            TrangThaiKhoanVay result = new TrangThaiKhoanVay();
 
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
             }
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tbKQXetDuyet WHERE MaKQXetDuyet = @MaKQXetDuyet", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbTrangThaiHopDongVay WHERE MaTrangThai = @MaTrangThai", conn);
             try
             {
-                cmd.Parameters.AddWithValue("@MaKQXetDuyet", MaKQ);
+                cmd.Parameters.AddWithValue("@MaTrangThai", MaTrangThai);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     result.UUID = reader.GetString(0);
-                    MaNV = reader.GetString(1);
-                    result.isChapNhan = reader.GetBoolean(2);
-                    result.LyDo = reader.GetString(3);
+                    result.TenTrangThai = reader.GetString(1);
+                    result.MucRuiRo = reader.GetInt32(2);
                 }
                 reader.Close();
-
-                result.NVXetDuyet = (NhanVienXetDuyet)new NhanVienDAO().GetNhanVienByMaNV(MaNV);
             }
             catch (SqlException SQLex)
             {
@@ -47,23 +42,22 @@ namespace DataAccessTier
             return result;
         }
 
-        public bool AddKQXetDuyet(KetQuaXetDuyet entry)
+        public bool AddTrangThaiKhoanVay(TrangThaiKhoanVay entry)
         {
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
             }
             if (entry.UUID.Equals("")) entry.UUID = Guid.NewGuid().ToString();
-            SqlCommand cmd = new SqlCommand("INSERT INTO tbKQXetDuyet VALUES (@MaKQ, @MaNV, @KetQua, @LyDo)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO tbTrangThaiHopDongVay VALUES (@MaTrangThai, @TenTrangThai, @MucRuiRo)", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaKQ", entry.UUID);
-                cmd.Parameters.AddWithValue("@MaNV", entry.NVXetDuyet.MaNV);
-                cmd.Parameters.AddWithValue("@KetQua", entry.isChapNhan);
-                cmd.Parameters.AddWithValue("@LyDo", entry.LyDo);
+                cmd.Parameters.AddWithValue("@TenTrangThai", entry.TenTrangThai);
+                cmd.Parameters.AddWithValue("@MucRuiRo", entry.MucRuiRo);
 
                 int res = cmd.ExecuteNonQuery();
-                if (res != 1) throw new Exception("Can't add new approval action");
+                if (res != 1) throw new Exception("Can't add new loan status");
                 return true;
             }
             catch (SqlException SQLex)

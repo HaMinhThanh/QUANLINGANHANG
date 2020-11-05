@@ -2,43 +2,44 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using DataModel;
 using DataAccessTier;
-using System.Data;
 
 namespace BusinessLogicTier
 {
-    public class KhachHangBUS
+    public class DinhDanhBUS
     {
-        private KhachHangDAO dataAccessObj = new KhachHangDAO();
-        public KhachHang GetKhachHangByMaKH(string MaKH)
+        private DinhDanhDAO dataAccessObj = new DinhDanhDAO();
+        public DinhDanh GetDinhDanhByMaDinhDanh(string MaDinhDanh)
         {
             try
             {
-                return dataAccessObj.GetKhachHangByMaKH(MaKH);
+                return dataAccessObj.GetDinhDanhByMaDinhDanh(MaDinhDanh);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public DataTable GetKhachHangByTieuChuanTraCuu(KhachHang query)
+/*
+        public void dummyMethod()
         {
             try
             {
-                return dataAccessObj.GetKhachHangByTieuChuanTraCuu(query);
+                return dataAccessObj.
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
-        public bool AddKhachHang(KhachHang entry)
+*/
+        public bool AddDinhDanh(DinhDanh entry)
         {
             try
             {
-                return dataAccessObj.AddKhachHang(entry);
+                return dataAccessObj.AddDinhDanh(entry);
             }
             catch (Exception ex)
             {
