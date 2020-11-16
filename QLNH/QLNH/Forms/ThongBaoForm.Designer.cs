@@ -33,11 +33,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -126,6 +126,42 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(488, 135);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Image = global::QLNH.Properties.Resources.Go_back_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(247, 78);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(238, 45);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Thoát";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Image = global::QLNH.Properties.Resources.delete_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(247, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(238, 45);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Hủy";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(238, 43);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Tạo thông báo";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel4);
@@ -163,36 +199,6 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(482, 300);
             this.tableLayoutPanel4.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(3, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(238, 43);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Tạo thông báo";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(247, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(238, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(247, 78);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(238, 45);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Thoát";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // label1
             // 

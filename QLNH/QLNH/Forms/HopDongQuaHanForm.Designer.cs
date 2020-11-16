@@ -41,7 +41,6 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -49,6 +48,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -215,19 +215,11 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(468, 147);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(3, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Xác nhận ";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Image = global::QLNH.Properties.Resources.delete_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(237, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(228, 49);
@@ -238,6 +230,8 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Image = global::QLNH.Properties.Resources.Go_back_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(237, 85);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(228, 49);
@@ -303,6 +297,18 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(462, 234);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Image = global::QLNH.Properties.Resources.Actions_dialog_ok_apply_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(228, 49);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Xác nhận ";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // HopDongQuaHanForm
             // 

@@ -33,8 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,6 +41,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -55,14 +57,12 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -167,26 +167,6 @@
             this.tableLayoutPanel11.Size = new System.Drawing.Size(324, 47);
             this.tableLayoutPanel11.TabIndex = 15;
             // 
-            // button6
-            // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(3, 8);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 31);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Location = new System.Drawing.Point(165, 8);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(156, 31);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Lưu";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -268,6 +248,43 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(324, 22);
             this.numericUpDown1.TabIndex = 12;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(161, 14);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(324, 22);
+            this.textBox1.TabIndex = 16;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(161, 115);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(324, 24);
+            this.comboBox1.TabIndex = 17;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(161, 221);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(324, 17);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Kì hạn";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(161, 272);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(324, 17);
+            this.label11.TabIndex = 19;
+            this.label11.Text = "Lãi suất";
             // 
             // groupBox2
             // 
@@ -410,26 +427,6 @@
             this.tableLayoutPanel12.Size = new System.Drawing.Size(482, 35);
             this.tableLayoutPanel12.TabIndex = 3;
             // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Location = new System.Drawing.Point(3, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(235, 29);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(244, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Tìm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.dataGridView2);
@@ -441,43 +438,6 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Danh sách tài sản thế chấp";
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(161, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(324, 22);
-            this.textBox1.TabIndex = 16;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(161, 115);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(324, 24);
-            this.comboBox1.TabIndex = 17;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(161, 221);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(324, 17);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Kì hạn";
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(161, 272);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(324, 17);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Lãi suất";
-            // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -488,6 +448,54 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(994, 204);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.Location = new System.Drawing.Point(3, 8);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(156, 31);
+            this.button6.TabIndex = 0;
+            this.button6.Text = "Thêm";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button7.Image = global::QLNH.Properties.Resources.floppy_icon;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(165, 8);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(156, 31);
+            this.button7.TabIndex = 1;
+            this.button7.Text = "Lưu";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(3, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(235, 29);
+            this.button5.TabIndex = 3;
+            this.button5.Text = "Thêm";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Image = global::QLNH.Properties.Resources.Loupe_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(244, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 29);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Tìm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // HSChoVayForm
             // 

@@ -275,6 +275,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\star-full-icon.png" />
+    <None Include="Resources\Actions-dialog-ok-apply-icon.png" />
+    <None Include="Resources\delete-icon.png" />
+    <None Include="Resources\floppy-icon.png" />
+    <None Include="Resources\Loupe-icon.png" />
+    <None Include="Resources\Go-back-icon.png" />
+    <None Include="Resources\Gear-icon.png" />
+    <None Include="Resources\add-icon.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicTier\BusinessLogicTier.csproj">
