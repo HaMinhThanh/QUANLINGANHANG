@@ -8,7 +8,7 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class HopDongVayBUS
+    public class HopDongVayBUS
     {
         private HopDongVayDAO dataAccessObj = new HopDongVayDAO();
         public HopDongChoVay GetHopDongVayByMaHopDong(string MaHopDong)

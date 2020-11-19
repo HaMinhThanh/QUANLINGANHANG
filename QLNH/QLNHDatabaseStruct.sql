@@ -27,11 +27,20 @@ CREATE TABLE tbDieuKhoan (
 
 CREATE TABLE tbGiaoDich (
 	MaGiaoDich CHAR(36) NOT NULL,
-	LoaiGaoDich TINYINT NOT NULL,
+	LoaiGiaoDich TINYINT NOT NULL,
+	DonViGiaoDich VARCHAR(256),
 	GiaTri DECIMAL(32, 2) NOT NULL,
 	ThoiDiemThucHien DATETIME NOT NULL,
 	MoTa VARCHAR(512) NOT NULL
 	PRIMARY KEY (MaGiaoDich)
+)
+
+CREATE TABLE tbChiTietDoanhNghiep (
+	MaDoanhNghiep CHAR(36),
+	MaDangKy VARCHAR(64),
+	TenDoanhNghiep VARCHAR(256),
+	LinhVuc VARCHAR(128),
+	ChucVuDaiDien VARCHAR(64),
 )
 
 CREATE TABLE tbKhachHang (
@@ -40,9 +49,11 @@ CREATE TABLE tbKhachHang (
 	NgaySinh DATE NOT NULL,
 	SDT VARCHAR(25) NOT NULL,
 	DiaChi VARCHAR(256) NOT NULL,
-	MaDinhDanh CHAR(36) NOT NULL
+	MaDinhDanh CHAR(36) NOT NULL,
+	MaDoanhNghiepDaiDien CHAR(36)
 	PRIMARY KEY (MaKH)
 	FOREIGN KEY (MaDinhDanh) REFERENCES tbDinhDanh(MaDinhDanh)
+	FOREIGN KEY (MaDoanhNghiepDaiDien) REFERENCES tbChiTietDoanhNghiep(MaDoanhNghiep)
 )
 
 CREATE TABLE tbNhanVien (
@@ -76,7 +87,8 @@ CREATE TABLE tbYeuCauChoVay (
 	SoTienVay DECIMAL(32, 2) NOT NULL,
 	LaiSuat DECIMAL(7, 3) NOT NULL,
 	KiHan INT NOT NULL,
-	MaKQXetDuyet CHAR(36)
+	MaKQXetDuyet CHAR(36),
+	ThoiDiemTiepNhan DATETIME
 	PRIMARY KEY (MaYeuCau)
 	FOREIGN KEY (MaKHYeuCau) REFERENCES tbKhachHang(MaKH),
 	FOREIGN KEY (MaNVTiepNhan) REFERENCES tbNhanVien(MaNV),
@@ -185,3 +197,25 @@ CREATE TABLE tbChiTietYeuCauChinhSua (
 	FOREIGN KEY (MaLoaiYeuCau) REFERENCES tbLoaiYeuCauChinhSua(MaLoaiYeuCau)
 )
 
+CREATE TABLE tbThamSo (
+	ThoiGianApDung DATETIME NOT NULL,
+	VonVayCaNhanToiDa DECIMAL(32, 2) NOT NULL,
+	VonVayToChucToiDa DECIMAL(32, 2) NOT NULL,
+	YeuCauGiayToXacThuc BINARY NOT NULL,
+	TuoiDuocVayToiThieu INTEGER NOT NULL,
+	LaiSuatToiThieu DECIMAL(7, 3) NOT NULL,
+	LaiSuatToiDa DECIMAL(7, 3) NOT NULL,
+	ThoiGianThongBaoTraNo DECIMAL(5, 0) NOT NULL
+	PRIMARY KEY (ThoiGianApDung)
+)
+
+CREATE TABLE tbBaoCaoDoiTuongVay (
+	MaBaoCao CHAR(36) NOT NULL,
+	MaKHBaoCao CHAR(36) NOT NULL,
+	NgayBaoCao DATE NOT NULL,
+	SuDungVonDungMucDich BINARY NOT NULL,
+	TaiSanTheChapDamBao BINARY NOT NULL,
+	DanhGia VARCHAR(2048)
+	PRIMARY KEY (MaBaoCao)
+	FOREIGN KEY (MaKHBaoCao) REFERENCES tbKhachHang(MaKH)
+)

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BusinessLogicTier
 {
-    class TaiSanTheChapBUS
+    public class TaiSanTheChapBUS
     {
     }
 }

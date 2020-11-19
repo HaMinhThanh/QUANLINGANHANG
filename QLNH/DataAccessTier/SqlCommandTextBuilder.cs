@@ -19,5 +19,10 @@ namespace DataAccessTier
             else { commandText += " AND " + colName + " = @" + colName; }
             colCount++;
         }
+        public void AppendColumnInRange(string colName) { 
+            if (colCount == 0) { commandText += " WHERE " + colName + " >= @" + colName + "_low AND " + colName + " <= @" + colName + "_high"; }
+            else { commandText += " AND " + colName + " >= @" + colName + "_low AND " + colName + " <= @" + colName + "_high"; }
+            colCount++;
+        }
     }
 }

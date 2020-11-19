@@ -31,9 +31,10 @@ namespace DataAccessTier
                         case 2: result = new GiaoDichChi(); break;
                     }
                     result.UUID = reader.GetString(0);
-                    result.GiaTri = reader.GetDouble(2);
-                    result.ThoiDiemThucHien = reader.GetDateTime(3);
-                    result.MoTa = reader.GetString(4);
+                    result.DonViGiaoDich = reader.GetString(2);
+                    result.GiaTri = reader.GetDouble(3);
+                    result.ThoiDiemThucHien = reader.GetDateTime(4);
+                    result.MoTa = reader.GetString(5);
                 }
                 reader.Close();
             }

@@ -8,7 +8,7 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class GiayToChungThucBUS
+    public class GiayToChungThucBUS
     {
         private GiayToChungThucDAO dataAccessObj = new GiayToChungThucDAO();
         public List<string> GetMaGiayChungThucByMaTaiSan(string MaTaiSan)

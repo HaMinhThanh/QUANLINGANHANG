@@ -11,6 +11,7 @@ namespace DataModel
         public string UUID { get; set; }
         public DateTime ThoiDiemThucHien { get; set; }
         public double GiaTri { get; set; }
+        public string DonViGiaoDich { get; set; }
         public string MoTa { get; set; }
     }
 }

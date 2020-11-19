@@ -8,7 +8,7 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class TrangThaiTaiSanBUS
+    public class TrangThaiTaiSanBUS
     {
         private TrangThaiTaiSanDAO dataAccessObj = new TrangThaiTaiSanDAO();
 

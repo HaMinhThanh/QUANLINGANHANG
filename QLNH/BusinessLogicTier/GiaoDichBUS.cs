@@ -8,7 +8,7 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class GiaoDichBUS
+    public class GiaoDichBUS
     {
         private GiaoDichDAO dataAccessObj = new GiaoDichDAO();
         public GiaoDich GetGiaoDichByMaGiaoDich(string MaGD)

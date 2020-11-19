@@ -8,7 +8,7 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class KetQuaXetDuyetBUS
+    public class KetQuaXetDuyetBUS
     {
         private KetQuaXetDuyetDAO dataAccessObj = new KetQuaXetDuyetDAO();
         public KetQuaXetDuyet GetKQXetDuyetByMaKQ(string MaKQ)

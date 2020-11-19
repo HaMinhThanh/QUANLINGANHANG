@@ -136,6 +136,7 @@
     <Compile Include="Forms\HopDongQuaHanForm.Designer.cs">
       <DependentUpon>HopDongQuaHanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="HelperFunction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\ThongBaoForm.cs">
@@ -180,6 +181,7 @@
     <Compile Include="Forms\XuLiYeuCauHĐForm.Designer.cs">
       <DependentUpon>XuLiYeuCauHĐForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SessionState.cs" />
     <EmbeddedResource Include="Forms\BaoCaoTaiChinhForm.resx">
       <DependentUpon>BaoCaoTaiChinhForm.cs</DependentUpon>
     </EmbeddedResource>

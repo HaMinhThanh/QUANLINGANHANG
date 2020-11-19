@@ -8,7 +8,7 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class HoatDongBUS
+    public class HoatDongBUS
     {
         private HoatDongDAO dataAccessObj = new HoatDongDAO();
         public DataTable GetAllHoatDong()

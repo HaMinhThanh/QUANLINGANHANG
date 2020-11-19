@@ -8,9 +8,10 @@ namespace DataModel
 {
     public class YeuCauChoVay
     {
-        public string UUID { get; set; }
+        public string MaYeuCau { get; set; }
         public KhachHang KHYeuCau { get; set; }
         public NhanVienTinDung NVTiepNhan { get; set; }
+        public DateTime ThoiDiemTiepNhan { get; set; }
         public double SoTienVay { get; set; }
         public double LaiSuat { get; set; }
         public int KyHan { get; set; }

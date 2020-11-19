@@ -8,7 +8,7 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class HoatDongPhatTienBUS
+    public class HoatDongPhatTienBUS
     {
         private HoatDongPhatTienDAO dataAccessObj = new HoatDongPhatTienDAO();
         public DataTable GetHoatDongPhatTienInRangeThoiDiem(DateTime startTime, DateTime endTime)

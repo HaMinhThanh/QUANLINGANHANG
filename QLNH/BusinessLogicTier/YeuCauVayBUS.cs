@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BusinessLogicTier
 {
-    class YeuCauVayBUS
+    public class YeuCauVayBUS
     {
     }
 }

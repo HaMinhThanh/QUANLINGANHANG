@@ -8,7 +8,7 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class NhanVienBUS
+    public class NhanVienBUS
     {
         private NhanVienDAO dataAccessObj = new NhanVienDAO();
         public NhanVien GetNhanVienByMaNV(string MaNV)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -29,13 +30,14 @@ namespace DataAccessTier
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    result.UUID = reader.GetString(0);
+                    result.MaYeuCau = reader.GetString(0);
                     MaKHYC = reader.GetString(1);
                     MaNVTiepNhan = reader.GetString(2);
                     result.SoTienVay = reader.GetDouble(3);
                     result.LaiSuat = reader.GetDouble(4);
                     result.KyHan = reader.GetInt32(5);
                     MaKQXetDuyet = reader.GetString(6);
+                    result.ThoiDiemTiepNhan = reader.GetDateTime(7);
                 }
                 reader.Close();
                 KhachHangDAO tempAccessObj0 = new KhachHangDAO();
@@ -53,7 +55,7 @@ namespace DataAccessTier
                 KetQuaXetDuyetDAO tempAccessObj2 = new KetQuaXetDuyetDAO();
                 if (!MaKQXetDuyet.Equals(""))
                 {
-                    result.NVTiepNhan = tempAccessObj2.GetKQByMaKQ(MaKQXetDuyet);
+                    result.KQXetDuyet = tempAccessObj2.GetKQXetDuyetByMaKQ(MaKQXetDuyet);
                 }
                 TaiSanTheChapDAO tempAccessObj3 = new TaiSanTheChapDAO();
                 result.DSTaiSanTheChap = tempAccessObj3.GetTaiSanTheChapByMaYeuCauChoVay(MaYeuCau);                  
@@ -68,18 +70,20 @@ namespace DataAccessTier
             }
             return result;
         }
+
+
         public bool AddYeuCauChoVay(YeuCauChoVay entry)
         {
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
             }
-            if (entry.UUID.Equals("")) entry.UUID = Guid.NewGuid().ToString();
+            if (entry.MaYeuCau.Equals("")) entry.MaYeuCau = Guid.NewGuid().ToString();
             try
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO tbKhachHang VALUES (@MaYeuCau, @MaKHYeuCau, @MaNVTiepNhan, @SoTienVay, @LaiSuat, @KiHan,@MaKQXetDuyet)", conn);
 
-                cmd.Parameters.AddWithValue("@MaYeuCau", entry.UUID);
+                cmd.Parameters.AddWithValue("@MaYeuCau", entry.MaYeuCau);
                 cmd.Parameters.AddWithValue("@MaKHYeuCau", entry.KHYeuCau.MaKH);
                 cmd.Parameters.AddWithValue("@MaNVTiepNhan", entry.NVTiepNhan.MaNV);
                 cmd.Parameters.AddWithValue("@SoTienVay", entry.SoTienVay);
