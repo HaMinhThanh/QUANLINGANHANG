@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\BaoCaoTaiChinhDoiTuongVay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BaoCaoTaiChinhDoiTuongVay.Designer.cs">
+      <DependentUpon>BaoCaoTaiChinhDoiTuongVay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\BaoCaoTaiChinhForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     <Compile Include="Forms\HopDongQuaHanForm.Designer.cs">
       <DependentUpon>HopDongQuaHanForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TraCuuKhoanVay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TraCuuKhoanVay.Designer.cs">
+      <DependentUpon>TraCuuKhoanVay.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelperFunction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -182,6 +194,9 @@
       <DependentUpon>XuLiYeuCauHĐForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SessionState.cs" />
+    <EmbeddedResource Include="Forms\BaoCaoTaiChinhDoiTuongVay.resx">
+      <DependentUpon>BaoCaoTaiChinhDoiTuongVay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\BaoCaoTaiChinhForm.resx">
       <DependentUpon>BaoCaoTaiChinhForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ThongBaoForm.resx">
       <DependentUpon>ThongBaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TraCuuKhoanVay.resx">
+      <DependentUpon>TraCuuKhoanVay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -277,6 +295,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\print-icon.png" />
     <None Include="Resources\star-full-icon.png" />
     <None Include="Resources\Actions-dialog-ok-apply-icon.png" />
     <None Include="Resources\delete-icon.png" />

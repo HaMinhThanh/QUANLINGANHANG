@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace QLNH.Forms
 {
-    public partial class MainForm : Form
+    public partial class BaoCaoTaiChinhDoiTuongVay : Form
     {
-        public MainForm()
+        public BaoCaoTaiChinhDoiTuongVay()
         {
             InitializeComponent();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
