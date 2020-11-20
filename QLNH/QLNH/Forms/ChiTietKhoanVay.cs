@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace QLNH.Forms
 {
-    public partial class TraCuuKhoanVay : Form
+    public partial class ChiTietKhoanVay : Form
     {
-        public TraCuuKhoanVay()
+        public ChiTietKhoanVay()
         {
             InitializeComponent();
         }
