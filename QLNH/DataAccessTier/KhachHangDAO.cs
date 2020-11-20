@@ -17,6 +17,7 @@ namespace DataAccessTier
         {
             KhachHang result = new KhachHang();
             string MaDinhDanh = "";
+            string MaDoanhNghiep = "";
             
             if (conn.State != System.Data.ConnectionState.Open)
             {
@@ -35,6 +36,8 @@ namespace DataAccessTier
                     result.SDT = reader.GetString(3);
                     result.DiaChi = reader.GetString(4);
                     MaDinhDanh = reader.GetString(5);
+                    MaDoanhNghiep = reader.GetString(6);
+                    result.GioiTinh = reader.GetString(7);
                 }
                 reader.Close();
 
@@ -42,6 +45,18 @@ namespace DataAccessTier
                 if (!MaDinhDanh.Equals(""))
                 {
                     result.DinhDanhKH = tempAccessObj.GetDinhDanhByMaDinhDanh(MaDinhDanh);
+                }
+                if (!MaDoanhNghiep.Equals(""))
+                {
+                    KhachHangDoanhNghiep new_result = new KhachHangDoanhNghiep();
+                    new_result.MaKH = result.MaKH;
+                    new_result.HoTen = result.HoTen;
+                    new_result.NgaySinh = result.NgaySinh;
+                    new_result.SDT = result.SDT;
+                    new_result.DiaChi = result.DiaChi;
+                    new_result.DinhDanhKH = result.DinhDanhKH;
+                    this.AppendKhachHangDoanhNghiepByMaDN(MaDoanhNghiep, ref new_result);
+                    return new_result;
                 }
             }
             catch (SqlException SQLex)
@@ -53,6 +68,32 @@ namespace DataAccessTier
                 throw ex;
             }
             return result;
+        }
+
+        public void AppendKhachHangDoanhNghiepByMaDN(string MaDN, ref KhachHangDoanhNghiep result)
+        {
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbKhachHangDoanhNghiep WHERE MaDoanhNghiep = @MaDN", conn);
+            try
+            {
+                cmd.Parameters.AddWithValue("@MaDN", MaDN);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    result.MaDKDoanhNghiep = reader.GetString(1);
+                    result.TenDoanhNghiep = reader.GetString(2);
+                    result.LinhVuc = reader.GetString(3);
+                    result.ChucVuKHDaiDien = reader.GetString(4);
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         public DataTable GetKhachHangByTieuChuanTraCuu(KhachHang queryObj)
@@ -106,7 +147,7 @@ namespace DataAccessTier
             if (entry.MaKH.Equals("")) entry.MaKH = Guid.NewGuid().ToString();
             try
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO tbKhachHang VALUES (@MaKH, @HoTen, @NgaySinh, @SDT, @DiaChi, @MaDinhDanh)", conn);
+                SqlCommand cmd = new SqlCommand("INSERT INTO tbKhachHang VALUES (@MaKH, @HoTen, @NgaySinh, @SDT, @DiaChi, @MaDinhDanh, @MaDoanhNghiep, @GioiTinh)", conn);
 
                 cmd.Parameters.AddWithValue("@MaKH", entry.MaKH);
                 cmd.Parameters.AddWithValue("@HoTen", entry.HoTen);
@@ -114,6 +155,12 @@ namespace DataAccessTier
                 cmd.Parameters.AddWithValue("@SDT", entry.SDT);
                 cmd.Parameters.AddWithValue("@DiaChi", entry.DiaChi);
                 cmd.Parameters.AddWithValue("@MaDinhDanh", entry.DinhDanhKH.MaDinhDanh);
+                if (entry is KhachHangDoanhNghiep)
+                {
+                    cmd.Parameters.AddWithValue("@MaDoanhNghiep", this.AddKhachHangDoanhNghiep((KhachHangDoanhNghiep)entry));
+                }
+                else cmd.Parameters.AddWithValue("@MaDoanhNghiep", null);
+                cmd.Parameters.AddWithValue("@GioiTinh", entry.GioiTinh);
 
                 int res = cmd.ExecuteNonQuery();
                 if (res != 1) throw new Exception("Can't add new customer");
@@ -130,7 +177,38 @@ namespace DataAccessTier
             }
         }
 
-        public bool UpdateKhachHang(KhachHang entry, string MaKH)
+        public string AddKhachHangDoanhNghiep(KhachHangDoanhNghiep entry)
+        {
+            string MaDN = Guid.NewGuid().ToString();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            try
+            {
+                SqlCommand cmd = new SqlCommand("INSERT INTO tbChiTietDoanhNghiep VALUES (@MaDoanhNghiep, @MaDKDoanhNghiep, @TenDoanhNghiep, @LinhVuc, @ChucVuDaiDien)", conn);
+                cmd.Parameters.AddWithValue("@MaDoanhNghiep", MaDN);
+                cmd.Parameters.AddWithValue("@MaDKDoanhNghiep", entry.MaDKDoanhNghiep);
+                cmd.Parameters.AddWithValue("@TenDoanhNghiep", entry.TenDoanhNghiep);
+                cmd.Parameters.AddWithValue("@LinhVuc", entry.LinhVuc);
+                cmd.Parameters.AddWithValue("@ChucVuDaiDien", entry.ChucVuKHDaiDien);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't add new cooperate customer");
+
+                return MaDN;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+            public bool UpdateKhachHang(KhachHang entry, string MaKH)
         {
             return true;
         }

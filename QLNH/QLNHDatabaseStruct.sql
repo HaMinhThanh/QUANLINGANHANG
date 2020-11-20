@@ -50,7 +50,8 @@ CREATE TABLE tbKhachHang (
 	SDT VARCHAR(25) NOT NULL,
 	DiaChi VARCHAR(256) NOT NULL,
 	MaDinhDanh CHAR(36) NOT NULL,
-	MaDoanhNghiepDaiDien CHAR(36)
+	MaDoanhNghiepDaiDien CHAR(36),
+	GioiThinh VARCHAR(10) NOT NULL
 	PRIMARY KEY (MaKH)
 	FOREIGN KEY (MaDinhDanh) REFERENCES tbDinhDanh(MaDinhDanh)
 	FOREIGN KEY (MaDoanhNghiepDaiDien) REFERENCES tbChiTietDoanhNghiep(MaDoanhNghiep)
