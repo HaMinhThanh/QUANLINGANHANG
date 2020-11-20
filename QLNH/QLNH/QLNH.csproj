@@ -199,6 +199,11 @@
     <Compile Include="Forms\XuLiYeuCauHĐForm.Designer.cs">
       <DependentUpon>XuLiYeuCauHĐForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyNganHangDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNganHangDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SessionState.cs" />
     <EmbeddedResource Include="Forms\BaoCaoTaiChinhDoiTuongVay.resx">
       <DependentUpon>BaoCaoTaiChinhDoiTuongVay.cs</DependentUpon>
@@ -304,6 +309,17 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
     </Content>
+    <None Include="QuanLyNganHangDataSet.xsc">
+      <DependentUpon>QuanLyNganHangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNganHangDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNganHangDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="QuanLyNganHangDataSet.xss">
+      <DependentUpon>QuanLyNganHangDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Resources\print-icon.png" />
     <None Include="Resources\star-full-icon.png" />
     <None Include="Resources\Actions-dialog-ok-apply-icon.png" />
