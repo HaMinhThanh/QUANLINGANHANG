@@ -53,6 +53,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.button10 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -66,12 +67,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -80,22 +81,21 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.button12 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.button13 = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.button7 = new System.Windows.Forms.Button();
             this.comboBox9 = new System.Windows.Forms.ComboBox();
@@ -136,11 +136,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
@@ -203,7 +203,7 @@
             this.hệThốngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(311, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(311, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -211,7 +211,7 @@
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 26);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             this.hệThốngToolStripMenuItem.Click += new System.EventHandler(this.hệThốngToolStripMenuItem_Click);
             // 
@@ -246,6 +246,8 @@
             // 
             // button4
             // 
+            this.button4.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(3, 238);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(299, 50);
@@ -256,6 +258,8 @@
             // 
             // button3
             // 
+            this.button3.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(3, 176);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(299, 50);
@@ -276,6 +280,8 @@
             // 
             // button1
             // 
+            this.button1.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(3, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(299, 55);
@@ -286,6 +292,8 @@
             // 
             // button2
             // 
+            this.button2.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(3, 112);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(299, 50);
@@ -296,6 +304,8 @@
             // 
             // button6
             // 
+            this.button6.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(3, 434);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(299, 54);
@@ -306,6 +316,8 @@
             // 
             // button5
             // 
+            this.button5.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(3, 301);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(299, 50);
@@ -316,6 +328,8 @@
             // 
             // button9
             // 
+            this.button9.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button9.Location = new System.Drawing.Point(3, 366);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(299, 50);
@@ -470,6 +484,19 @@
             this.label16.TabIndex = 3;
             this.label16.Text = "Loại khách hàng";
             this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // button10
+            // 
+            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button10.Image = global::QLNH.Properties.Resources.Loupe_icon;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(684, 87);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(221, 34);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "Tra cứu";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox1
             // 
@@ -630,6 +657,19 @@
             this.label20.Text = "Tình trạng";
             this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
+            // button11
+            // 
+            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button11.Image = global::QLNH.Properties.Resources.Loupe_icon;
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(684, 87);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(221, 34);
+            this.button11.TabIndex = 4;
+            this.button11.Text = "Tra cứu";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // textBox5
             // 
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -677,18 +717,6 @@
             this.tabPage4.Text = "Tài sản thế chấp";
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.tableLayoutPanel12);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(920, 536);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Hoạt động";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // tableLayoutPanel10
             // 
@@ -793,6 +821,18 @@
             this.label24.TabIndex = 3;
             this.label24.Text = "Tình trạng";
             // 
+            // button12
+            // 
+            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button12.Image = global::QLNH.Properties.Resources.Loupe_icon;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(684, 87);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(221, 34);
+            this.button12.TabIndex = 4;
+            this.button12.Text = "Tra cứu";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
             // textBox9
             // 
             this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -824,6 +864,18 @@
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(221, 22);
             this.textBox12.TabIndex = 8;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.tableLayoutPanel12);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(920, 536);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "Hoạt động";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // tableLayoutPanel12
             // 
@@ -905,60 +957,6 @@
             this.label27.Text = "Đến ngày";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(184, 23);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(266, 22);
-            this.dateTimePicker2.TabIndex = 5;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(637, 30);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(268, 22);
-            this.dateTimePicker3.TabIndex = 6;
-            // 
-            // button10
-            // 
-            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button10.Image = global::QLNH.Properties.Resources.Loupe_icon;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(684, 87);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(221, 34);
-            this.button10.TabIndex = 4;
-            this.button10.Text = "Tra cứu";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // button11
-            // 
-            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.Image = global::QLNH.Properties.Resources.Loupe_icon;
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(684, 87);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(221, 34);
-            this.button11.TabIndex = 4;
-            this.button11.Text = "Tra cứu";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // button12
-            // 
-            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button12.Image = global::QLNH.Properties.Resources.Loupe_icon;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(684, 87);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(221, 34);
-            this.button12.TabIndex = 4;
-            this.button12.Text = "Tra cứu";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // button13
             // 
             this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -970,6 +968,22 @@
             this.button13.TabIndex = 4;
             this.button13.Text = "Tra cứu";
             this.button13.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker2.Location = new System.Drawing.Point(184, 23);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(266, 22);
+            this.dateTimePicker2.TabIndex = 5;
+            // 
+            // dateTimePicker3
+            // 
+            this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker3.Location = new System.Drawing.Point(637, 23);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(268, 22);
+            this.dateTimePicker3.TabIndex = 6;
             // 
             // tableLayoutPanel5
             // 
@@ -1266,12 +1280,12 @@
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
