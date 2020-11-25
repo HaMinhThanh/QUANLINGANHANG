@@ -6,14 +6,66 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BusinessLogicTier;
+using DataModel;
 
 namespace QLNH
 {
     public partial class KhachHang : Form
     {
+        private KhachHangBUS busObj = new KhachHangBUS();
         public KhachHang()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //add new customer........
+
+            DataModel.KhachHang entry;
+            if (radioButton5.Checked)
+            {
+                entry = new KhachHangDoanhNghiep();
+                ((KhachHangDoanhNghiep)entry).MaDKDoanhNghiep = textBox3.Text;
+                ((KhachHangDoanhNghiep)entry).TenDoanhNghiep = textBox6.Text;
+                ((KhachHangDoanhNghiep)entry).LinhVuc = textBox7.Text;
+                ((KhachHangDoanhNghiep)entry).ChucVuKHDaiDien = textBox8.Text;
+            }
+            else
+            {
+                entry = new DataModel.KhachHang();
+            }
+            entry.HoTen = textBox2.Text;
+            entry.NgaySinh = dateTimePicker1.Value;
+            entry.DiaChi = textBox5.Text;
+            //TODO: Add SDT field
+
+            if (radioButton1.Checked) entry.GioiTinh = "Nam";
+            if (radioButton2.Checked) entry.GioiTinh = "Nữ";
+            if (radioButton3.Checked) entry.GioiTinh = "Khác";
+
+            try
+            {
+                busObj.AddKhachHang(entry);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void KhachHang_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát khỏi biểu mẫu, các thay đổi có thể chưa được lưu lại?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

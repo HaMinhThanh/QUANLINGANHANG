@@ -58,7 +58,7 @@ namespace DataAccessTier
             if (entry.UUID.Equals("")) entry.UUID = Guid.NewGuid().ToString();
             int LoaiGiaoDich = 0;
 
-            SqlCommand cmd = new SqlCommand("INSERT INTO tbGiaoDich VALUES (@MaGiaoDich, @LoaiGiaoDich, @GiaTri, @ThoiDiem, @MoTa)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO tbGiaoDich VALUES (@MaGiaoDich, @LoaiGiaoDich, @DonViGiaoDich, @GiaTri, @ThoiDiem, @MoTa)", conn);
             try
             {
                 if (entry is GiaoDichThu) LoaiGiaoDich = 1;
@@ -66,6 +66,7 @@ namespace DataAccessTier
                 else throw new Exception("Unknown transaction type");
                 cmd.Parameters.AddWithValue("@MaKQ", entry.UUID);
                 cmd.Parameters.AddWithValue("@LoaiGiaoDich", LoaiGiaoDich);
+                cmd.Parameters.AddWithValue("@DonViGiaoDich", entry.DonViGiaoDich);
                 cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTri);
                 cmd.Parameters.AddWithValue("@ThoiDiem", entry.ThoiDiemThucHien);
                 cmd.Parameters.AddWithValue("@MoTa", entry.MoTa);

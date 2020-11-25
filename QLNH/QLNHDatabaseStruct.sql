@@ -41,6 +41,7 @@ CREATE TABLE tbChiTietDoanhNghiep (
 	TenDoanhNghiep VARCHAR(256),
 	LinhVuc VARCHAR(128),
 	ChucVuDaiDien VARCHAR(64),
+	PRIMARY KEY (MaDoanhNghiep)
 )
 
 CREATE TABLE tbKhachHang (
@@ -50,9 +51,10 @@ CREATE TABLE tbKhachHang (
 	SDT VARCHAR(25) NOT NULL,
 	DiaChi VARCHAR(256) NOT NULL,
 	MaDinhDanh CHAR(36) NOT NULL,
-	MaDoanhNghiepDaiDien CHAR(36)
+	MaDoanhNghiepDaiDien CHAR(36),
+	GioiTinh VARCHAR(10) NOT NULL
 	PRIMARY KEY (MaKH)
-	FOREIGN KEY (MaDinhDanh) REFERENCES tbDinhDanh(MaDinhDanh)
+	FOREIGN KEY (MaDinhDanh) REFERENCES tbDinhDanh(MaDinhDanh),
 	FOREIGN KEY (MaDoanhNghiepDaiDien) REFERENCES tbChiTietDoanhNghiep(MaDoanhNghiep)
 )
 
@@ -203,6 +205,9 @@ CREATE TABLE tbThamSo (
 	VonVayToChucToiDa DECIMAL(32, 2) NOT NULL,
 	YeuCauGiayToXacThuc BINARY NOT NULL,
 	TuoiDuocVayToiThieu INTEGER NOT NULL,
+	KyHanToiDa INTEGER NOT NULL,
+	KyHanToiThieu INTEGER NOT NULL,
+	DinhGiaToiThieu DECIMAL(7, 3) NOT NULL,
 	LaiSuatToiThieu DECIMAL(7, 3) NOT NULL,
 	LaiSuatToiDa DECIMAL(7, 3) NOT NULL,
 	ThoiGianThongBaoTraNo DECIMAL(5, 0) NOT NULL
