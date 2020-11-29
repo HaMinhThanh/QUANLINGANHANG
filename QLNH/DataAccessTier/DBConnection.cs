@@ -60,8 +60,13 @@ namespace DataAccessTier
 
                 }
                 reader.Close();
+                return result;
 
-            } catch (Exception) { }
+            } catch (Exception) 
+            {
+                
+            }
+            return result;
         }
     }
 }

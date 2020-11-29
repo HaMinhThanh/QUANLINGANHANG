@@ -309,6 +309,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\tải xuống.png" />
     <None Include="QuanLyNganHangDataSet.xsc">
       <DependentUpon>QuanLyNganHangDataSet.xsd</DependentUpon>
     </None>
@@ -339,6 +340,9 @@
       <Project>{72476cf8-15b9-4c20-b0c4-3f876ede094c}</Project>
       <Name>DataModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
