@@ -10,14 +10,15 @@ using System.Data;
 
 namespace DataAccessTier
 {
-    public class TaiSanTheChapDAO : DBConnection
+    public class TaiSanTheChapDAO
     {
-        public TaiSanTheChapDAO() : base() { }
+        public TaiSanTheChapDAO() { }
 
         public TaiSanTheChap GetTaiSanTheChapByMaTSTC(string MaTaiSan)
         {
             TaiSanTheChap result = new TaiSanTheChap();
             string matrangthai = "";
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -61,6 +62,7 @@ namespace DataAccessTier
         {
             List<TaiSanTheChap> results = new List<TaiSanTheChap>();
             List<string> DSMaTrangThai = new List<string>();
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -108,6 +110,7 @@ namespace DataAccessTier
 
         public bool AddTaiSanTheChap(TaiSanTheChap entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

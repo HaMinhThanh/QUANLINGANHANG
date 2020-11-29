@@ -7,11 +7,12 @@ using DataModel;
 
 namespace DataAccessTier
 {
-    public class HopDongVayDAO : DBConnection
+    public class HopDongVayDAO
     {
-        public HopDongVayDAO() : base() { }
+        public HopDongVayDAO() { }
         public HopDongChoVay GetHopDongVayByMaHopDong(string MaHopDong)
         {
+            SqlConnection conn = DBConnection.getConnection();
             HopDongChoVay result = new HopDongChoVay();
             string MaNV = "";
             string MaYC = "";
@@ -54,6 +55,7 @@ namespace DataAccessTier
 
         public bool AddHopDongVay(HopDongChoVay entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

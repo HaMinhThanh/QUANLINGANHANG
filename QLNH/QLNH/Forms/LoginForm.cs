@@ -20,7 +20,15 @@ namespace QLNH.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SessionState.NVDangNhap = busObj.GetNhanVienByDangNhap(textBox1.Text, textBox2.Text);
+            try
+            {
+                SessionState.NVDangNhap = busObj.GetNhanVienByDangNhap(textBox1.Text, textBox2.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+                return;
+            }
             if (SessionState.NVDangNhap == null)
             {
                 MessageBox.Show("Không thể xác thực tài khoản, sai thông tin đăng nhập", "Thông báo");
@@ -28,6 +36,7 @@ namespace QLNH.Forms
             }
             MainForm mainForm = new MainForm();
             mainForm.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)

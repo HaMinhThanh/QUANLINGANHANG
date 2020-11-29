@@ -8,16 +8,16 @@ using DataModel;
 
 namespace DataAccessTier
 {
-    public class YeuCauChinhSuaDAO : DBConnection
+    public class YeuCauChinhSuaDAO
     {
-        public YeuCauChinhSuaDAO() : base() { }
+        public YeuCauChinhSuaDAO() { }
         public YeuCauChinhSuaHopDong GetYeuCauChinhSua(String UUID)
         {
             YeuCauChinhSuaHopDong result = new YeuCauChinhSuaHopDong();
             String MaHD = "";
             String MaNV = "";
             String MaKQ = "";
-            
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

@@ -10,15 +10,16 @@ using System.Data;
 
 namespace DataAccessTier
 {
-    public class KhachHangDAO : DBConnection
+    public class KhachHangDAO
     {
-        public KhachHangDAO() : base() { }
+        public KhachHangDAO() { }
         public KhachHang GetKhachHangByMaKH(string MaKH)
         {
             KhachHang result = new KhachHang();
             string MaDinhDanh = "";
             string MaDoanhNghiep = "";
-            
+
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -72,6 +73,7 @@ namespace DataAccessTier
 
         public void AppendKhachHangDoanhNghiepByMaDN(string MaDN, ref KhachHangDoanhNghiep result)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -98,6 +100,7 @@ namespace DataAccessTier
 
         public DataTable GetKhachHangByTieuChuanTraCuu(KhachHang queryObj)
         {
+            SqlConnection conn = DBConnection.getConnection();
             DataTable dt = new DataTable();
             if (conn.State != System.Data.ConnectionState.Open)
             {
@@ -140,6 +143,7 @@ namespace DataAccessTier
 
         public bool AddKhachHang(KhachHang entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -179,6 +183,7 @@ namespace DataAccessTier
 
         public string AddKhachHangDoanhNghiep(KhachHangDoanhNghiep entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             string MaDN = Guid.NewGuid().ToString();
             if (conn.State != System.Data.ConnectionState.Open)
             {

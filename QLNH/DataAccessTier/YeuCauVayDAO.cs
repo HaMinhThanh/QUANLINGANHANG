@@ -9,15 +9,16 @@ using DataModel;
 
 namespace DataAccessTier
 {
-    public class YeuCauVayDAO : DBConnection
+    public class YeuCauVayDAO 
     {
-        public YeuCauVayDAO() : base() { }
+        public YeuCauVayDAO() { }
         public YeuCauChoVay GetYeuCauChoVayByMaYC(String MaYeuCau)
         {
             YeuCauChoVay result = new YeuCauChoVay();
             String MaKHYC = "";
             String MaNVTiepNhan = "";
             String MaKQXetDuyet = "";
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -74,6 +75,7 @@ namespace DataAccessTier
 
         public bool AddYeuCauChoVay(YeuCauChoVay entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
