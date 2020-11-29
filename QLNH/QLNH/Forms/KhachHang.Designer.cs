@@ -164,11 +164,16 @@
             // 
             this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "CMND",
+            "CCCD",
+            "Passport"});
             this.comboBox2.Location = new System.Drawing.Point(2, 8);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(81, 21);
             this.comboBox2.TabIndex = 0;
+            this.comboBox2.Text = "<Chọn một>";
             // 
             // textBox4
             // 
@@ -513,40 +518,40 @@
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox3.Enabled = false;
             this.textBox3.Location = new System.Drawing.Point(148, 29);
             this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(236, 20);
             this.textBox3.TabIndex = 4;
             // 
             // textBox6
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(148, 106);
             this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(236, 20);
             this.textBox6.TabIndex = 5;
             // 
             // textBox7
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(148, 181);
             this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(236, 20);
             this.textBox7.TabIndex = 6;
             // 
             // textBox8
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox8.Enabled = false;
             this.textBox8.Location = new System.Drawing.Point(148, 260);
             this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(236, 20);
             this.textBox8.TabIndex = 7;
             // 

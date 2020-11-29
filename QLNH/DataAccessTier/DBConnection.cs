@@ -10,20 +10,20 @@ namespace DataAccessTier
     public class DBConnection
     {
         protected static SqlConnection conn;
-        public DBConnection()
-        {
-            try
-            {
-                conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\QuanLyNganHang.mdf;Integrated Security=True");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
 
         public static SqlConnection getConnection()
         {
+            if (conn == null)
+            {
+                try
+                {
+                    conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\QuanLyNganHang.mdf;Integrated Security=True");
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+            }
             return conn;
         }
     }

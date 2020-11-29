@@ -163,7 +163,10 @@ namespace DataAccessTier
                 {
                     cmd.Parameters.AddWithValue("@MaDoanhNghiep", this.AddKhachHangDoanhNghiep((KhachHangDoanhNghiep)entry));
                 }
-                else cmd.Parameters.AddWithValue("@MaDoanhNghiep", null);
+                else
+                {
+                    cmd.Parameters.AddWithValue("@MaDoanhNghiep", DBNull.Value);
+                }
                 cmd.Parameters.AddWithValue("@GioiTinh", entry.GioiTinh);
 
                 int res = cmd.ExecuteNonQuery();
