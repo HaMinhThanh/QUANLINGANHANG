@@ -7,12 +7,13 @@ using DataModel;
 
 namespace DataAccessTier
 {
-    public class GiaoDichDAO : DBConnection
+    public class GiaoDichDAO
     {
-        public GiaoDichDAO() : base() { }
+        public GiaoDichDAO() { }
         public GiaoDich GetGiaoDichByMaGiaoDich(string MaGD)
         {
-            GiaoDich result = new GiaoDich();
+            GiaoDich result = null;
+            SqlConnection conn = DBConnection.getConnection();
 
             if (conn.State != System.Data.ConnectionState.Open)
             {
@@ -25,11 +26,10 @@ namespace DataAccessTier
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    switch (reader.GetInt32(1))
-                    {
-                        case 1: result = new GiaoDichThu(); break;
-                        case 2: result = new GiaoDichChi(); break;
-                    }
+                    byte tranType = (byte)reader["LoaiGiaoDich"];
+                    if (tranType == 1) result = new GiaoDichThu();
+                    else if (tranType == 2) result = new GiaoDichChi();
+                    else throw new Exception("Unknown transaction type");
                     result.UUID = reader.GetString(0);
                     result.DonViGiaoDich = reader.GetString(2);
                     result.GiaTri = reader.GetDouble(3);
@@ -51,6 +51,7 @@ namespace DataAccessTier
 
         public bool AddGiaoDich(GiaoDich entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -64,7 +65,8 @@ namespace DataAccessTier
                 if (entry is GiaoDichThu) LoaiGiaoDich = 1;
                 else if (entry is GiaoDichChi) LoaiGiaoDich = 2;
                 else throw new Exception("Unknown transaction type");
-                cmd.Parameters.AddWithValue("@MaKQ", entry.UUID);
+
+                cmd.Parameters.AddWithValue("@MaGiaoDich", entry.UUID);
                 cmd.Parameters.AddWithValue("@LoaiGiaoDich", LoaiGiaoDich);
                 cmd.Parameters.AddWithValue("@DonViGiaoDich", entry.DonViGiaoDich);
                 cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTri);
@@ -82,6 +84,10 @@ namespace DataAccessTier
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                conn.Close();
             }
         }
     }

@@ -43,7 +43,8 @@ namespace QLNH
                 transactionIn.GiaTri = Double.Parse(textBox5.Text);
                 transactionIn.MoTa = richTextBox2.Text;
 
-                busObj.AddGiaoDich(transactionIn);
+                bool res = busObj.AddGiaoDich(transactionIn);
+                if (res) MessageBox.Show("Thêm giao dịch thành công", "Thông báo");
             }
             catch (Exception ex)
             {

@@ -22,20 +22,3 @@ DROP TABLE tbTrangThaiHopDongVay
 DROP TABLE tbThamSo
 
 --
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

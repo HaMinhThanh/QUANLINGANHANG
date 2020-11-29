@@ -8,14 +8,15 @@ using System.Data.SqlClient;
 
 namespace DataAccessTier
 {
-    public class KetQuaXetDuyetDAO : DBConnection
+    public class KetQuaXetDuyetDAO
     {
-        public KetQuaXetDuyetDAO() : base() { }
+        public KetQuaXetDuyetDAO()  { }
         public KetQuaXetDuyet GetKQXetDuyetByMaKQ(string MaKQ)
         {
             KetQuaXetDuyet result = new KetQuaXetDuyet();
             string MaNV = "";
 
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -49,6 +50,7 @@ namespace DataAccessTier
 
         public bool AddKQXetDuyet(KetQuaXetDuyet entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

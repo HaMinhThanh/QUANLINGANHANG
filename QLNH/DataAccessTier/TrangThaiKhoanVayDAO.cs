@@ -7,13 +7,13 @@ using System.Text;
 
 namespace DataAccessTier
 {
-    public class TrangThaiKhoanVayDAO : DBConnection
+    public class TrangThaiKhoanVayDAO 
     {
-        public TrangThaiKhoanVayDAO() : base() { }
+        public TrangThaiKhoanVayDAO() { }
         public TrangThaiKhoanVay GetTrangThaiByMaTrangThai(string MaTrangThai)
         {
             TrangThaiKhoanVay result = new TrangThaiKhoanVay();
-
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -44,6 +44,7 @@ namespace DataAccessTier
 
         public bool AddTrangThaiKhoanVay(TrangThaiKhoanVay entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

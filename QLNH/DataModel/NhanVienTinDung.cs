@@ -8,6 +8,6 @@ namespace DataModel
 {
     public class NhanVienTinDung : NhanVien
     {
-        //stub
+        public NhanVienTinDung() : base() { }
     }
 }

@@ -6,11 +6,12 @@ using System.Text;
 
 namespace DataAccessTier
 {
-    public class GiayToChungThucDAO : DBConnection
+    public class GiayToChungThucDAO
     {
-        public GiayToChungThucDAO() : base() {}
+        public GiayToChungThucDAO() {}
         public List<string> GetMaGiayChungThucByMaTaiSan(string MaTaiSan)
         {
+            SqlConnection conn = DBConnection.getConnection();
             List<string> result = new List<string>();
             if (conn.State != System.Data.ConnectionState.Open)
             {
@@ -40,6 +41,7 @@ namespace DataAccessTier
 
         public bool AddMaGiayChungThuc(string MaTaiSan, string MaChungThuc)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

@@ -9,12 +9,13 @@ using System.Data.SqlTypes;
 
 namespace DataAccessTier
 {
-    public class DinhDanhDAO : DBConnection
+    public class DinhDanhDAO
     {
-        public DinhDanhDAO() : base() { }
+        public DinhDanhDAO() { }
         public DinhDanh GetDinhDanhByMaDinhDanh(string MaDinhDanh)
         {
             DinhDanh result = new DinhDanh();
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -27,7 +28,7 @@ namespace DataAccessTier
                 if (reader.Read())
                 {
                     result.MaDinhDanh = reader.GetString(0);
-                    result.LoaiDinhDanh = (DinhDanh.DANH_SACH_LOAI_DINH_DANH)reader.GetInt32(1);
+                    result.LoaiDinhDanh = (DinhDanh.DANH_SACH_LOAI_DINH_DANH)reader.GetByte(1);
                     result.GiaTriDinhDanh = reader.GetString(2);
                 }
                 reader.Close();
@@ -45,6 +46,7 @@ namespace DataAccessTier
 
         public bool AddDinhDanh(DinhDanh entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

@@ -10,22 +10,22 @@ namespace DataAccessTier
 {
     public class DBConnection
     {
-        protected SqlConnection conn;
+        protected static SqlConnection conn;
         public DBConnection()
         {
             try
             {
                 conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\QuanLyNganHang.mdf;Integrated Security=True");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 
-        ~DBConnection()
+        public static SqlConnection getConnection()
         {
-            conn.Close();
+            return conn;
         }
         public YeuCauChinhSuaHopDong GetYeuCauChinhSua(String UUID)
         {

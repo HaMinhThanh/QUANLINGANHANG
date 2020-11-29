@@ -8,12 +8,13 @@ using DataModel;
 
 namespace DataAccessTier
 {
-    public class HoatDongThuTienDAO : DBConnection
+    public class HoatDongThuTienDAO
     {
-        public HoatDongThuTienDAO() : base() { }
+        public HoatDongThuTienDAO() { }
         public DataTable GetHoatDongThuTienInRangeThoiDiem(DateTime startTime, DateTime endTime)
         {
             DataTable dt = new DataTable();
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -39,6 +40,7 @@ namespace DataAccessTier
 
         public bool AddHoatDongThuTien(BienBanThuTien entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

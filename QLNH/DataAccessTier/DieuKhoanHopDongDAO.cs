@@ -9,12 +9,14 @@ using DataModel;
 
 namespace DataAccessTier
 {
-    public class DieuKhoanHopDongDAO : DBConnection
+    public class DieuKhoanHopDongDAO
     {
-        public DieuKhoanHopDongDAO() : base() { }
+        public DieuKhoanHopDongDAO() { }
         public DieuKhoanChoVay GetDieuKhoanHopDongByMaDieuKhoan(string MaDieuKhoan)
         {
             DieuKhoanChoVay result = new DieuKhoanChoVay();
+
+            SqlConnection conn = DBConnection.getConnection();
 
             if (conn.State != System.Data.ConnectionState.Open)
             {
@@ -45,6 +47,7 @@ namespace DataAccessTier
 
         public DataTable GetDieuKhoanByMoTa(string MoTa)
         {
+            SqlConnection conn = DBConnection.getConnection();
             DataTable dt = new DataTable();
             if (conn.State != System.Data.ConnectionState.Open)
             {
@@ -70,6 +73,7 @@ namespace DataAccessTier
 
         public bool AddDieuKhoan(DieuKhoanChoVay entry)
         {
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
