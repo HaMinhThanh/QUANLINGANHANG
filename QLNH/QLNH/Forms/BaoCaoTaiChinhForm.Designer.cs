@@ -199,7 +199,7 @@
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(126, 8);
+            this.comboBox1.Location = new System.Drawing.Point(126, 9);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(179, 24);
             this.comboBox1.TabIndex = 3;
@@ -289,6 +289,8 @@
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Image = global::QLNH.Properties.Resources.Go_back_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(723, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(175, 35);
@@ -299,6 +301,8 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Image = global::QLNH.Properties.Resources.print_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(543, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(174, 35);
@@ -309,6 +313,8 @@
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(3, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(174, 35);

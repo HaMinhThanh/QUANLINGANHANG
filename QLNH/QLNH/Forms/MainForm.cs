@@ -18,367 +18,219 @@ namespace QLNH.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (SessionState.NVDangNhap is DataModel.NhanVienTinDung)
+            {
+                Button btnHSChoVay = new Button();
+                btnHSChoVay.Location = new Point(3, 59);
+                btnHSChoVay.Size = new Size(299, 55);
+                btnHSChoVay.Text = "Tạo Hồ Sơ Cho Vay";
+                btnHSChoVay.Click += BtnHSChoVay_Click;
+                Controls.Add(btnHSChoVay);
+
+                Button btnTaiSanTheChap = new Button();
+                btnTaiSanTheChap.Location = new Point(3, 115);
+                btnTaiSanTheChap.Size = new Size(299, 55);
+                btnTaiSanTheChap.Text = "Tài sản thế chấp";
+                btnTaiSanTheChap.Click += BtnTaiSanTheChap_Click;
+                Controls.Add(btnTaiSanTheChap);
+
+                Button btnThongBao = new Button();
+                btnThongBao.Location = new Point(3, 171);
+                btnThongBao.Size = new Size(299, 55);
+                btnThongBao.Text = "Tạo Thông Báo";
+                btnThongBao.Click += BtnThongBao_Click; ;
+                Controls.Add(btnThongBao);
+
+                Button btnXacNhanHD = new Button();
+                btnXacNhanHD.Location = new Point(3, 227);
+                btnXacNhanHD.Size = new Size(299, 55);
+                btnXacNhanHD.Text = "Xác Nhận Hợp Đồng";
+                btnXacNhanHD.Click += BtnXacNhanHD_Click; 
+                Controls.Add(btnXacNhanHD);
+
+                Button btnXuLiYeuCauHD = new Button();
+                //btnXuLiYeuCauHD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+                //btnXuLiYeuCauHD.AutoSize = true;
+                btnXuLiYeuCauHD.Location = new Point(3, 283);
+                btnXuLiYeuCauHD.Size = new Size(299, 55);
+                btnXuLiYeuCauHD.Text = "Xử lí yêu cầu hợp đồng";
+                btnXuLiYeuCauHD.Click += BtnXuLiYeuCauHD_Click;
+                Controls.Add(btnXuLiYeuCauHD);
+
+                
+
+                
+            }
+            else if(SessionState.NVDangNhap is DataModel.NhanVienXetDuyet)
+            {
+                Button btnXetDuyetChoVay = new Button();
+                btnXetDuyetChoVay.Location = new Point(3, 59);
+                btnXetDuyetChoVay.Size = new Size(299, 55);
+                btnXetDuyetChoVay.Text = "Xét Duyệt Cho Vay";
+                btnXetDuyetChoVay.Click += BtnXetDuyetChoVay_Click;
+                Controls.Add(btnXetDuyetChoVay);
+            } 
+            else if(SessionState.NVDangNhap is DataModel.NhanVienKeToan)
+            {
+                Button btnThuNoLai = new Button();
+                btnThuNoLai.Location = new Point(3, 59);
+                btnThuNoLai.Size = new Size(299, 55);
+                btnThuNoLai.Text = "Tạo Phiếu Thu Nợ Lãi";
+                btnThuNoLai.Click += BtnThuNoLai_Click;
+                Controls.Add(btnThuNoLai);
+            } 
+            else if(SessionState.NVDangNhap is DataModel.NhanVienQuanLy)
+            {
+                Button btnHSPhatTien = new Button();
+                btnHSPhatTien.Location = new Point(3, 59);
+                btnHSPhatTien.Size = new Size(299, 55);
+                btnHSPhatTien.Text = "Tạo Hồ Sơ Phát Tiền Vay";
+                btnHSPhatTien.Click += BtnHSPhatTien_Click;
+                Controls.Add(btnHSPhatTien);
+
+                Button btnDonGHMG = new Button();
+                btnDonGHMG.Location = new Point(3, 115);
+                btnDonGHMG.Size = new Size(299, 55);
+                btnDonGHMG.Text = "Lập Đơn GHMG";
+                btnDonGHMG.Click += BtnDonGHMG_Click;
+                Controls.Add(btnDonGHMG);
 
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void hệThốngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
+                Button btnThanhLy = new Button();
+                btnThanhLy.Location = new Point(3, 171);
+                btnThanhLy.Size = new Size(299, 55);
+                btnThanhLy.Text = "Thanh Lý Hợp Đồng";
+                btnThanhLy.Click += BtnThanhLy_Click;
+                Controls.Add(btnThanhLy);
 
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox7_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+                Button btnDongVonBoSung = new Button();
+                btnDongVonBoSung.Location = new Point(3, 227);
+                btnDongVonBoSung.Size = new Size(299, 55);
+                btnDongVonBoSung.Text = "Dòng Vốn Bổ Sung";
+                btnDongVonBoSung.Click += BtnDongVonBoSung_Click;
+                Controls.Add(btnDongVonBoSung);
 
-        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
+                Button btnChiTieuBoSung = new Button();
+                btnChiTieuBoSung.Location = new Point(3, 283);
+                btnChiTieuBoSung.Size = new Size(299, 55);
+                btnChiTieuBoSung.Text = "Chi Tiêu Bổ Sung";
+                btnChiTieuBoSung.Click += BtnChiTieuBoSung_Click;
+                Controls.Add(btnChiTieuBoSung);
 
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
+                Button btnHDQuaHan = new Button();
+                btnHDQuaHan.Location = new Point(3, 339);
+                btnHDQuaHan.Size = new Size(299, 55);
+                btnHDQuaHan.Text = "Hợp Đồng Qúa Hạn";
+                btnHDQuaHan.Click += BtnHDQuaHan_Click;
+                Controls.Add(btnHDQuaHan);
 
-        }
+                Button btnQuyetToan = new Button();
+                btnQuyetToan.Location = new Point(3, 395);
+                btnQuyetToan.Size = new Size(299, 55);
+                btnQuyetToan.Text = "Lập Quyết Toán";
+                btnQuyetToan.Click += BtnQuyetToan_Click;
+                Controls.Add(btnQuyetToan);
 
-        private void label16_Click(object sender, EventArgs e)
-        {
+                Button btnBaoCaoDoiTuong = new Button();
+                btnBaoCaoDoiTuong.Location = new Point(3, 451);
+                btnBaoCaoDoiTuong.Size = new Size(299, 55);
+                btnBaoCaoDoiTuong.Text = "Báo Cáo Đối Tượng Vay";
+                btnBaoCaoDoiTuong.Click += BtnBaoCaoDoiTuong_Click;
+                Controls.Add(btnBaoCaoDoiTuong);
 
+                Button btnBaoCaoTaiChinh = new Button();
+                btnBaoCaoTaiChinh.Location = new Point(3, 507);
+                btnBaoCaoTaiChinh.Size = new Size(299, 55);
+                btnBaoCaoTaiChinh.Text = "Báo Cáo Tài Chính";
+                btnBaoCaoTaiChinh.Click += BtnBaoCaoTaiChinh_Click;
+                Controls.Add(btnBaoCaoTaiChinh);
+            }    
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void BtnBaoCaoTaiChinh_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void BtnBaoCaoDoiTuong_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void BtnQuyetToan_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void BtnHDQuaHan_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void BtnChiTieuBoSung_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        private void BtnDongVonBoSung_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
+        private void BtnThanhLy_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void BtnDonGHMG_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void tableLayoutPanel9_Paint(object sender, PaintEventArgs e)
+        private void BtnHSPhatTien_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void label17_Click(object sender, EventArgs e)
+        private void BtnXetDuyetChoVay_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void BtnXuLiYeuCauHD_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void label19_Click(object sender, EventArgs e)
+        private void BtnXacNhanHD_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void label20_Click(object sender, EventArgs e)
+        private void BtnThongBao_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void button11_Click(object sender, EventArgs e)
+        private void BtnTaiSanTheChap_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void BtnThuNoLai_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void textBox6_TextChanged(object sender, EventArgs e)
+        private void BtnDonMGGH_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
 
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void BtnHSChoVay_Click(object sender, EventArgs e)
         {
-
+            throw new NotImplementedException();
         }
-
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
 
-        }
+        
     }
 }

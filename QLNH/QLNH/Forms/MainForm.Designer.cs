@@ -120,6 +120,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button14 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -166,7 +167,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.21053F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1245, 678);
             this.tableLayoutPanel1.TabIndex = 0;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // tableLayoutPanel2
             // 
@@ -182,7 +182,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(926, 99);
             this.tableLayoutPanel2.TabIndex = 0;
-            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // label1
             // 
@@ -194,7 +193,6 @@
             this.label1.Size = new System.Drawing.Size(141, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Xin chào, [nhân viên]";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // menuStrip1
             // 
@@ -206,19 +204,18 @@
             this.menuStrip1.Size = new System.Drawing.Size(311, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
-            this.hệThốngToolStripMenuItem.Click += new System.EventHandler(this.hệThốngToolStripMenuItem_Click);
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.button14, 0, 9);
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.button3, 0, 3);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
@@ -230,43 +227,41 @@
             this.tableLayoutPanel3.Controls.Add(this.button8, 0, 8);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 110);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 9;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.98058F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 66.01942F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 73F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel3.RowCount = 10;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(305, 565);
             this.tableLayoutPanel3.TabIndex = 2;
-            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint);
             // 
             // button4
             // 
             this.button4.Image = global::QLNH.Properties.Resources.add_icon;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 238);
+            this.button4.Location = new System.Drawing.Point(3, 227);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(299, 50);
             this.button4.TabIndex = 4;
             this.button4.Text = "Lập đơn miễn giảm/ gia hạn";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
             this.button3.Image = global::QLNH.Properties.Resources.add_icon;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(3, 176);
+            this.button3.Location = new System.Drawing.Point(3, 171);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(299, 50);
             this.button3.TabIndex = 3;
             this.button3.Text = "Lập phiếu thu nợ/ lãi";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label2
             // 
@@ -276,77 +271,71 @@
             this.label2.Size = new System.Drawing.Size(76, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Chức năng";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Image = global::QLNH.Properties.Resources.add_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 40);
+            this.button1.Location = new System.Drawing.Point(3, 59);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(299, 55);
+            this.button1.Size = new System.Drawing.Size(299, 50);
             this.button1.TabIndex = 1;
             this.button1.Text = "Lập hồ sơ cho vay";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Image = global::QLNH.Properties.Resources.add_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(3, 112);
+            this.button2.Location = new System.Drawing.Point(3, 115);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(299, 50);
             this.button2.TabIndex = 2;
             this.button2.Text = "Lập hồ sơ phát tiền vay";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button6
             // 
             this.button6.Image = global::QLNH.Properties.Resources.add_icon;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(3, 434);
+            this.button6.Location = new System.Drawing.Point(3, 395);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(299, 54);
+            this.button6.Size = new System.Drawing.Size(299, 50);
             this.button6.TabIndex = 6;
             this.button6.Text = "Lập báo cáo quyết toán";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
             this.button5.Image = global::QLNH.Properties.Resources.add_icon;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(3, 301);
+            this.button5.Location = new System.Drawing.Point(3, 283);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(299, 50);
             this.button5.TabIndex = 5;
             this.button5.Text = "Lập hồ sơ theo dõi/ quản lí vốn vay";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button9
             // 
             this.button9.Image = global::QLNH.Properties.Resources.add_icon;
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(3, 366);
+            this.button9.Location = new System.Drawing.Point(3, 339);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(299, 50);
             this.button9.TabIndex = 9;
             this.button9.Text = "Lập phiếu thông báo";
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(3, 507);
+            this.button8.Location = new System.Drawing.Point(3, 451);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(299, 53);
+            this.button8.Size = new System.Drawing.Size(299, 50);
             this.button8.TabIndex = 8;
             this.button8.Text = "Thay đổi quy định";
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // tabControl1
             // 
@@ -360,7 +349,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(928, 565);
             this.tabControl1.TabIndex = 1;
-            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -372,7 +360,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Khách hàng";
             this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // tableLayoutPanel6
             // 
@@ -388,7 +375,6 @@
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.47169F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(914, 530);
             this.tableLayoutPanel6.TabIndex = 0;
-            this.tableLayoutPanel6.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel6_Paint);
             // 
             // groupBox2
             // 
@@ -400,7 +386,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh sách Khách hàng";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // dataGridView2
             // 
@@ -412,7 +397,6 @@
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(902, 373);
             this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // tableLayoutPanel7
             // 
@@ -439,7 +423,6 @@
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(908, 124);
             this.tableLayoutPanel7.TabIndex = 1;
-            this.tableLayoutPanel7.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel7_Paint);
             // 
             // label7
             // 
@@ -450,7 +433,6 @@
             this.label7.Size = new System.Drawing.Size(221, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "Mã khách hàng";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label14
             // 
@@ -461,7 +443,6 @@
             this.label14.Size = new System.Drawing.Size(221, 17);
             this.label14.TabIndex = 1;
             this.label14.Text = "Định danh";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -472,7 +453,6 @@
             this.label15.Size = new System.Drawing.Size(221, 17);
             this.label15.TabIndex = 2;
             this.label15.Text = "Họ tên khách hàng";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
@@ -483,7 +463,6 @@
             this.label16.Size = new System.Drawing.Size(221, 17);
             this.label16.TabIndex = 3;
             this.label16.Text = "Loại khách hàng";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // button10
             // 
@@ -496,7 +475,6 @@
             this.button10.TabIndex = 4;
             this.button10.Text = "Tra cứu";
             this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox1
             // 
@@ -505,7 +483,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(221, 22);
             this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -514,7 +491,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(221, 22);
             this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -523,7 +499,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(221, 22);
             this.textBox3.TabIndex = 7;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -532,7 +507,6 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(221, 22);
             this.textBox4.TabIndex = 8;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // tabPage3
             // 
@@ -544,7 +518,6 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hợp đồng";
             this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
             // tableLayoutPanel8
             // 
@@ -560,7 +533,6 @@
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75.47169F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(914, 530);
             this.tableLayoutPanel8.TabIndex = 1;
-            this.tableLayoutPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel8_Paint);
             // 
             // groupBox3
             // 
@@ -572,7 +544,6 @@
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh sách Hợp đồng";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // dataGridView3
             // 
@@ -584,7 +555,6 @@
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(902, 373);
             this.dataGridView3.TabIndex = 0;
-            this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
             // 
             // tableLayoutPanel9
             // 
@@ -611,7 +581,6 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(908, 124);
             this.tableLayoutPanel9.TabIndex = 1;
-            this.tableLayoutPanel9.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel9_Paint);
             // 
             // label17
             // 
@@ -622,7 +591,6 @@
             this.label17.Size = new System.Drawing.Size(221, 17);
             this.label17.TabIndex = 0;
             this.label17.Text = "Mã khoản vay";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -633,7 +601,6 @@
             this.label18.Size = new System.Drawing.Size(221, 17);
             this.label18.TabIndex = 1;
             this.label18.Text = "Loại hình vay";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label19
             // 
@@ -644,7 +611,6 @@
             this.label19.Size = new System.Drawing.Size(221, 17);
             this.label19.TabIndex = 2;
             this.label19.Text = "Mã khách hàng";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label20
             // 
@@ -655,7 +621,6 @@
             this.label20.Size = new System.Drawing.Size(221, 17);
             this.label20.TabIndex = 3;
             this.label20.Text = "Tình trạng";
-            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // button11
             // 
@@ -668,7 +633,6 @@
             this.button11.TabIndex = 4;
             this.button11.Text = "Tra cứu";
             this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // textBox5
             // 
@@ -677,7 +641,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(221, 22);
             this.textBox5.TabIndex = 5;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox6
             // 
@@ -686,7 +649,6 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(221, 22);
             this.textBox6.TabIndex = 6;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // textBox7
             // 
@@ -695,7 +657,6 @@
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(221, 22);
             this.textBox7.TabIndex = 7;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // textBox8
             // 
@@ -704,7 +665,6 @@
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(221, 22);
             this.textBox8.TabIndex = 8;
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // tabPage4
             // 
@@ -716,7 +676,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tài sản thế chấp";
             this.tabPage4.UseVisualStyleBackColor = true;
-            this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
             // tableLayoutPanel10
             // 
@@ -875,7 +834,6 @@
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Hoạt động";
             this.tabPage5.UseVisualStyleBackColor = true;
-            this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
             // tableLayoutPanel12
             // 
@@ -1005,7 +963,6 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(908, 259);
             this.tableLayoutPanel5.TabIndex = 1;
-            this.tableLayoutPanel5.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel5_Paint);
             // 
             // button7
             // 
@@ -1016,7 +973,6 @@
             this.button7.TabIndex = 21;
             this.button7.Text = "Tìm kiếm";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // comboBox9
             // 
@@ -1026,7 +982,6 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(210, 25);
             this.comboBox9.TabIndex = 20;
-            this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
             // comboBox8
             // 
@@ -1036,7 +991,6 @@
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(205, 25);
             this.comboBox8.TabIndex = 19;
-            this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
             // 
             // comboBox7
             // 
@@ -1046,7 +1000,6 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(205, 25);
             this.comboBox7.TabIndex = 18;
-            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // comboBox6
             // 
@@ -1056,7 +1009,6 @@
             this.comboBox6.Name = "comboBox6";
             this.comboBox6.Size = new System.Drawing.Size(210, 25);
             this.comboBox6.TabIndex = 17;
-            this.comboBox6.SelectedIndexChanged += new System.EventHandler(this.comboBox6_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -1065,7 +1017,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(205, 22);
             this.dateTimePicker1.TabIndex = 16;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // comboBox5
             // 
@@ -1075,7 +1026,6 @@
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(205, 25);
             this.comboBox5.TabIndex = 15;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // comboBox4
             // 
@@ -1085,7 +1035,6 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(210, 25);
             this.comboBox4.TabIndex = 14;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox3
             // 
@@ -1095,7 +1044,6 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(205, 25);
             this.comboBox3.TabIndex = 13;
-            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -1105,7 +1053,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(205, 25);
             this.comboBox2.TabIndex = 12;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -1115,7 +1062,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(205, 25);
             this.comboBox1.TabIndex = 11;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label13
             // 
@@ -1126,7 +1072,6 @@
             this.label13.Size = new System.Drawing.Size(84, 34);
             this.label13.TabIndex = 10;
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label12
             // 
@@ -1137,7 +1082,6 @@
             this.label12.Size = new System.Drawing.Size(84, 17);
             this.label12.TabIndex = 9;
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label11
             // 
@@ -1147,7 +1091,6 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 34);
             this.label11.TabIndex = 8;
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
@@ -1158,7 +1101,6 @@
             this.label10.Size = new System.Drawing.Size(84, 34);
             this.label10.TabIndex = 7;
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -1169,7 +1111,6 @@
             this.label9.Size = new System.Drawing.Size(84, 34);
             this.label9.TabIndex = 6;
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -1179,7 +1120,6 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(84, 34);
             this.label8.TabIndex = 5;
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label6
             // 
@@ -1190,7 +1130,6 @@
             this.label6.Size = new System.Drawing.Size(84, 34);
             this.label6.TabIndex = 3;
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -1201,7 +1140,6 @@
             this.label5.Size = new System.Drawing.Size(84, 34);
             this.label5.TabIndex = 2;
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -1211,7 +1149,6 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(84, 34);
             this.label4.TabIndex = 1;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -1222,7 +1159,6 @@
             this.label3.Size = new System.Drawing.Size(84, 51);
             this.label3.TabIndex = 0;
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // groupBox1
             // 
@@ -1232,7 +1168,6 @@
             this.groupBox1.Size = new System.Drawing.Size(908, 259);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dataGridView1
             // 
@@ -1244,7 +1179,15 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(902, 238);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(3, 507);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(299, 50);
+            this.button14.TabIndex = 10;
+            this.button14.Text = "Thay đổi quy định";
+            this.button14.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -1390,5 +1333,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button14;
     }
 }
