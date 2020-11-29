@@ -18,6 +18,28 @@ namespace QLNH.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            TableLayoutPanel dynamicTableLayoutPanel = new TableLayoutPanel();
+
+            dynamicTableLayoutPanel.Location = new System.Drawing.Point(3, 110);
+            dynamicTableLayoutPanel.Name = "TableLayoutPanel1";
+            dynamicTableLayoutPanel.Size = new System.Drawing.Size(305, 565);
+            dynamicTableLayoutPanel.TabIndex = 0;           
+
+            //dynamicTableLayoutPanel.ColumnCount = 3;
+            dynamicTableLayoutPanel.RowCount = 10;
+            //dynamicTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
+            //dynamicTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30 ));
+            //dynamicTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 10));
+
             if (SessionState.NVDangNhap is DataModel.NhanVienTinDung)
             {
                 Button btnHSChoVay = new Button();
@@ -57,9 +79,13 @@ namespace QLNH.Forms
                 btnXuLiYeuCauHD.Click += BtnXuLiYeuCauHD_Click;
                 Controls.Add(btnXuLiYeuCauHD);
 
-                
-
-                
+                dynamicTableLayoutPanel.Controls.Add(btnHSChoVay, 0, 1);
+                dynamicTableLayoutPanel.Controls.Add(btnTaiSanTheChap, 0, 2);
+                dynamicTableLayoutPanel.Controls.Add(btnHSChoVay, 0, 3);
+                dynamicTableLayoutPanel.Controls.Add(btnTaiSanTheChap, 0, 4);
+                dynamicTableLayoutPanel.Controls.Add(btnHSChoVay, 0, 5);
+            
+                Controls.Add(dynamicTableLayoutPanel);
             }
             else if(SessionState.NVDangNhap is DataModel.NhanVienXetDuyet)
             {
@@ -69,6 +95,9 @@ namespace QLNH.Forms
                 btnXetDuyetChoVay.Text = "Xét Duyệt Cho Vay";
                 btnXetDuyetChoVay.Click += BtnXetDuyetChoVay_Click;
                 Controls.Add(btnXetDuyetChoVay);
+
+                dynamicTableLayoutPanel.Controls.Add(btnXetDuyetChoVay, 0, 1);
+                Controls.Add(dynamicTableLayoutPanel);
             } 
             else if(SessionState.NVDangNhap is DataModel.NhanVienKeToan)
             {
@@ -78,6 +107,9 @@ namespace QLNH.Forms
                 btnThuNoLai.Text = "Tạo Phiếu Thu Nợ Lãi";
                 btnThuNoLai.Click += BtnThuNoLai_Click;
                 Controls.Add(btnThuNoLai);
+
+                dynamicTableLayoutPanel.Controls.Add(btnThuNoLai, 0, 1);
+                Controls.Add(dynamicTableLayoutPanel);
             } 
             else if(SessionState.NVDangNhap is DataModel.NhanVienQuanLy)
             {
@@ -143,6 +175,18 @@ namespace QLNH.Forms
                 btnBaoCaoTaiChinh.Text = "Báo Cáo Tài Chính";
                 btnBaoCaoTaiChinh.Click += BtnBaoCaoTaiChinh_Click;
                 Controls.Add(btnBaoCaoTaiChinh);
+
+                dynamicTableLayoutPanel.Controls.Add(btnHSPhatTien, 0, 1);
+                dynamicTableLayoutPanel.Controls.Add(btnDonGHMG, 0, 2);
+                dynamicTableLayoutPanel.Controls.Add(btnThanhLy, 0, 3);
+                dynamicTableLayoutPanel.Controls.Add(btnDongVonBoSung, 0, 4);
+                dynamicTableLayoutPanel.Controls.Add(btnChiTieuBoSung, 0, 5);
+                dynamicTableLayoutPanel.Controls.Add(btnHDQuaHan, 0, 6);
+                dynamicTableLayoutPanel.Controls.Add(btnQuyetToan, 0, 7);
+                dynamicTableLayoutPanel.Controls.Add(btnBaoCaoDoiTuong, 0, 8);
+                dynamicTableLayoutPanel.Controls.Add(btnBaoCaoTaiChinh, 0, 9);            
+
+                Controls.Add(dynamicTableLayoutPanel);
             }    
         }
 
