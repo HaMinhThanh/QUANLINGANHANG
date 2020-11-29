@@ -42,7 +42,7 @@ namespace DataAccessTier
                     result.TrangThai = tempAccessObj.GetTrangThaiByMaTrangThai(matrangthai);
                 }
                 GiayToChungThucDAO tempAccessObj2 = new GiayToChungThucDAO();
-                result.DSMaGiayToChungThuc = tempAccessObj2.GetDSGiayToChungThucByMaTaiSanTHeChap(MaTaiSan);
+                result.DSMaGiayToChungThuc = tempAccessObj2.GetMaGiayChungThucByMaTaiSan(MaTaiSan);
             }
             catch (SqlException SQLex)
             {
@@ -60,6 +60,7 @@ namespace DataAccessTier
         public List<TaiSanTheChap> GetTaiSanTheChapByMaYeuCauChoVay(String MaYC)
         {
             List<TaiSanTheChap> results = new List<TaiSanTheChap>();
+            List<string> DSMaTrangThai = new List<string>();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -69,7 +70,7 @@ namespace DataAccessTier
             {
                 cmd.Parameters.AddWithValue("@MaYeuCauChoVay", MaYC);
                 SqlDataReader reader = cmd.ExecuteReader();
-                while(reader.Read())
+                while (reader.Read())
                 {
                     TaiSanTheChap taiSanTheChap = new TaiSanTheChap();
                     string matrangthai = "";
@@ -77,16 +78,21 @@ namespace DataAccessTier
                     taiSanTheChap.MoTa = reader.GetString(1);
                     taiSanTheChap.DinhGia = reader.GetDouble(2);
                     matrangthai = reader.GetString(3);
-                    TrangThaiTaiSanDAO tempAccessObj = new TrangThaiTaiSanDAO();
-                    if (!matrangthai.Equals(""))
-                    {
-                        taiSanTheChap.TrangThai = tempAccessObj.GetTrangThaiByMaTrangThai(matrangthai);
-                    }
-                    GiayToChungThucDAO tempAccessObj2 = new GiayToChungThucDAO();
-                    taiSanTheChap.DSMaGiayToChungThuc = tempAccessObj2.GetDSGiayToChungThucByMaTaiSanTHeChap(MaTaiSan);
-                    results.Add(taiSanTheChap);
-                }
 
+                    results.Add(taiSanTheChap);
+                    DSMaTrangThai.Add(matrangthai);
+                }
+                reader.Close();
+                TrangThaiTaiSanDAO tempAccessObj = new TrangThaiTaiSanDAO();
+                GiayToChungThucDAO tempAccessObj2 = new GiayToChungThucDAO();
+                for (int i = 0; i < results.Count; i++)
+                {
+                    results[i].DSMaGiayToChungThuc = tempAccessObj2.GetMaGiayChungThucByMaTaiSan(results[i].MaTSTC);
+                }
+                for (int i = 0; i < DSMaTrangThai.Count; i++)
+                {
+                    results[i].TrangThai = tempAccessObj.GetTrangThaiByMaTrangThai(DSMaTrangThai[i]);
+                }
             }
             catch (SqlException SQLex)
             {

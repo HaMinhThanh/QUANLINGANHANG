@@ -17,7 +17,7 @@ namespace QLNH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HSChoVayForm());
+            Application.Run(new ChiTieuBoSungForm());
         }
     }
 }

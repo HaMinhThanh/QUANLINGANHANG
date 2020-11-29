@@ -64,7 +64,7 @@ namespace DataAccessTier
                 if (entry is GiaoDichThu) LoaiGiaoDich = 1;
                 else if (entry is GiaoDichChi) LoaiGiaoDich = 2;
                 else throw new Exception("Unknown transaction type");
-                cmd.Parameters.AddWithValue("@MaKQ", entry.UUID);
+                cmd.Parameters.AddWithValue("@MaGiaoDich", entry.UUID);
                 cmd.Parameters.AddWithValue("@LoaiGiaoDich", LoaiGiaoDich);
                 cmd.Parameters.AddWithValue("@DonViGiaoDich", entry.DonViGiaoDich);
                 cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTri);
@@ -82,6 +82,10 @@ namespace DataAccessTier
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                conn.Close();
             }
         }
     }

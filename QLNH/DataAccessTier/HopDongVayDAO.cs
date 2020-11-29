@@ -63,7 +63,7 @@ namespace DataAccessTier
             try
             {
                 cmd.Parameters.AddWithValue("@MaHopDong", entry.MaHopDong);
-                cmd.Parameters.AddWithValue("@MaYeuCau", entry.YeuCauVay.UUID);
+                cmd.Parameters.AddWithValue("@MaYeuCau", entry.YeuCauVay.MaYeuCau);
                 cmd.Parameters.AddWithValue("@MaNV", entry.NVThietLap.MaNV);
                 cmd.Parameters.AddWithValue("@NgayLap", entry.NgayThietLap);
                 cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTriConLai);

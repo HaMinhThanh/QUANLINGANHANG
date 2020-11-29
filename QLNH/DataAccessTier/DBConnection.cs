@@ -24,7 +24,10 @@ namespace DataAccessTier
 
         ~DBConnection()
         {
-            conn.Close();
+            if (conn.State != System.Data.ConnectionState.Closed)
+            {
+                conn.Close();
+            }
         }
     }
 }

@@ -39,12 +39,16 @@ namespace DataAccessTier
                             result = new YeuCauChinhSuaLaiSuat();
                             ((YeuCauChinhSuaLaiSuat)result).GiaTriMoi = reader.GetInt32(2);
                             break;
-                        default: throw new Exception("unknow yeucauchinhsua type");
+                        default: throw new Exception("Unknown yeucauchinhsua type");
                     }
                     
                 }
                 reader.Close();
-
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
     }
