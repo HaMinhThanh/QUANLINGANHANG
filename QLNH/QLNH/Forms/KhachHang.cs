@@ -14,6 +14,7 @@ namespace QLNH
     public partial class KhachHang : Form
     {
         private KhachHangBUS busObj = new KhachHangBUS();
+        private DinhDanhBUS busObjDinhDanh = new DinhDanhBUS();
         public KhachHang()
         {
             InitializeComponent();
@@ -28,9 +29,9 @@ namespace QLNH
             {
                 entry = new KhachHangDoanhNghiep();
                 ((KhachHangDoanhNghiep)entry).MaDKDoanhNghiep = textBox3.Text;
-                ((KhachHangDoanhNghiep)entry).TenDoanhNghiep = textBox6.Text;
-                ((KhachHangDoanhNghiep)entry).LinhVuc = textBox7.Text;
-                ((KhachHangDoanhNghiep)entry).ChucVuKHDaiDien = textBox8.Text;
+                ((KhachHangDoanhNghiep)entry).TenDoanhNghiep = textBox7.Text;
+                ((KhachHangDoanhNghiep)entry).LinhVuc = textBox8.Text;
+                ((KhachHangDoanhNghiep)entry).ChucVuKHDaiDien = textBox6.Text;
             }
             else
             {
@@ -51,6 +52,7 @@ namespace QLNH
 
             try
             {
+                busObjDinhDanh.AddDinhDanh(entry.DinhDanhKH);
                 busObj.AddKhachHang(entry);
             }
             catch (Exception ex)

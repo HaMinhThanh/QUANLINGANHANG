@@ -8,7 +8,7 @@ namespace DataModel
 {
     public class DinhDanh
     {
-        public string MaDinhDanh;
+        public string MaDinhDanh { get; set; } = "";
         public enum DANH_SACH_LOAI_DINH_DANH { CMND, CCCD, PASSPORT }
         public DANH_SACH_LOAI_DINH_DANH LoaiDinhDanh { get; set; }
         public string GiaTriDinhDanh { get; set; }
