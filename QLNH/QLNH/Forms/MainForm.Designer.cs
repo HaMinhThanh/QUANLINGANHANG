@@ -659,8 +659,8 @@
             this.tableLayoutPanel11.Controls.Add(this.button12, 3, 2);
             this.tableLayoutPanel11.Controls.Add(this.textBox9, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.textBox11, 3, 0);
-            this.tableLayoutPanel11.Controls.Add(this.textBox12, 3, 1);
-            this.tableLayoutPanel11.Controls.Add(this.comboBox12, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.textBox12, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.comboBox12, 3, 1);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 2);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -746,19 +746,20 @@
             // textBox12
             // 
             this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Location = new System.Drawing.Point(637, 44);
+            this.textBox12.Location = new System.Drawing.Point(184, 44);
             this.textBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(268, 22);
+            this.textBox12.Size = new System.Drawing.Size(266, 22);
             this.textBox12.TabIndex = 8;
+            this.textBox12.TextChanged += new System.EventHandler(this.textBox12_TextChanged);
             // 
             // comboBox12
             // 
             this.comboBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(184, 43);
+            this.comboBox12.Location = new System.Drawing.Point(637, 43);
             this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(266, 24);
+            this.comboBox12.Size = new System.Drawing.Size(268, 24);
             this.comboBox12.TabIndex = 9;
             // 
             // tabPage5
