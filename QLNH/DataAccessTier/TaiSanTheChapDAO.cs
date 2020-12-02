@@ -32,7 +32,7 @@ namespace DataAccessTier
                 {
                     result.MaTSTC = reader.GetString(0);
                     result.MoTa = reader.GetString(1);
-                    result.DinhGia = reader.GetDouble(2);
+                    result.DinhGia = (Double) reader.GetDecimal(2);
                     matrangthai = reader.GetString(3);
                 }
                 reader.Close();
@@ -78,7 +78,7 @@ namespace DataAccessTier
                     string matrangthai = "";
                     taiSanTheChap.MaTSTC = reader.GetString(0);
                     taiSanTheChap.MoTa = reader.GetString(1);
-                    taiSanTheChap.DinhGia = reader.GetDouble(2);
+                    taiSanTheChap.DinhGia = (Double) reader.GetDecimal(2);
                     matrangthai = reader.GetString(3);
 
                     results.Add(taiSanTheChap);
@@ -108,7 +108,7 @@ namespace DataAccessTier
 
         }
 
-        public bool AddTaiSanTheChap(TaiSanTheChap entry)
+        public bool AddTaiSanTheChap(TaiSanTheChap entry, string MaYeuCau = null)
         {
             SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
@@ -118,14 +118,24 @@ namespace DataAccessTier
             if (entry.MaTSTC.Equals("")) entry.MaTSTC = Guid.NewGuid().ToString();
             try
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO tbTaiSanTheChap VALUES (@MaTaiSan, @MoTa, @DinhGia, @MaTrangThai)", conn);
+                SqlCommand cmd = new SqlCommand("INSERT INTO tbTaiSanTheChap VALUES (@MaTaiSan, @MaYeuCau, @MoTa, @DinhGia, @MaTrangThai)", conn);
                 cmd.Parameters.AddWithValue("@MaTaiSan", entry.MaTSTC);
+                cmd.Parameters.AddWithValue("@MaYeuCau", MaYeuCau);
                 cmd.Parameters.AddWithValue("@MoTa", entry.MoTa);
-                cmd.Parameters.AddWithValue("@DinhGia", entry.DinhGia);
+                if (entry.DinhGia == -1)
+                    cmd.Parameters.AddWithValue("@DinhGia", DBNull.Value);
+                else
+                    cmd.Parameters.AddWithValue("@DinhGia", entry.DinhGia);
                 cmd.Parameters.AddWithValue("@MaTrangThai", entry.TrangThai.UUID);
 
                 int res = cmd.ExecuteNonQuery();
                 if (res != 1) throw new Exception("Can't add new TaiSanTheChap");
+
+                GiayToChungThucDAO tempDataObj = new GiayToChungThucDAO();
+                foreach (string val in entry.DSMaGiayToChungThuc)
+                {
+                    tempDataObj.AddMaGiayChungThuc(entry.MaTSTC, val);
+                }
 
                 return true;
 
@@ -140,7 +150,7 @@ namespace DataAccessTier
             }
         }
 
-        public bool UpdateTaiSanTheChap(TaiSanTheChap entry,string MaTS)
+        public bool UpdateTaiSanTheChap(TaiSanTheChap entry, string MaTS)
         { return true; }
     }
 }

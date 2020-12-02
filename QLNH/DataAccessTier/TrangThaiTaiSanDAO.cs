@@ -27,7 +27,7 @@ namespace DataAccessTier
                 {
                     result.UUID = reader.GetString(0);
                     result.TenTrangThai= reader.GetString(1);
-                    result.MucDanhGia = reader.GetDouble(2);
+                    result.MucDanhGia = (Double) reader.GetDecimal(2);
                 }
                 reader.Close();
             }

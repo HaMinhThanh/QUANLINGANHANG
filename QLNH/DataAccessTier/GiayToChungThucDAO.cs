@@ -49,8 +49,8 @@ namespace DataAccessTier
             SqlCommand cmd = new SqlCommand("INSERT INTO tbGiayToChungThuc VALUES(@MaChungThuc, @MaTaiSan)", conn);
             try
             {
-                cmd.Parameters.AddWithValue("@MaDinhDanh", MaChungThuc);
-                cmd.Parameters.AddWithValue("@LoaiDinhDanh", MaTaiSan);
+                cmd.Parameters.AddWithValue("@MaChungThuc", MaChungThuc);
+                cmd.Parameters.AddWithValue("@MaTaiSan", MaTaiSan);
 
                 int res = cmd.ExecuteNonQuery();
                 if (res != 1) throw new Exception("Can't add new ownership paper");

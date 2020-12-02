@@ -7,7 +7,7 @@ namespace DataModel
 {
     public class BaoCaoTaiChinh
     {
-        public string MaBaoCao { get; set; }
+        public string MaBaoCao { get; set; } = "";
         public KhachHang DoiTuongBaoCao { get; set; }
         public bool suDungVonDungMucDich { get; set; }
         public bool trangThaiTaiSanDamBao { get; set; }

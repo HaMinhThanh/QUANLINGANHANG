@@ -54,6 +54,8 @@ namespace QLNH
             {
                 busObjDinhDanh.AddDinhDanh(entry.DinhDanhKH);
                 busObj.AddKhachHang(entry);
+                MessageBox.Show("Thêm khách hàng thành công", "Thông báo");
+                this.Close();
             }
             catch (Exception ex)
             {

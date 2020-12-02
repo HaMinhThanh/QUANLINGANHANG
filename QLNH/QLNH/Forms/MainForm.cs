@@ -11,6 +11,7 @@ namespace QLNH.Forms
 {
     public partial class MainForm : Form
     {
+        public LoginForm rootForm { get; set; }
         public MainForm()
         {
             InitializeComponent();
@@ -18,6 +19,15 @@ namespace QLNH.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HopDongVayExt' table. You can move, or remove it, as needed.
+            this.hopDongVayExtTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExt);
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HoatDong' table. You can move, or remove it, as needed.
+            this.hoatDongTableAdapter.Fill(this.quanLyNganHangDataSet.HoatDong);
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TaiSanTheChapExt' table. You can move, or remove it, as needed.
+            this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.KhachHang' table. You can move, or remove it, as needed.
+            this.khachHangTableAdapter.Fill(this.quanLyNganHangDataSet.KhachHang);
+
             TableLayoutPanel dynamicTableLayoutPanel = new TableLayoutPanel();
 
             //dynamicTableLayoutPanel.Location = new System.Drawing.Point(3, 110);
@@ -249,77 +259,122 @@ namespace QLNH.Forms
 
         private void BtnBaoCaoTaiChinh_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            BaoCaoTaiChinhForm newForm = new BaoCaoTaiChinhForm();
+            newForm.Show();
         }
 
         private void BtnBaoCaoDoiTuong_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            BaoCaoTaiChinhDoiTuongVay newForm = new BaoCaoTaiChinhDoiTuongVay();
+            newForm.Show();
         }
 
         private void BtnQuyetToan_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            QuyetToanForm newForm = new QuyetToanForm();
+            newForm.Show();
         }
 
         private void BtnHDQuaHan_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            
+            //DanhSachHopDongQuaHanForm newForm = new DanhSachHopDongQuaHanForm();
+            //newForm.Show();
         }
 
         private void BtnChiTieuBoSung_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            ChiTieuBoSungForm newForm = new ChiTieuBoSungForm();
+            newForm.Show();
         }
 
         private void BtnDongVonBoSung_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            DongVonBoSungForm newForm = new DongVonBoSungForm();
+            newForm.Show();
         }
 
         private void BtnThanhLy_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            //DanhSachHopDongThanhLyForm newForm = new DanhSachThanhLyQuaHanForm();
+            //newForm.Show();
         }
 
         private void BtnDonGHMG_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            DonMGGHForm newForm = new DonMGGHForm();
+            newForm.Show();
         }
 
         private void BtnHSPhatTien_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            HSPhatTienVayForm newForm = new HSPhatTienVayForm();
+            newForm.Show();
         }
 
         private void BtnXetDuyetChoVay_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            XetDuyetChoVayForm newForm = new XetDuyetChoVayForm();
+            newForm.Show();
         }
 
         private void BtnXuLiYeuCauHD_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            XuLiYeuCauHĐForm newForm = new XuLiYeuCauHĐForm();
+            newForm.Show();
         }
 
         private void BtnXacNhanHD_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            XacNhanHopDongForm newForm = new XacNhanHopDongForm();
+            newForm.Show();
         }
 
         private void BtnThongBao_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            ThongBaoForm newForm = new ThongBaoForm();
+            newForm.Show();
         }
 
         private void BtnTaiSanTheChap_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            TaiSanTheChapForm newForm = new TaiSanTheChapForm();
+            newForm.Show();
         }
 
         private void BtnThuNoLai_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            PhieuThuNoLaiForm newForm = new PhieuThuNoLaiForm();
+            newForm.Show();
         }
 
         private void BtnDonMGGH_Click(object sender, EventArgs e)
@@ -329,12 +384,30 @@ namespace QLNH.Forms
 
         private void BtnHSChoVay_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            HSChoVayForm newForm = new HSChoVayForm();
+            newForm.Show();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            rootForm.Show();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.khachHangTableAdapter.Fill(this.quanLyNganHangDataSet.KhachHang);
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
         }
     }
 }

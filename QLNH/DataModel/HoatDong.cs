@@ -8,7 +8,7 @@ namespace DataModel
 {
     public class HoatDong
     {
-        public string UUID { get; set; }
+        public string UUID { get; set; } = "";
         public NhanVien NhanVienThucHien { get; set; }
         public DateTime ThoiDiem { get; set; }
         public string MoTa { get; set; }

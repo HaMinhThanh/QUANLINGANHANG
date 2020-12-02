@@ -11,12 +11,18 @@ namespace QLNH
 {
     public partial class DonMGGHForm : Form
     {
+        private string MaHDVay = "";
         public DonMGGHForm()
         {
             InitializeComponent();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

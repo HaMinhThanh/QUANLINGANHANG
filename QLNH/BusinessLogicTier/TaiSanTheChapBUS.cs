@@ -34,11 +34,11 @@ namespace BusinessLogicTier
             }
         }
 
-        public bool AddTaiSanTheChap(TaiSanTheChap entry)
+        public bool AddTaiSanTheChap(TaiSanTheChap entry, string MaYeuCau = null)
         {
             try
             {
-                return dataAccessObj.AddTaiSanTheChap(entry);
+                return dataAccessObj.AddTaiSanTheChap(entry, MaYeuCau);
             }
             catch (Exception ex)
             {

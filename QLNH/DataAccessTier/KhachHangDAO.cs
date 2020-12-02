@@ -37,7 +37,10 @@ namespace DataAccessTier
                     result.SDT = reader.GetString(3);
                     result.DiaChi = reader.GetString(4);
                     MaDinhDanh = reader.GetString(5);
-                    MaDoanhNghiep = reader.GetString(6);
+                    if (reader[6] == DBNull.Value)
+                        MaDoanhNghiep = "";
+                    else
+                        MaDoanhNghiep = reader.GetString(6);
                     result.GioiTinh = reader.GetString(7);
                 }
                 reader.Close();

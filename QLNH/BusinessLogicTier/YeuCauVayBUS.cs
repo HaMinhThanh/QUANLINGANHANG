@@ -22,7 +22,7 @@ namespace BusinessLogicTier
             }
         }
 
-        public bool AddYeuCauChoVay(YeuCauChoVay entry)
+        public string AddYeuCauChoVay(YeuCauChoVay entry)
         {
             try
             {

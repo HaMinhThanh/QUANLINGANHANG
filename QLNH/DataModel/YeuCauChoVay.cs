@@ -8,7 +8,7 @@ namespace DataModel
 {
     public class YeuCauChoVay
     {
-        public string MaYeuCau { get; set; }
+        public string MaYeuCau { get; set; } = "";
         public KhachHang KHYeuCau { get; set; }
         public NhanVienTinDung NVTiepNhan { get; set; }
         public DateTime ThoiDiemTiepNhan { get; set; }

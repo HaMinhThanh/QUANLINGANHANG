@@ -8,7 +8,7 @@ namespace DataModel
 {
     public class BienBanPhatTien
     {
-        public string UUID { get; set; }
+        public string UUID { get; set; } = "";
         public NhanVienTinDung NVThucHien { get; set; }
         public HopDongChoVay HopDong { get; set; }
         public GiaoDichChi GiaoDichThucHien { get; set; }

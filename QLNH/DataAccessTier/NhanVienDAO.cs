@@ -8,13 +8,14 @@ using DataModel;
 
 namespace DataAccessTier
 {
-    public class NhanVienDAO : DBConnection
+    public class NhanVienDAO
     {
-        public NhanVienDAO() : base() { }
+        public NhanVienDAO() { }
         public NhanVien GetNhanVienByMaNV(string MaNV)
         {
             NhanVien result = new NhanVien();
             string MaDinhDanh = "";
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();
@@ -26,14 +27,14 @@ namespace DataAccessTier
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    switch (reader.GetInt32(9))
-                    {
-                        case 1: result = new NhanVienTinDung(); break;
-                        case 2: result = new NhanVienKeToan(); break;
-                        case 3: result = new NhanVienXetDuyet(); break;
-                        case 4: result = new NhanVienQuanLy(); break;
-                        default: throw new Exception("Unknown Employee Type");
-                    }
+                    int employeeType = (byte)reader["LoaiNhanVien"];
+
+                    if (employeeType == 1) result = new NhanVienTinDung();
+                    else if (employeeType == 2) result = new NhanVienKeToan();
+                    else if (employeeType == 3) result = new NhanVienXetDuyet();
+                    else if (employeeType == 4) result = new NhanVienQuanLy();
+                    else throw new Exception("Unknown Employee Type");
+
                     result.MaNV = reader.GetString(0);
                     result.HoTen = reader.GetString(1);
                     result.NgaySinh = reader.GetDateTime(4);
@@ -65,6 +66,7 @@ namespace DataAccessTier
         {
             NhanVien result = null;
             string MaDinhDanh = "";
+            SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
             {
                 conn.Open();

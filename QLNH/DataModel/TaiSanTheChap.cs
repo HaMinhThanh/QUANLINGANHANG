@@ -8,9 +8,9 @@ namespace DataModel
 {
     public class TaiSanTheChap
     {
-        public string MaTSTC { get; set; }
+        public string MaTSTC { get; set; } = "";
         public string MoTa { get; set; }
-        public double DinhGia { get; set; }
+        public double DinhGia { get; set; } = -1;
         public TrangThaiTaiSan TrangThai { get; set; }
         public List<string> DSMaGiayToChungThuc { get; set; }
     }

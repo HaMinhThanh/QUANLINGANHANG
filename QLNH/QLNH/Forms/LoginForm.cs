@@ -35,6 +35,7 @@ namespace QLNH.Forms
                 return;
             }
             MainForm mainForm = new MainForm();
+            mainForm.rootForm = this;
             mainForm.Show();
             this.Hide();
         }

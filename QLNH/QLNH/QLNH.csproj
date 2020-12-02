@@ -199,6 +199,9 @@
     <Compile Include="Forms\XuLiYeuCauHĐForm.Designer.cs">
       <DependentUpon>XuLiYeuCauHĐForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyNganHangDataSet.cs">
+      <DependentUpon>QuanLyNganHangDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyNganHangDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -303,10 +306,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="QuanLyNganHang.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="QuanLyNganHang_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
     </Content>
     <None Include="Resources\tải xuống.png" />
