@@ -75,8 +75,8 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.21172F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.78828F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 77.8828F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.1172F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(937, 529);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -89,12 +89,12 @@
             this.tableLayoutPanel4.Controls.Add(this.button3, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 385);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 414);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(462, 141);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(462, 112);
             this.tableLayoutPanel4.TabIndex = 6;
             // 
             // groupBox2
@@ -103,7 +103,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(471, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(463, 376);
+            this.groupBox2.Size = new System.Drawing.Size(463, 405);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
@@ -135,14 +135,14 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(457, 355);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(457, 384);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 21);
+            this.label1.Location = new System.Drawing.Point(3, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 17);
             this.label1.TabIndex = 0;
@@ -152,7 +152,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 80);
+            this.label2.Location = new System.Drawing.Point(3, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 17);
             this.label2.TabIndex = 1;
@@ -162,7 +162,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 139);
+            this.label3.Location = new System.Drawing.Point(3, 151);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(121, 17);
             this.label3.TabIndex = 2;
@@ -172,7 +172,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 198);
+            this.label4.Location = new System.Drawing.Point(3, 215);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 17);
             this.label4.TabIndex = 3;
@@ -182,7 +182,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 257);
+            this.label5.Location = new System.Drawing.Point(3, 279);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(121, 17);
             this.label5.TabIndex = 4;
@@ -192,7 +192,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 316);
+            this.label6.Location = new System.Drawing.Point(3, 343);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(121, 17);
             this.label6.TabIndex = 5;
@@ -201,7 +201,7 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(130, 18);
+            this.textBox1.Location = new System.Drawing.Point(130, 21);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(324, 22);
@@ -210,7 +210,7 @@
             // textBox2
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(130, 77);
+            this.textBox2.Location = new System.Drawing.Point(130, 85);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(324, 22);
@@ -219,7 +219,7 @@
             // textBox4
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Location = new System.Drawing.Point(130, 195);
+            this.textBox4.Location = new System.Drawing.Point(130, 213);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(324, 22);
@@ -228,7 +228,7 @@
             // textBox5
             // 
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Location = new System.Drawing.Point(130, 254);
+            this.textBox5.Location = new System.Drawing.Point(130, 277);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(324, 22);
@@ -238,7 +238,7 @@
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(130, 136);
+            this.dateTimePicker1.Location = new System.Drawing.Point(130, 149);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(324, 22);
             this.dateTimePicker1.TabIndex = 11;
@@ -247,7 +247,7 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(130, 316);
+            this.label7.Location = new System.Drawing.Point(130, 343);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(324, 17);
             this.label7.TabIndex = 12;
@@ -263,12 +263,12 @@
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.button6, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(471, 385);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(471, 414);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(463, 141);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(463, 112);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // groupBox1
@@ -277,7 +277,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 376);
+            this.groupBox1.Size = new System.Drawing.Size(462, 405);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hợp đồng";
@@ -290,77 +290,82 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(456, 355);
+            this.dataGridView1.Size = new System.Drawing.Size(456, 384);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Image = global::QLNH.Properties.Resources.add_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 13);
+            this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(225, 44);
+            this.button1.Size = new System.Drawing.Size(225, 50);
             this.button1.TabIndex = 0;
             this.button1.Text = "Thêm điều khoản";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Image = global::QLNH.Properties.Resources.Loupe_icon;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(234, 83);
+            this.button3.Location = new System.Drawing.Point(232, 59);
+            this.button3.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(225, 44);
+            this.button3.Size = new System.Drawing.Size(229, 50);
             this.button3.TabIndex = 2;
             this.button3.Text = "Chi tiết";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Image = global::QLNH.Properties.Resources.delete_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(234, 13);
+            this.button2.Location = new System.Drawing.Point(232, 3);
+            this.button2.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(225, 44);
+            this.button2.Size = new System.Drawing.Size(229, 50);
             this.button2.TabIndex = 1;
             this.button2.Text = "Xóa điều khoản";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.Image = global::QLNH.Properties.Resources.Actions_dialog_ok_apply_icon;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(3, 13);
+            this.button4.Location = new System.Drawing.Point(1, 3);
+            this.button4.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(225, 43);
+            this.button4.Size = new System.Drawing.Size(229, 50);
             this.button4.TabIndex = 0;
             this.button4.Text = "Chấp nhận";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.Image = global::QLNH.Properties.Resources.delete_icon;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(234, 13);
+            this.button5.Location = new System.Drawing.Point(232, 3);
+            this.button5.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(226, 43);
+            this.button5.Size = new System.Drawing.Size(230, 50);
             this.button5.TabIndex = 1;
             this.button5.Text = "Từ chối";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button6.Image = global::QLNH.Properties.Resources.Go_back_icon;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(234, 84);
+            this.button6.Location = new System.Drawing.Point(232, 59);
+            this.button6.Margin = new System.Windows.Forms.Padding(1, 3, 1, 3);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(226, 43);
+            this.button6.Size = new System.Drawing.Size(230, 50);
             this.button6.TabIndex = 2;
             this.button6.Text = "Thoát";
             this.button6.UseVisualStyleBackColor = true;

@@ -208,6 +208,12 @@
       <DependentUpon>QuanLyNganHangDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SessionState.cs" />
+    <Compile Include="Forms\TraCuuKhoanVay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TraCuuKhoanVay.Designer.cs">
+      <DependentUpon>TraCuuKhoanVay.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\BaoCaoTaiChinhDoiTuongVay.resx">
       <DependentUpon>BaoCaoTaiChinhDoiTuongVay.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChiTietKhoanVay.resx">
       <DependentUpon>ChiTietKhoanVay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TraCuuKhoanVay.resx">
+      <DependentUpon>TraCuuKhoanVay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -312,6 +321,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\Programming-Show-Property-icon.png" />
+    <None Include="Resources\Loupe-icon1.png" />
     <None Include="Resources\tải xuống.png" />
     <None Include="QuanLyNganHangDataSet.xsc">
       <DependentUpon>QuanLyNganHangDataSet.xsd</DependentUpon>

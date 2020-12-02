@@ -23,7 +23,7 @@ namespace QLNH
         {
             try
             {
-                double input = Double.Parse(textBox5.Text);
+                double input = Double.Parse(textBox2.Text);
                 if (Double.IsNaN(input)) throw new Exception("Invalid number format");
                 label12.Text = HelperFunction.Number2Pronounce(input);
             }
@@ -41,7 +41,7 @@ namespace QLNH
                 GiaoDichChi transactionOut = new GiaoDichChi();
                 transactionOut.ThoiDiemThucHien = dateTimePicker2.Value;
                 transactionOut.DonViGiaoDich = textBox4.Text;
-                transactionOut.GiaTri = Double.Parse(textBox5.Text);
+                transactionOut.GiaTri = Double.Parse(textBox2.Text);
                 transactionOut.MoTa = richTextBox2.Text;
 
                 bool res = busObj.AddGiaoDich(transactionOut);
