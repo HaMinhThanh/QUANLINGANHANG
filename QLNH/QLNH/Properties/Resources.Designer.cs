@@ -133,9 +133,29 @@ namespace QLNH.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Loupe_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("Loupe-icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap print_icon {
             get {
                 object obj = ResourceManager.GetObject("print-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Programming_Show_Property_icon {
+            get {
+                object obj = ResourceManager.GetObject("Programming-Show-Property-icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

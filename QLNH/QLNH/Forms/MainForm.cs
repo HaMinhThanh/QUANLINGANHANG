@@ -24,21 +24,22 @@ namespace QLNH.Forms
             dynamicTableLayoutPanel.Name = "TableLayoutPanel1";
             //dynamicTableLayoutPanel.Size = new System.Drawing.Size(300, 565);
             
-            dynamicTableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            dynamicTableLayoutPanel.AutoSize = false;
+            dynamicTableLayoutPanel.Dock = DockStyle.Fill;
+            dynamicTableLayoutPanel.AutoSize = true;
             dynamicTableLayoutPanel.ColumnCount = 1;
             dynamicTableLayoutPanel.RowCount = 10;
-            
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45 ));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45 ));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45 ));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45 ));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45 ));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45));
-            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Absolute, 45));
+
+            dynamicTableLayoutPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10 ));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
+            dynamicTableLayoutPanel.RowStyles.Add(new RowStyle(SizeType.Percent, 10));
 
             Label lab = new Label();            
             //lab.Size = new Size(299, 44);
@@ -140,7 +141,7 @@ namespace QLNH.Forms
                 dynamicTableLayoutPanel.Controls.Add(btnThuNoLai, 0, 1);
                 Controls.Add(dynamicTableLayoutPanel);
             } 
-            else if (SessionState.NVDangNhap is DataModel.NhanVienQuanLy)
+            else //if (SessionState.NVDangNhap is DataModel.NhanVienQuanLy)
             {
                 Button btnHSPhatTien = new Button();
                 //btnHSPhatTien.Location = new Point(3, 59);
@@ -157,9 +158,9 @@ namespace QLNH.Forms
                 btnDonGHMG.Size = new Size(299, 44);
                 btnDonGHMG.Text = "Lập Đơn GHMG";
                 btnDonGHMG.Click += BtnDonGHMG_Click;
-                btnDonGHMG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnDonGHMG.TextAlign = ContentAlignment.MiddleCenter;
                 btnDonGHMG.TabIndex = 2;
-                btnDonGHMG.Dock = System.Windows.Forms.DockStyle.Fill;
+                btnDonGHMG.Dock = DockStyle.Fill;
                 Controls.Add(btnDonGHMG);
 
                 Button btnThanhLy = new Button();
