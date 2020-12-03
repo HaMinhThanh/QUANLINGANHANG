@@ -40,6 +40,16 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaiDinhDanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaTriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -56,6 +66,14 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.maHopDongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaTriHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maTrangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayThietLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laiSuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kiHanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hopDongVayExtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -70,6 +88,11 @@
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.maTaiSanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moTaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dinhGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenTrangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taiSanTheChapExtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -84,6 +107,12 @@
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.maHoatDongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoiDiemThucHienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moTaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenDangNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoatDongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -114,39 +143,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
-            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khachHangTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.KhachHangTableAdapter();
-            this.maKHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaySinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sDTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diaChiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaiDinhDanhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaTriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hopDongVayExtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hopDongVayExtTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.HopDongVayExtTableAdapter();
-            this.maHopDongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaTriHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maTrangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayThietLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laiSuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kiHanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.taiSanTheChapExtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.taiSanTheChapExtTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.TaiSanTheChapExtTableAdapter();
-            this.maTaiSanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moTaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dinhGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenTrangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoatDongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.hoatDongTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.HoatDongTableAdapter();
-            this.maHoatDongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thoiDiemThucHienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moTaDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDangNhapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -155,29 +155,29 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiSanTheChapExtBindingSource)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoatDongBindingSource)).BeginInit();
             this.tableLayoutPanel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taiSanTheChapExtBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoatDongBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -262,7 +262,7 @@
             this.tabControl1.Controls.Add(this.tabPage5);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(235, 88);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(697, 461);
@@ -272,9 +272,9 @@
             // 
             this.tabPage2.Controls.Add(this.tableLayoutPanel6);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(689, 435);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Khách hàng";
@@ -288,7 +288,7 @@
             this.tableLayoutPanel6.Controls.Add(this.tableLayoutPanel7, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.5283F));
@@ -301,9 +301,9 @@
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(2, 107);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(681, 322);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
@@ -327,13 +327,79 @@
             this.dataGridView2.DataSource = this.khachHangBindingSource;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(2, 15);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(677, 305);
             this.dataGridView2.TabIndex = 0;
+            // 
+            // maKHDataGridViewTextBoxColumn
+            // 
+            this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.HeaderText = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
+            this.maKHDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoTenDataGridViewTextBoxColumn
+            // 
+            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ngaySinhDataGridViewTextBoxColumn
+            // 
+            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
+            this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sDTDataGridViewTextBoxColumn
+            // 
+            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
+            this.sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
+            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
+            this.sDTDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // diaChiDataGridViewTextBoxColumn
+            // 
+            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
+            this.diaChiDataGridViewTextBoxColumn.HeaderText = "DiaChi";
+            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
+            this.diaChiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // gioiTinhDataGridViewTextBoxColumn
+            // 
+            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
+            this.gioiTinhDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // loaiDinhDanhDataGridViewTextBoxColumn
+            // 
+            this.loaiDinhDanhDataGridViewTextBoxColumn.DataPropertyName = "LoaiDinhDanh";
+            this.loaiDinhDanhDataGridViewTextBoxColumn.HeaderText = "LoaiDinhDanh";
+            this.loaiDinhDanhDataGridViewTextBoxColumn.Name = "loaiDinhDanhDataGridViewTextBoxColumn";
+            this.loaiDinhDanhDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // giaTriDataGridViewTextBoxColumn
+            // 
+            this.giaTriDataGridViewTextBoxColumn.DataPropertyName = "GiaTri";
+            this.giaTriDataGridViewTextBoxColumn.HeaderText = "GiaTri";
+            this.giaTriDataGridViewTextBoxColumn.Name = "giaTriDataGridViewTextBoxColumn";
+            this.giaTriDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // khachHangBindingSource
+            // 
+            this.khachHangBindingSource.DataMember = "KhachHang";
+            this.khachHangBindingSource.DataSource = this.quanLyNganHangDataSet;
+            // 
+            // quanLyNganHangDataSet
+            // 
+            this.quanLyNganHangDataSet.DataSetName = "QuanLyNganHangDataSet";
+            this.quanLyNganHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel7
             // 
@@ -353,7 +419,7 @@
             this.tableLayoutPanel7.Controls.Add(this.tableLayoutPanel3, 1, 1);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -412,7 +478,7 @@
             this.button10.Image = global::QLNH.Properties.Resources.Loupe_icon;
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.Location = new System.Drawing.Point(478, 62);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(201, 37);
             this.button10.TabIndex = 4;
@@ -423,7 +489,7 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(138, 5);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 20);
             this.textBox1.TabIndex = 5;
@@ -432,7 +498,7 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(478, 5);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(201, 20);
             this.textBox3.TabIndex = 7;
@@ -442,7 +508,7 @@
             this.comboBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Location = new System.Drawing.Point(478, 34);
-            this.comboBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox10.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(201, 21);
             this.comboBox10.TabIndex = 8;
@@ -456,7 +522,7 @@
             this.tableLayoutPanel3.Controls.Add(this.textBox2, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(138, 32);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -468,7 +534,7 @@
             this.comboBox13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox13.FormattingEnabled = true;
             this.comboBox13.Location = new System.Drawing.Point(2, 2);
-            this.comboBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox13.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(61, 21);
             this.comboBox13.TabIndex = 0;
@@ -477,7 +543,7 @@
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Location = new System.Drawing.Point(67, 2);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(131, 20);
             this.textBox2.TabIndex = 1;
@@ -486,9 +552,9 @@
             // 
             this.tabPage3.Controls.Add(this.tableLayoutPanel8);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(689, 435);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Hợp đồng";
@@ -502,7 +568,7 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 2;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.5283F));
@@ -515,9 +581,9 @@
             this.groupBox3.Controls.Add(this.dataGridView3);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(2, 107);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(681, 322);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
@@ -540,13 +606,67 @@
             this.dataGridView3.DataSource = this.hopDongVayExtBindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(2, 15);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(677, 305);
             this.dataGridView3.TabIndex = 0;
+            // 
+            // maHopDongDataGridViewTextBoxColumn
+            // 
+            this.maHopDongDataGridViewTextBoxColumn.DataPropertyName = "MaHopDong";
+            this.maHopDongDataGridViewTextBoxColumn.HeaderText = "MaHopDong";
+            this.maHopDongDataGridViewTextBoxColumn.Name = "maHopDongDataGridViewTextBoxColumn";
+            this.maHopDongDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoTenDataGridViewTextBoxColumn1
+            // 
+            this.hoTenDataGridViewTextBoxColumn1.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn1.HeaderText = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn1.Name = "hoTenDataGridViewTextBoxColumn1";
+            this.hoTenDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // giaTriHienTaiDataGridViewTextBoxColumn
+            // 
+            this.giaTriHienTaiDataGridViewTextBoxColumn.DataPropertyName = "GiaTriHienTai";
+            this.giaTriHienTaiDataGridViewTextBoxColumn.HeaderText = "GiaTriHienTai";
+            this.giaTriHienTaiDataGridViewTextBoxColumn.Name = "giaTriHienTaiDataGridViewTextBoxColumn";
+            this.giaTriHienTaiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // maTrangThaiDataGridViewTextBoxColumn
+            // 
+            this.maTrangThaiDataGridViewTextBoxColumn.DataPropertyName = "MaTrangThai";
+            this.maTrangThaiDataGridViewTextBoxColumn.HeaderText = "MaTrangThai";
+            this.maTrangThaiDataGridViewTextBoxColumn.Name = "maTrangThaiDataGridViewTextBoxColumn";
+            this.maTrangThaiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ngayThietLapDataGridViewTextBoxColumn
+            // 
+            this.ngayThietLapDataGridViewTextBoxColumn.DataPropertyName = "NgayThietLap";
+            this.ngayThietLapDataGridViewTextBoxColumn.HeaderText = "NgayThietLap";
+            this.ngayThietLapDataGridViewTextBoxColumn.Name = "ngayThietLapDataGridViewTextBoxColumn";
+            this.ngayThietLapDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // laiSuatDataGridViewTextBoxColumn
+            // 
+            this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
+            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "LaiSuat";
+            this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
+            this.laiSuatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kiHanDataGridViewTextBoxColumn
+            // 
+            this.kiHanDataGridViewTextBoxColumn.DataPropertyName = "KiHan";
+            this.kiHanDataGridViewTextBoxColumn.HeaderText = "KiHan";
+            this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
+            this.kiHanDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hopDongVayExtBindingSource
+            // 
+            this.hopDongVayExtBindingSource.DataMember = "HopDongVayExt";
+            this.hopDongVayExtBindingSource.DataSource = this.quanLyNganHangDataSet;
             // 
             // tableLayoutPanel9
             // 
@@ -566,7 +686,7 @@
             this.tableLayoutPanel9.Controls.Add(this.comboBox11, 1, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 3;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -625,7 +745,7 @@
             this.button11.Image = global::QLNH.Properties.Resources.Loupe_icon;
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button11.Location = new System.Drawing.Point(478, 62);
-            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(201, 37);
             this.button11.TabIndex = 4;
@@ -636,7 +756,7 @@
             // 
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Location = new System.Drawing.Point(138, 5);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(200, 20);
             this.textBox5.TabIndex = 5;
@@ -645,7 +765,7 @@
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox7.Location = new System.Drawing.Point(478, 5);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(201, 20);
             this.textBox7.TabIndex = 7;
@@ -654,7 +774,7 @@
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox8.Location = new System.Drawing.Point(478, 35);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(201, 20);
             this.textBox8.TabIndex = 8;
@@ -664,7 +784,7 @@
             this.comboBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Location = new System.Drawing.Point(138, 34);
-            this.comboBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox11.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(200, 21);
             this.comboBox11.TabIndex = 9;
@@ -673,9 +793,9 @@
             // 
             this.tabPage4.Controls.Add(this.tableLayoutPanel10);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(689, 435);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Tài sản thế chấp";
@@ -689,7 +809,7 @@
             this.tableLayoutPanel10.Controls.Add(this.tableLayoutPanel11, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 2;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.5283F));
@@ -702,9 +822,9 @@
             this.groupBox4.Controls.Add(this.dataGridView4);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(2, 107);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(681, 322);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
@@ -724,13 +844,46 @@
             this.dataGridView4.DataSource = this.taiSanTheChapExtBindingSource;
             this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView4.Location = new System.Drawing.Point(2, 15);
-            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView4.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.ReadOnly = true;
             this.dataGridView4.RowHeadersWidth = 51;
             this.dataGridView4.RowTemplate.Height = 24;
             this.dataGridView4.Size = new System.Drawing.Size(677, 305);
             this.dataGridView4.TabIndex = 0;
+            // 
+            // maTaiSanDataGridViewTextBoxColumn
+            // 
+            this.maTaiSanDataGridViewTextBoxColumn.DataPropertyName = "MaTaiSan";
+            this.maTaiSanDataGridViewTextBoxColumn.HeaderText = "MaTaiSan";
+            this.maTaiSanDataGridViewTextBoxColumn.Name = "maTaiSanDataGridViewTextBoxColumn";
+            this.maTaiSanDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // moTaDataGridViewTextBoxColumn
+            // 
+            this.moTaDataGridViewTextBoxColumn.DataPropertyName = "MoTa";
+            this.moTaDataGridViewTextBoxColumn.HeaderText = "MoTa";
+            this.moTaDataGridViewTextBoxColumn.Name = "moTaDataGridViewTextBoxColumn";
+            this.moTaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dinhGiaDataGridViewTextBoxColumn
+            // 
+            this.dinhGiaDataGridViewTextBoxColumn.DataPropertyName = "DinhGia";
+            this.dinhGiaDataGridViewTextBoxColumn.HeaderText = "DinhGia";
+            this.dinhGiaDataGridViewTextBoxColumn.Name = "dinhGiaDataGridViewTextBoxColumn";
+            this.dinhGiaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tenTrangThaiDataGridViewTextBoxColumn
+            // 
+            this.tenTrangThaiDataGridViewTextBoxColumn.DataPropertyName = "TenTrangThai";
+            this.tenTrangThaiDataGridViewTextBoxColumn.HeaderText = "TenTrangThai";
+            this.tenTrangThaiDataGridViewTextBoxColumn.Name = "tenTrangThaiDataGridViewTextBoxColumn";
+            this.tenTrangThaiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // taiSanTheChapExtBindingSource
+            // 
+            this.taiSanTheChapExtBindingSource.DataMember = "TaiSanTheChapExt";
+            this.taiSanTheChapExtBindingSource.DataSource = this.quanLyNganHangDataSet;
             // 
             // tableLayoutPanel11
             // 
@@ -750,7 +903,7 @@
             this.tableLayoutPanel11.Controls.Add(this.comboBox12, 1, 1);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 3;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30F));
@@ -809,7 +962,7 @@
             this.button12.Image = global::QLNH.Properties.Resources.Loupe_icon;
             this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button12.Location = new System.Drawing.Point(478, 62);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(201, 37);
             this.button12.TabIndex = 4;
@@ -820,7 +973,7 @@
             // 
             this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox9.Location = new System.Drawing.Point(138, 5);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(200, 20);
             this.textBox9.TabIndex = 5;
@@ -829,7 +982,7 @@
             // 
             this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox11.Location = new System.Drawing.Point(478, 5);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(201, 20);
             this.textBox11.TabIndex = 7;
@@ -838,7 +991,7 @@
             // 
             this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox12.Location = new System.Drawing.Point(478, 35);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(201, 20);
             this.textBox12.TabIndex = 8;
@@ -848,7 +1001,7 @@
             this.comboBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox12.FormattingEnabled = true;
             this.comboBox12.Location = new System.Drawing.Point(138, 34);
-            this.comboBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox12.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(200, 21);
             this.comboBox12.TabIndex = 9;
@@ -857,9 +1010,9 @@
             // 
             this.tabPage5.Controls.Add(this.tableLayoutPanel12);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage5.Size = new System.Drawing.Size(689, 435);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Hoạt động";
@@ -873,7 +1026,7 @@
             this.tableLayoutPanel12.Controls.Add(this.tableLayoutPanel13, 0, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel12.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel12.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 2;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.5283F));
@@ -886,9 +1039,9 @@
             this.groupBox5.Controls.Add(this.dataGridView5);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.Location = new System.Drawing.Point(2, 107);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(681, 322);
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
@@ -909,13 +1062,53 @@
             this.dataGridView5.DataSource = this.hoatDongBindingSource;
             this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView5.Location = new System.Drawing.Point(2, 15);
-            this.dataGridView5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView5.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.ReadOnly = true;
             this.dataGridView5.RowHeadersWidth = 51;
             this.dataGridView5.RowTemplate.Height = 24;
             this.dataGridView5.Size = new System.Drawing.Size(677, 305);
             this.dataGridView5.TabIndex = 0;
+            // 
+            // maHoatDongDataGridViewTextBoxColumn
+            // 
+            this.maHoatDongDataGridViewTextBoxColumn.DataPropertyName = "MaHoatDong";
+            this.maHoatDongDataGridViewTextBoxColumn.HeaderText = "MaHoatDong";
+            this.maHoatDongDataGridViewTextBoxColumn.Name = "maHoatDongDataGridViewTextBoxColumn";
+            this.maHoatDongDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoTenDataGridViewTextBoxColumn2
+            // 
+            this.hoTenDataGridViewTextBoxColumn2.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn2.HeaderText = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn2.Name = "hoTenDataGridViewTextBoxColumn2";
+            this.hoTenDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // thoiDiemThucHienDataGridViewTextBoxColumn
+            // 
+            this.thoiDiemThucHienDataGridViewTextBoxColumn.DataPropertyName = "ThoiDiemThucHien";
+            this.thoiDiemThucHienDataGridViewTextBoxColumn.HeaderText = "ThoiDiemThucHien";
+            this.thoiDiemThucHienDataGridViewTextBoxColumn.Name = "thoiDiemThucHienDataGridViewTextBoxColumn";
+            this.thoiDiemThucHienDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // moTaDataGridViewTextBoxColumn1
+            // 
+            this.moTaDataGridViewTextBoxColumn1.DataPropertyName = "MoTa";
+            this.moTaDataGridViewTextBoxColumn1.HeaderText = "MoTa";
+            this.moTaDataGridViewTextBoxColumn1.Name = "moTaDataGridViewTextBoxColumn1";
+            this.moTaDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // tenDangNhapDataGridViewTextBoxColumn
+            // 
+            this.tenDangNhapDataGridViewTextBoxColumn.DataPropertyName = "TenDangNhap";
+            this.tenDangNhapDataGridViewTextBoxColumn.HeaderText = "TenDangNhap";
+            this.tenDangNhapDataGridViewTextBoxColumn.Name = "tenDangNhapDataGridViewTextBoxColumn";
+            this.tenDangNhapDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoatDongBindingSource
+            // 
+            this.hoatDongBindingSource.DataMember = "HoatDong";
+            this.hoatDongBindingSource.DataSource = this.quanLyNganHangDataSet;
             // 
             // tableLayoutPanel13
             // 
@@ -931,7 +1124,7 @@
             this.tableLayoutPanel13.Controls.Add(this.dateTimePicker3, 3, 0);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel13.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel13.Name = "tableLayoutPanel13";
             this.tableLayoutPanel13.RowCount = 2;
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60F));
@@ -969,7 +1162,7 @@
             this.button13.Image = global::QLNH.Properties.Resources.Loupe_icon;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.Location = new System.Drawing.Point(478, 62);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(201, 37);
             this.button13.TabIndex = 4;
@@ -980,7 +1173,7 @@
             // 
             this.dateTimePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker2.Location = new System.Drawing.Point(138, 20);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 5;
@@ -989,7 +1182,7 @@
             // 
             this.dateTimePicker3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker3.Location = new System.Drawing.Point(478, 20);
-            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(201, 20);
             this.dateTimePicker3.TabIndex = 6;
@@ -1231,195 +1424,21 @@
             this.dataGridView1.Size = new System.Drawing.Size(902, 238);
             this.dataGridView1.TabIndex = 0;
             // 
-            // quanLyNganHangDataSet
-            // 
-            this.quanLyNganHangDataSet.DataSetName = "QuanLyNganHangDataSet";
-            this.quanLyNganHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // khachHangBindingSource
-            // 
-            this.khachHangBindingSource.DataMember = "KhachHang";
-            this.khachHangBindingSource.DataSource = this.quanLyNganHangDataSet;
-            // 
             // khachHangTableAdapter
             // 
             this.khachHangTableAdapter.ClearBeforeFill = true;
-            // 
-            // maKHDataGridViewTextBoxColumn
-            // 
-            this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
-            this.maKHDataGridViewTextBoxColumn.HeaderText = "MaKH";
-            this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            // 
-            // ngaySinhDataGridViewTextBoxColumn
-            // 
-            this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
-            // 
-            // sDTDataGridViewTextBoxColumn
-            // 
-            this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
-            this.sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
-            this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
-            // 
-            // diaChiDataGridViewTextBoxColumn
-            // 
-            this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
-            this.diaChiDataGridViewTextBoxColumn.HeaderText = "DiaChi";
-            this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
-            // 
-            // gioiTinhDataGridViewTextBoxColumn
-            // 
-            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
-            // 
-            // loaiDinhDanhDataGridViewTextBoxColumn
-            // 
-            this.loaiDinhDanhDataGridViewTextBoxColumn.DataPropertyName = "LoaiDinhDanh";
-            this.loaiDinhDanhDataGridViewTextBoxColumn.HeaderText = "LoaiDinhDanh";
-            this.loaiDinhDanhDataGridViewTextBoxColumn.Name = "loaiDinhDanhDataGridViewTextBoxColumn";
-            // 
-            // giaTriDataGridViewTextBoxColumn
-            // 
-            this.giaTriDataGridViewTextBoxColumn.DataPropertyName = "GiaTri";
-            this.giaTriDataGridViewTextBoxColumn.HeaderText = "GiaTri";
-            this.giaTriDataGridViewTextBoxColumn.Name = "giaTriDataGridViewTextBoxColumn";
-            // 
-            // hopDongVayExtBindingSource
-            // 
-            this.hopDongVayExtBindingSource.DataMember = "HopDongVayExt";
-            this.hopDongVayExtBindingSource.DataSource = this.quanLyNganHangDataSet;
             // 
             // hopDongVayExtTableAdapter
             // 
             this.hopDongVayExtTableAdapter.ClearBeforeFill = true;
             // 
-            // maHopDongDataGridViewTextBoxColumn
-            // 
-            this.maHopDongDataGridViewTextBoxColumn.DataPropertyName = "MaHopDong";
-            this.maHopDongDataGridViewTextBoxColumn.HeaderText = "MaHopDong";
-            this.maHopDongDataGridViewTextBoxColumn.Name = "maHopDongDataGridViewTextBoxColumn";
-            // 
-            // hoTenDataGridViewTextBoxColumn1
-            // 
-            this.hoTenDataGridViewTextBoxColumn1.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn1.HeaderText = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn1.Name = "hoTenDataGridViewTextBoxColumn1";
-            // 
-            // giaTriHienTaiDataGridViewTextBoxColumn
-            // 
-            this.giaTriHienTaiDataGridViewTextBoxColumn.DataPropertyName = "GiaTriHienTai";
-            this.giaTriHienTaiDataGridViewTextBoxColumn.HeaderText = "GiaTriHienTai";
-            this.giaTriHienTaiDataGridViewTextBoxColumn.Name = "giaTriHienTaiDataGridViewTextBoxColumn";
-            // 
-            // maTrangThaiDataGridViewTextBoxColumn
-            // 
-            this.maTrangThaiDataGridViewTextBoxColumn.DataPropertyName = "MaTrangThai";
-            this.maTrangThaiDataGridViewTextBoxColumn.HeaderText = "MaTrangThai";
-            this.maTrangThaiDataGridViewTextBoxColumn.Name = "maTrangThaiDataGridViewTextBoxColumn";
-            // 
-            // ngayThietLapDataGridViewTextBoxColumn
-            // 
-            this.ngayThietLapDataGridViewTextBoxColumn.DataPropertyName = "NgayThietLap";
-            this.ngayThietLapDataGridViewTextBoxColumn.HeaderText = "NgayThietLap";
-            this.ngayThietLapDataGridViewTextBoxColumn.Name = "ngayThietLapDataGridViewTextBoxColumn";
-            // 
-            // laiSuatDataGridViewTextBoxColumn
-            // 
-            this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
-            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "LaiSuat";
-            this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
-            // 
-            // kiHanDataGridViewTextBoxColumn
-            // 
-            this.kiHanDataGridViewTextBoxColumn.DataPropertyName = "KiHan";
-            this.kiHanDataGridViewTextBoxColumn.HeaderText = "KiHan";
-            this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
-            // 
-            // taiSanTheChapExtBindingSource
-            // 
-            this.taiSanTheChapExtBindingSource.DataMember = "TaiSanTheChapExt";
-            this.taiSanTheChapExtBindingSource.DataSource = this.quanLyNganHangDataSet;
-            // 
             // taiSanTheChapExtTableAdapter
             // 
             this.taiSanTheChapExtTableAdapter.ClearBeforeFill = true;
             // 
-            // maTaiSanDataGridViewTextBoxColumn
-            // 
-            this.maTaiSanDataGridViewTextBoxColumn.DataPropertyName = "MaTaiSan";
-            this.maTaiSanDataGridViewTextBoxColumn.HeaderText = "MaTaiSan";
-            this.maTaiSanDataGridViewTextBoxColumn.Name = "maTaiSanDataGridViewTextBoxColumn";
-            // 
-            // moTaDataGridViewTextBoxColumn
-            // 
-            this.moTaDataGridViewTextBoxColumn.DataPropertyName = "MoTa";
-            this.moTaDataGridViewTextBoxColumn.HeaderText = "MoTa";
-            this.moTaDataGridViewTextBoxColumn.Name = "moTaDataGridViewTextBoxColumn";
-            // 
-            // dinhGiaDataGridViewTextBoxColumn
-            // 
-            this.dinhGiaDataGridViewTextBoxColumn.DataPropertyName = "DinhGia";
-            this.dinhGiaDataGridViewTextBoxColumn.HeaderText = "DinhGia";
-            this.dinhGiaDataGridViewTextBoxColumn.Name = "dinhGiaDataGridViewTextBoxColumn";
-            // 
-            // tenTrangThaiDataGridViewTextBoxColumn
-            // 
-            this.tenTrangThaiDataGridViewTextBoxColumn.DataPropertyName = "TenTrangThai";
-            this.tenTrangThaiDataGridViewTextBoxColumn.HeaderText = "TenTrangThai";
-            this.tenTrangThaiDataGridViewTextBoxColumn.Name = "tenTrangThaiDataGridViewTextBoxColumn";
-            // 
-            // hoatDongBindingSource
-            // 
-            this.hoatDongBindingSource.DataMember = "HoatDong";
-            this.hoatDongBindingSource.DataSource = this.quanLyNganHangDataSet;
-            // 
             // hoatDongTableAdapter
             // 
             this.hoatDongTableAdapter.ClearBeforeFill = true;
-            // 
-            // maHoatDongDataGridViewTextBoxColumn
-            // 
-            this.maHoatDongDataGridViewTextBoxColumn.DataPropertyName = "MaHoatDong";
-            this.maHoatDongDataGridViewTextBoxColumn.HeaderText = "MaHoatDong";
-            this.maHoatDongDataGridViewTextBoxColumn.Name = "maHoatDongDataGridViewTextBoxColumn";
-            this.maHoatDongDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // hoTenDataGridViewTextBoxColumn2
-            // 
-            this.hoTenDataGridViewTextBoxColumn2.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn2.HeaderText = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn2.Name = "hoTenDataGridViewTextBoxColumn2";
-            this.hoTenDataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // thoiDiemThucHienDataGridViewTextBoxColumn
-            // 
-            this.thoiDiemThucHienDataGridViewTextBoxColumn.DataPropertyName = "ThoiDiemThucHien";
-            this.thoiDiemThucHienDataGridViewTextBoxColumn.HeaderText = "ThoiDiemThucHien";
-            this.thoiDiemThucHienDataGridViewTextBoxColumn.Name = "thoiDiemThucHienDataGridViewTextBoxColumn";
-            this.thoiDiemThucHienDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // moTaDataGridViewTextBoxColumn1
-            // 
-            this.moTaDataGridViewTextBoxColumn1.DataPropertyName = "MoTa";
-            this.moTaDataGridViewTextBoxColumn1.HeaderText = "MoTa";
-            this.moTaDataGridViewTextBoxColumn1.Name = "moTaDataGridViewTextBoxColumn1";
-            this.moTaDataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // tenDangNhapDataGridViewTextBoxColumn
-            // 
-            this.tenDangNhapDataGridViewTextBoxColumn.DataPropertyName = "TenDangNhap";
-            this.tenDangNhapDataGridViewTextBoxColumn.HeaderText = "TenDangNhap";
-            this.tenDangNhapDataGridViewTextBoxColumn.Name = "tenDangNhapDataGridViewTextBoxColumn";
-            this.tenDangNhapDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // MainForm
             // 
@@ -1429,8 +1448,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Padding = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.Text = "Hệ thống quản lý ngân hàng";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -1443,6 +1463,8 @@
             this.tableLayoutPanel6.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -1451,26 +1473,24 @@
             this.tableLayoutPanel8.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.taiSanTheChapExtBindingSource)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hoatDongBindingSource)).EndInit();
             this.tableLayoutPanel13.ResumeLayout(false);
             this.tableLayoutPanel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.taiSanTheChapExtBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hoatDongBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

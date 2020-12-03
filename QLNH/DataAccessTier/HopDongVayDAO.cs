@@ -72,7 +72,39 @@ namespace DataAccessTier
                 cmd.Parameters.AddWithValue("@MaTrangThai", entry.TrangThai.UUID);
 
                 int res = cmd.ExecuteNonQuery();
-                if (res != 1) throw new Exception("Can't add new payment action");
+                if (res != 1) throw new Exception("Can't add new contract");
+                return true;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool UpdateHopDongVay(HopDongChoVay entry)
+        {
+            SqlConnection conn = DBConnection.getConnection();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if (entry.MaHopDong.Equals("")) throw new Exception("Unknown contract");
+            SqlCommand cmd = new SqlCommand("UPDATE tbHopDongVay SET MaYeuCau = @MaYeuCau, MaNVTiepNhan = @MaNV, NgayThietLap = @NgayLap, GiaTriHienTai = @GiaTri, MaTrangThai = @MaTrangThai WHERE MaHopDong = @MaHopDong,", conn);
+            try
+            {
+                cmd.Parameters.AddWithValue("@MaYeuCau", entry.YeuCauVay.MaYeuCau);
+                cmd.Parameters.AddWithValue("@MaNV", entry.NVThietLap.MaNV);
+                cmd.Parameters.AddWithValue("@NgayLap", entry.NgayThietLap);
+                cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTriConLai);
+                cmd.Parameters.AddWithValue("@MaTrangThai", entry.TrangThai.UUID);
+                cmd.Parameters.AddWithValue("@MaHopDong", entry.MaHopDong);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't update contract");
                 return true;
             }
             catch (SqlException SQLex)

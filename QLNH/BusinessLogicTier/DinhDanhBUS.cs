@@ -46,5 +46,16 @@ namespace BusinessLogicTier
                 throw ex;
             }
         }
+
+        public bool UpdateDinhDanh(DinhDanh entry) { 
+            try
+            {
+                return dataAccessObj.UpdateDinhDanh(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

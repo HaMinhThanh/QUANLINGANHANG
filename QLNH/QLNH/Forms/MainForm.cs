@@ -83,15 +83,15 @@ namespace QLNH.Forms
                 btnTaiSanTheChap.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnTaiSanTheChap);
 
-                Button btnThongBao = new Button();
-                //btnThongBao.Location = new Point(3, 171);
-                btnThongBao.Size = new Size(299, 44);
-                btnThongBao.Text = "Tạo Thông Báo";
-                btnThongBao.Click += BtnThongBao_Click;
-                btnThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                btnThongBao.TabIndex = 3;
-                btnThongBao.Dock = System.Windows.Forms.DockStyle.Fill;
-                Controls.Add(btnThongBao);
+                Button btnThemKhachHang = new Button();
+                //btnXacNhanHD.Location = new Point(3, 227);
+                btnThemKhachHang.Size = new Size(299, 44);
+                btnThemKhachHang.Text = "Thêm khách hàng";
+                btnThemKhachHang.Click += BtnThemKhachHang_Click;
+                btnThemKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnThemKhachHang.TabIndex = 3;
+                btnThemKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+                Controls.Add(btnThemKhachHang);
 
                 Button btnXacNhanHD = new Button();
                 //btnXacNhanHD.Location = new Point(3, 227);
@@ -103,21 +103,11 @@ namespace QLNH.Forms
                 btnXacNhanHD.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnXacNhanHD);
 
-                Button btnXuLiYeuCauHD = new Button();                
-                //btnXuLiYeuCauHD.Location = new Point(3, 283);
-                btnXuLiYeuCauHD.Size = new Size(299, 44);
-                btnXuLiYeuCauHD.Text = "Xử lí yêu cầu hợp đồng";
-                btnXuLiYeuCauHD.Click += BtnXuLiYeuCauHD_Click;
-                btnXuLiYeuCauHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                btnXuLiYeuCauHD.TabIndex = 5;
-                btnXuLiYeuCauHD.Dock = System.Windows.Forms.DockStyle.Fill;
-                Controls.Add(btnXuLiYeuCauHD);
-
                 dynamicTableLayoutPanel.Controls.Add(btnHSChoVay, 0, 1);
                 dynamicTableLayoutPanel.Controls.Add(btnTaiSanTheChap, 0, 2);
-                dynamicTableLayoutPanel.Controls.Add(btnThongBao, 0, 3);
+                dynamicTableLayoutPanel.Controls.Add(btnThemKhachHang, 0, 3);
                 dynamicTableLayoutPanel.Controls.Add(btnXacNhanHD, 0, 4);
-                dynamicTableLayoutPanel.Controls.Add(btnXuLiYeuCauHD, 0, 5);
+                
             
                 Controls.Add(dynamicTableLayoutPanel);
             }
@@ -133,7 +123,18 @@ namespace QLNH.Forms
                 btnXetDuyetChoVay.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnXetDuyetChoVay);
 
+                Button btnXuLiYeuCauHD = new Button();
+                //btnXuLiYeuCauHD.Location = new Point(3, 283);
+                btnXuLiYeuCauHD.Size = new Size(299, 44);
+                btnXuLiYeuCauHD.Text = "Xử lí yêu cầu hợp đồng";
+                btnXuLiYeuCauHD.Click += BtnXuLiYeuCauHD_Click;
+                btnXuLiYeuCauHD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnXuLiYeuCauHD.TabIndex = 5;
+                btnXuLiYeuCauHD.Dock = System.Windows.Forms.DockStyle.Fill;
+                Controls.Add(btnXuLiYeuCauHD);
+
                 dynamicTableLayoutPanel.Controls.Add(btnXetDuyetChoVay, 0, 1);
+                dynamicTableLayoutPanel.Controls.Add(btnXuLiYeuCauHD, 0, 2);
                 Controls.Add(dynamicTableLayoutPanel);
             } 
             else if (SessionState.NVDangNhap is DataModel.NhanVienKeToan)
@@ -148,7 +149,29 @@ namespace QLNH.Forms
                 btnThuNoLai.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnThuNoLai);
 
+                Button btnPhieuPhatTien = new Button();
+                //btnThuNoLai.Location = new Point(3, 59);
+                btnPhieuPhatTien.Size = new Size(299, 44);
+                btnPhieuPhatTien.Text = "Tạo Phiếu Phát tiền";
+                btnPhieuPhatTien.Click += BtnPhieuPhatTien_Click;
+                btnPhieuPhatTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnPhieuPhatTien.TabIndex = 1;
+                btnPhieuPhatTien.Dock = System.Windows.Forms.DockStyle.Fill;
+                Controls.Add(btnPhieuPhatTien);
+
+                Button btnThongBao = new Button();
+                //btnThongBao.Location = new Point(3, 171);
+                btnThongBao.Size = new Size(299, 44);
+                btnThongBao.Text = "Tạo Thông Báo";
+                btnThongBao.Click += BtnThongBao_Click;
+                btnThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnThongBao.TabIndex = 3;
+                btnThongBao.Dock = System.Windows.Forms.DockStyle.Fill;
+                Controls.Add(btnThongBao);
+
                 dynamicTableLayoutPanel.Controls.Add(btnThuNoLai, 0, 1);
+                dynamicTableLayoutPanel.Controls.Add(btnThongBao, 0, 2);
+                dynamicTableLayoutPanel.Controls.Add(btnPhieuPhatTien, 0, 3);
                 Controls.Add(dynamicTableLayoutPanel);
             } 
             else //if (SessionState.NVDangNhap is DataModel.NhanVienQuanLy)
@@ -206,7 +229,7 @@ namespace QLNH.Forms
                 Button btnHDQuaHan = new Button();
                 //btnHDQuaHan.Location = new Point(3, 339);
                 btnHDQuaHan.Size = new Size(299, 44);
-                btnHDQuaHan.Text = "Hợp Đồng Qúa Hạn";
+                btnHDQuaHan.Text = "Hợp Đồng Quá Hạn";
                 btnHDQuaHan.Click += BtnHDQuaHan_Click;
                 btnHDQuaHan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
                 btnHDQuaHan.TabIndex = 6;
@@ -256,6 +279,18 @@ namespace QLNH.Forms
                 Controls.Add(dynamicTableLayoutPanel);
             }
             tableLayoutPanel1.Controls.Add(dynamicTableLayoutPanel);
+        }
+
+        private void BtnPhieuPhatTien_Click(object sender, EventArgs e)
+        {
+            HSPhatTienVayForm newForm = new HSPhatTienVayForm();
+            newForm.Show();
+        }
+
+        private void BtnThemKhachHang_Click(object sender, EventArgs e)
+        {
+            KhachHang newForm = new KhachHang();
+            newForm.Show();
         }
 
         private void BtnBaoCaoTaiChinh_Click(object sender, EventArgs e)

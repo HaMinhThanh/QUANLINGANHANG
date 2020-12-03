@@ -72,5 +72,34 @@ namespace DataAccessTier
                 throw ex;
             }
         }
+
+        public bool UpdateDinhDanh(DinhDanh entry)
+        {
+            SqlConnection conn = DBConnection.getConnection();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if (entry.MaDinhDanh.Equals("")) throw new Exception("Unknown identifier");
+            SqlCommand cmd = new SqlCommand("UPDATE tbDinhDanh VALUES LoaiDinhDanh = @LoaiDinhDanh, GiaTri = @GiaTri WHERE MaDinhDanh = @MaDinhDanh", conn);
+            try
+            {
+                cmd.Parameters.AddWithValue("@LoaiDinhDanh", (int)entry.LoaiDinhDanh);
+                cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTriDinhDanh);
+                cmd.Parameters.AddWithValue("@MaDinhDanh", entry.MaDinhDanh);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't update identity entry");
+                return true;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

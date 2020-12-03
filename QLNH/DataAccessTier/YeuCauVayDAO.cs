@@ -112,5 +112,44 @@ namespace DataAccessTier
             }
 
         }
+
+        public string UpdateYeuCauChoVay(YeuCauChoVay entry)
+        {
+            SqlConnection conn = DBConnection.getConnection();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if (entry.MaYeuCau.Equals("")) entry.MaYeuCau = Guid.NewGuid().ToString();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE tbYeuCauChoVay SET MaKHYeuCau = @MaKHYeuCau, MaNVTiepNhan = @MaNVTiepNhan, SoTienVay = @SoTienVay, LaiSuat = @LaiSuat, KiHan = @KiHan, MaKQXetDuyet = @MaKQXetDuyet, ThoiDiemTiepNhan = @ThoiDiemTiepNhan WHERE MaYeuCau = @MaYeuCau", conn);
+
+                cmd.Parameters.AddWithValue("@MaYeuCau", entry.MaYeuCau);
+                cmd.Parameters.AddWithValue("@MaKHYeuCau", entry.KHYeuCau.MaKH);
+                cmd.Parameters.AddWithValue("@MaNVTiepNhan", entry.NVTiepNhan.MaNV);
+                cmd.Parameters.AddWithValue("@SoTienVay", entry.SoTienVay);
+                cmd.Parameters.AddWithValue("@LaiSuat", entry.LaiSuat);
+                cmd.Parameters.AddWithValue("@KiHan", entry.KyHan);
+                if (entry.KQXetDuyet == null)
+                    cmd.Parameters.AddWithValue("@MaKQXetDuyet", DBNull.Value);
+                else cmd.Parameters.AddWithValue("@MaKQXetDuyet", entry.KQXetDuyet.UUID);
+                cmd.Parameters.AddWithValue("@ThoiDiemTiepNhan", entry.ThoiDiemTiepNhan);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't update YeuCauVay");
+
+                return entry.MaYeuCau;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }

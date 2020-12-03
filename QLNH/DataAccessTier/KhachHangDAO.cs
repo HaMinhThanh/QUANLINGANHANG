@@ -219,9 +219,76 @@ namespace DataAccessTier
             }
         }
 
-            public bool UpdateKhachHang(KhachHang entry, string MaKH)
+        public bool UpdateKhachHang(KhachHang entry)
         {
-            return true;
+            SqlConnection conn = DBConnection.getConnection();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if (entry.MaKH.Equals("")) throw new Exception("Unknown customer");
+            try
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE tbKhachHang SET HoTen = @HoTen, NgaySinh = @NgaySinh, SDT = @SDT, DiaChi = @DiaChi, GioiTinh = @GioiTinh WHERE MaKH = @MaKH,", conn);
+
+                cmd.Parameters.AddWithValue("@HoTen", entry.HoTen);
+                cmd.Parameters.AddWithValue("@NgaySinh", entry.NgaySinh);
+                cmd.Parameters.AddWithValue("@SDT", entry.SDT);
+                cmd.Parameters.AddWithValue("@DiaChi", entry.DiaChi);
+                (new DinhDanhDAO()).UpdateDinhDanh(entry.DinhDanhKH);
+                if (entry is KhachHangDoanhNghiep)
+                {
+                    this.UpdateKhachHangDoanhNghiep((KhachHangDoanhNghiep) entry);
+                }
+                cmd.Parameters.AddWithValue("@GioiTinh", entry.GioiTinh);
+                cmd.Parameters.AddWithValue("@MaKH", entry.MaKH);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't update customer");
+
+                return true;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool UpdateKhachHangDoanhNghiep(KhachHangDoanhNghiep entry)
+        {
+            SqlConnection conn = DBConnection.getConnection();
+            string MaDN = Guid.NewGuid().ToString();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            try
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE tbChiTietDoanhNghiep SET MaDangKy = @MaDKDoanhNghiep, TenDoanhNghiep = @TenDoanhNghiep, LinhVuc = @LinhVuc, ChucVuDaiDien = @ChucVuDaiDien WHERE MaDoanhNghiep = @MaDoanhNghiep", conn);
+
+                cmd.Parameters.AddWithValue("@MaDKDoanhNghiep", entry.MaDKDoanhNghiep);
+                cmd.Parameters.AddWithValue("@TenDoanhNghiep", entry.TenDoanhNghiep);
+                cmd.Parameters.AddWithValue("@LinhVuc", entry.LinhVuc);
+                cmd.Parameters.AddWithValue("@ChucVuDaiDien", entry.ChucVuKHDaiDien);
+                cmd.Parameters.AddWithValue("@MaDoanhNghiep", MaDN);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't update cooperate customer");
+
+                return true;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

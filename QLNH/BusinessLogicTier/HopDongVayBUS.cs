@@ -33,5 +33,16 @@ namespace BusinessLogicTier
                 throw ex;
             }
         }
+        public bool UpdateHopDongVay(HopDongChoVay entry)
+        {
+            try
+            {
+                return dataAccessObj.UpdateHopDongVay(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

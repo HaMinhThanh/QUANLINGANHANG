@@ -150,7 +150,38 @@ namespace DataAccessTier
             }
         }
 
-        public bool UpdateTaiSanTheChap(TaiSanTheChap entry, string MaTS)
-        { return true; }
+        public bool UpdateTaiSanTheChap(TaiSanTheChap entry)
+        {
+            SqlConnection conn = DBConnection.getConnection();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if (entry.MaTSTC.Equals("")) entry.MaTSTC = Guid.NewGuid().ToString();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("UPDATE tbTaiSanTheChap SET MoTa = @MoTa, DinhGia = @DinhGia, MaTrangThai = @MaTrangThai WHERE MaTaiSan = @MaTaiSan", conn);
+                cmd.Parameters.AddWithValue("@MaTaiSan", entry.MaTSTC);
+                cmd.Parameters.AddWithValue("@MoTa", entry.MoTa);
+                if (entry.DinhGia == -1)
+                    cmd.Parameters.AddWithValue("@DinhGia", DBNull.Value);
+                else
+                    cmd.Parameters.AddWithValue("@DinhGia", entry.DinhGia);
+                cmd.Parameters.AddWithValue("@MaTrangThai", entry.TrangThai.UUID);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't update TaiSanTheChap");
+
+                return true;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

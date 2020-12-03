@@ -45,5 +45,17 @@ namespace BusinessLogicTier
                 throw ex;
             }
         }
+
+        public bool UpdateKhachHang(KhachHang entry)
+        {
+            try
+            {
+                return dataAccessObj.UpdateKhachHang(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

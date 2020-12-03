@@ -46,11 +46,11 @@ namespace BusinessLogicTier
             }
         }
 
-        public bool UpdateTaiSanTheChap(string target, TaiSanTheChap newEntry)
+        public bool UpdateTaiSanTheChap(TaiSanTheChap newEntry)
         {
             try
             {
-                return dataAccessObj.UpdateTaiSanTheChap(newEntry, target);
+                return dataAccessObj.UpdateTaiSanTheChap(newEntry);
             }
             catch (Exception ex)
             {
