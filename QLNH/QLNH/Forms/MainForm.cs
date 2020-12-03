@@ -19,12 +19,12 @@ namespace QLNH.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HopDongVayExt' table. You can move, or remove it, as needed.
-            this.hopDongVayExtTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExt);
             // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HoatDong' table. You can move, or remove it, as needed.
             this.hoatDongTableAdapter.Fill(this.quanLyNganHangDataSet.HoatDong);
             // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TaiSanTheChapExt' table. You can move, or remove it, as needed.
             this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HopDongVayExt' table. You can move, or remove it, as needed.
+            this.hopDongVayExtTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExt);
             // TODO: This line of code loads data into the 'quanLyNganHangDataSet.KhachHang' table. You can move, or remove it, as needed.
             this.khachHangTableAdapter.Fill(this.quanLyNganHangDataSet.KhachHang);
 

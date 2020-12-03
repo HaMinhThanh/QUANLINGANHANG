@@ -68,7 +68,6 @@ namespace QLNH
                 entry.DSMaGiayToChungThuc.Add(val.Text);
             }
             entry.TrangThai = busObjTrangThai.GetTrangThaiByMaTrangThai(comboBox1.SelectedValue.ToString());
-            if (numericUpDown1.Enabled) entry.DinhGia = (Double) numericUpDown1.Value;
             try
             {
                 busObj.AddTaiSanTheChap(entry, MaYeuCau);
@@ -86,6 +85,13 @@ namespace QLNH
             // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TrangThaiTaiSanCB' table. You can move, or remove it, as needed.
             this.trangThaiTaiSanCBTableAdapter.Fill(this.quanLyNganHangDataSet.TrangThaiTaiSanCB);
             comboBox1.SelectedIndex = 0;
+        }
+
+        private void TaiSanTheChapForm_Load_1(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TrangThaiTaiSanCB' table. You can move, or remove it, as needed.
+            this.trangThaiTaiSanCBTableAdapter.Fill(this.quanLyNganHangDataSet.TrangThaiTaiSanCB);
+
         }
     }
 }
