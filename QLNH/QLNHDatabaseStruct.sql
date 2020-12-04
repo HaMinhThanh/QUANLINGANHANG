@@ -25,16 +25,6 @@ CREATE TABLE tbDieuKhoan (
 	PRIMARY KEY (MaDieuKhoan)
 )
 
-CREATE TABLE tbGiaoDich (
-	MaGiaoDich CHAR(36) NOT NULL,
-	LoaiGiaoDich TINYINT NOT NULL,
-	DonViGiaoDich NVARCHAR(256),
-	GiaTri DECIMAL(32, 2) NOT NULL,
-	ThoiDiemThucHien DATETIME NOT NULL,
-	MoTa NVARCHAR(512) NOT NULL
-	PRIMARY KEY (MaGiaoDich)
-)
-
 CREATE TABLE tbChiTietDoanhNghiep (
 	MaDoanhNghiep CHAR(36),
 	MaDangKy VARCHAR(64),
@@ -56,6 +46,17 @@ CREATE TABLE tbKhachHang (
 	PRIMARY KEY (MaKH)
 	FOREIGN KEY (MaDinhDanh) REFERENCES tbDinhDanh(MaDinhDanh),
 	FOREIGN KEY (MaDoanhNghiepDaiDien) REFERENCES tbChiTietDoanhNghiep(MaDoanhNghiep)
+)
+
+CREATE TABLE tbGiaoDich (
+	MaGiaoDich CHAR(36) NOT NULL,
+	LoaiGiaoDich TINYINT NOT NULL,
+	DonViGiaoDich CHAR(36),
+	GiaTri DECIMAL(32, 2) NOT NULL,
+	ThoiDiemThucHien DATETIME NOT NULL,
+	MoTa NVARCHAR(512) NOT NULL
+	FOREIGN KEY (DonViGiaoDich) REFERENCES tbKhachHang(MaKH)
+	PRIMARY KEY (MaGiaoDich)
 )
 
 CREATE TABLE tbNhanVien (

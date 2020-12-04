@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="KhachHangTableAdapter" GeneratorDataComponentClassName="KhachHangTableAdapter" Name="KhachHang" UserDataComponentName="KhachHangTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        tbKhachHang.MaKH, tbKhachHang.HoTen, tbKhachHang.NgaySinh, tbKhachHang.SDT, tbKhachHang.DiaChi, tbKhachHang.GioiTinh, tbDinhDanh.LoaiDinhDanh, tbDinhDanh.GiaTri
@@ -34,7 +34,7 @@ FROM            tbDinhDanh INNER JOIN
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HoatDongTableAdapter" GeneratorDataComponentClassName="HoatDongTableAdapter" Name="HoatDong" UserDataComponentName="HoatDongTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        tbHoatDong.MaHoatDong, tbNhanVien.HoTen, tbHoatDong.ThoiDiemThucHien, tbHoatDong.MoTa, tbNhanVien.TenDangNhap
@@ -56,7 +56,7 @@ FROM            tbHoatDong INNER JOIN
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="YeuCauVayTableAdapter" GeneratorDataComponentClassName="YeuCauVayTableAdapter" Name="YeuCauVay" UserDataComponentName="YeuCauVayTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        tbYeuCauChoVay.MaYeuCau, tbKhachHang.HoTen, tbNhanVien.HoTen AS Expr1, tbYeuCauChoVay.SoTienVay, tbYeuCauChoVay.LaiSuat, tbYeuCauChoVay.KiHan, tbYeuCauChoVay.ThoiDiemTiepNhan
@@ -81,7 +81,7 @@ FROM            tbKhachHang INNER JOIN
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TaiSanTheChapExtTableAdapter" GeneratorDataComponentClassName="TaiSanTheChapExtTableAdapter" Name="TaiSanTheChapExt" UserDataComponentName="TaiSanTheChapExtTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        tbTaiSanTheChap.MaTaiSan, tbTaiSanTheChap.MoTa, tbTaiSanTheChap.DinhGia, tbTrangThaiTaiSan.TenTrangThai
@@ -141,7 +141,7 @@ SELECT MaTrangThai, TenTrangThai FROM tbTrangThaiTaiSan WHERE (MaTrangThai = @Ma
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="HopDongVayExtTableAdapter" GeneratorDataComponentClassName="HopDongVayExtTableAdapter" Name="HopDongVayExt" UserDataComponentName="HopDongVayExtTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        tbHopDongVay.MaHopDong, tbKhachHang.HoTen, tbHopDongVay.GiaTriHienTai, tbHopDongVay.MaTrangThai, tbHopDongVay.NgayThietLap, tbYeuCauChoVay.LaiSuat, tbYeuCauChoVay.KiHan
@@ -164,6 +164,77 @@ FROM            tbHopDongVay INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GiaoDichTableAdapter" GeneratorDataComponentClassName="GiaoDichTableAdapter" Name="GiaoDich" UserDataComponentName="GiaoDichTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QuanLyNganHangConnectionString (Settings)" DbObjectName="dbo.tbGiaoDich" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [tbGiaoDich] WHERE (([MaGiaoDich] = @Original_MaGiaoDich) AND ([LoaiGiaoDich] = @Original_LoaiGiaoDich) AND ((@IsNull_DonViGiaoDich = 1 AND [DonViGiaoDich] IS NULL) OR ([DonViGiaoDich] = @Original_DonViGiaoDich)) AND ([GiaTri] = @Original_GiaTri) AND ([ThoiDiemThucHien] = @Original_ThoiDiemThucHien) AND ([MoTa] = @Original_MoTa))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MaGiaoDich" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaGiaoDich" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Original_LoaiGiaoDich" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="LoaiGiaoDich" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DonViGiaoDich" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DonViGiaoDich" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_DonViGiaoDich" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DonViGiaoDich" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_GiaTri" Precision="32" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GiaTri" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ThoiDiemThucHien" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ThoiDiemThucHien" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MoTa" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MoTa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [tbGiaoDich] ([MaGiaoDich], [LoaiGiaoDich], [DonViGiaoDich], [GiaTri], [ThoiDiemThucHien], [MoTa]) VALUES (@MaGiaoDich, @LoaiGiaoDich, @DonViGiaoDich, @GiaTri, @ThoiDiemThucHien, @MoTa);
+SELECT MaGiaoDich, LoaiGiaoDich, DonViGiaoDich, GiaTri, ThoiDiemThucHien, MoTa FROM tbGiaoDich WHERE (MaGiaoDich = @MaGiaoDich)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MaGiaoDich" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaGiaoDich" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@LoaiGiaoDich" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="LoaiGiaoDich" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@DonViGiaoDich" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DonViGiaoDich" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@GiaTri" Precision="32" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GiaTri" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ThoiDiemThucHien" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ThoiDiemThucHien" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MoTa" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MoTa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        MaGiaoDich, LoaiGiaoDich, DonViGiaoDich, GiaTri, ThoiDiemThucHien, MoTa
+FROM            tbGiaoDich</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [tbGiaoDich] SET [MaGiaoDich] = @MaGiaoDich, [LoaiGiaoDich] = @LoaiGiaoDich, [DonViGiaoDich] = @DonViGiaoDich, [GiaTri] = @GiaTri, [ThoiDiemThucHien] = @ThoiDiemThucHien, [MoTa] = @MoTa WHERE (([MaGiaoDich] = @Original_MaGiaoDich) AND ([LoaiGiaoDich] = @Original_LoaiGiaoDich) AND ((@IsNull_DonViGiaoDich = 1 AND [DonViGiaoDich] IS NULL) OR ([DonViGiaoDich] = @Original_DonViGiaoDich)) AND ([GiaTri] = @Original_GiaTri) AND ([ThoiDiemThucHien] = @Original_ThoiDiemThucHien) AND ([MoTa] = @Original_MoTa));
+SELECT MaGiaoDich, LoaiGiaoDich, DonViGiaoDich, GiaTri, ThoiDiemThucHien, MoTa FROM tbGiaoDich WHERE (MaGiaoDich = @MaGiaoDich)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@MaGiaoDich" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaGiaoDich" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@LoaiGiaoDich" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="LoaiGiaoDich" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@DonViGiaoDich" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DonViGiaoDich" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@GiaTri" Precision="32" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GiaTri" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@ThoiDiemThucHien" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ThoiDiemThucHien" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MoTa" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MoTa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_MaGiaoDich" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="MaGiaoDich" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Byte" Direction="Input" ParameterName="@Original_LoaiGiaoDich" Precision="0" ProviderType="TinyInt" Scale="0" Size="0" SourceColumn="LoaiGiaoDich" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DonViGiaoDich" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DonViGiaoDich" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_DonViGiaoDich" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="DonViGiaoDich" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Decimal" Direction="Input" ParameterName="@Original_GiaTri" Precision="32" ProviderType="Decimal" Scale="2" Size="0" SourceColumn="GiaTri" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_ThoiDiemThucHien" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="ThoiDiemThucHien" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_MoTa" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MoTa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MaGiaoDich" DataSetColumn="MaGiaoDich" />
+              <Mapping SourceColumn="LoaiGiaoDich" DataSetColumn="LoaiGiaoDich" />
+              <Mapping SourceColumn="DonViGiaoDich" DataSetColumn="DonViGiaoDich" />
+              <Mapping SourceColumn="GiaTri" DataSetColumn="GiaTri" />
+              <Mapping SourceColumn="ThoiDiemThucHien" DataSetColumn="ThoiDiemThucHien" />
+              <Mapping SourceColumn="MoTa" DataSetColumn="MoTa" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -172,7 +243,7 @@ FROM            tbHopDongVay INNER JOIN
   <xs:element name="QuanLyNganHangDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="QuanLyNganHangDataSet" msprop:Generator_UserDSName="QuanLyNganHangDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="KhachHang" msprop:Generator_TableClassName="KhachHangDataTable" msprop:Generator_TableVarName="tableKhachHang" msprop:Generator_RowChangedName="KhachHangRowChanged" msprop:Generator_TablePropName="KhachHang" msprop:Generator_RowDeletingName="KhachHangRowDeleting" msprop:Generator_RowChangingName="KhachHangRowChanging" msprop:Generator_RowEvHandlerName="KhachHangRowChangeEventHandler" msprop:Generator_RowDeletedName="KhachHangRowDeleted" msprop:Generator_RowClassName="KhachHangRow" msprop:Generator_UserTableName="KhachHang" msprop:Generator_RowEvArgName="KhachHangRowChangeEvent">
+        <xs:element name="KhachHang" msprop:Generator_TableClassName="KhachHangDataTable" msprop:Generator_TableVarName="tableKhachHang" msprop:Generator_TablePropName="KhachHang" msprop:Generator_RowDeletingName="KhachHangRowDeleting" msprop:Generator_RowChangingName="KhachHangRowChanging" msprop:Generator_RowEvHandlerName="KhachHangRowChangeEventHandler" msprop:Generator_RowDeletedName="KhachHangRowDeleted" msprop:Generator_UserTableName="KhachHang" msprop:Generator_RowChangedName="KhachHangRowChanged" msprop:Generator_RowEvArgName="KhachHangRowChangeEvent" msprop:Generator_RowClassName="KhachHangRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaKH" msprop:Generator_ColumnVarNameInTable="columnMaKH" msprop:Generator_ColumnPropNameInRow="MaKH" msprop:Generator_ColumnPropNameInTable="MaKHColumn" msprop:Generator_UserColumnName="MaKH">
@@ -222,7 +293,7 @@ FROM            tbHopDongVay INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="HoatDong" msprop:Generator_TableClassName="HoatDongDataTable" msprop:Generator_TableVarName="tableHoatDong" msprop:Generator_TablePropName="HoatDong" msprop:Generator_RowDeletingName="HoatDongRowDeleting" msprop:Generator_RowChangingName="HoatDongRowChanging" msprop:Generator_RowEvHandlerName="HoatDongRowChangeEventHandler" msprop:Generator_RowDeletedName="HoatDongRowDeleted" msprop:Generator_UserTableName="HoatDong" msprop:Generator_RowChangedName="HoatDongRowChanged" msprop:Generator_RowEvArgName="HoatDongRowChangeEvent" msprop:Generator_RowClassName="HoatDongRow">
+        <xs:element name="HoatDong" msprop:Generator_TableClassName="HoatDongDataTable" msprop:Generator_TableVarName="tableHoatDong" msprop:Generator_RowChangedName="HoatDongRowChanged" msprop:Generator_TablePropName="HoatDong" msprop:Generator_RowDeletingName="HoatDongRowDeleting" msprop:Generator_RowChangingName="HoatDongRowChanging" msprop:Generator_RowEvHandlerName="HoatDongRowChangeEventHandler" msprop:Generator_RowDeletedName="HoatDongRowDeleted" msprop:Generator_RowClassName="HoatDongRow" msprop:Generator_UserTableName="HoatDong" msprop:Generator_RowEvArgName="HoatDongRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaHoatDong" msprop:Generator_ColumnVarNameInTable="columnMaHoatDong" msprop:Generator_ColumnPropNameInRow="MaHoatDong" msprop:Generator_ColumnPropNameInTable="MaHoatDongColumn" msprop:Generator_UserColumnName="MaHoatDong">
@@ -257,7 +328,7 @@ FROM            tbHopDongVay INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="YeuCauVay" msprop:Generator_TableClassName="YeuCauVayDataTable" msprop:Generator_TableVarName="tableYeuCauVay" msprop:Generator_TablePropName="YeuCauVay" msprop:Generator_RowDeletingName="YeuCauVayRowDeleting" msprop:Generator_RowChangingName="YeuCauVayRowChanging" msprop:Generator_RowEvHandlerName="YeuCauVayRowChangeEventHandler" msprop:Generator_RowDeletedName="YeuCauVayRowDeleted" msprop:Generator_UserTableName="YeuCauVay" msprop:Generator_RowChangedName="YeuCauVayRowChanged" msprop:Generator_RowEvArgName="YeuCauVayRowChangeEvent" msprop:Generator_RowClassName="YeuCauVayRow">
+        <xs:element name="YeuCauVay" msprop:Generator_TableClassName="YeuCauVayDataTable" msprop:Generator_TableVarName="tableYeuCauVay" msprop:Generator_RowChangedName="YeuCauVayRowChanged" msprop:Generator_TablePropName="YeuCauVay" msprop:Generator_RowDeletingName="YeuCauVayRowDeleting" msprop:Generator_RowChangingName="YeuCauVayRowChanging" msprop:Generator_RowEvHandlerName="YeuCauVayRowChangeEventHandler" msprop:Generator_RowDeletedName="YeuCauVayRowDeleted" msprop:Generator_RowClassName="YeuCauVayRow" msprop:Generator_UserTableName="YeuCauVay" msprop:Generator_RowEvArgName="YeuCauVayRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaYeuCau" msprop:Generator_ColumnVarNameInTable="columnMaYeuCau" msprop:Generator_ColumnPropNameInRow="MaYeuCau" msprop:Generator_ColumnPropNameInTable="MaYeuCauColumn" msprop:Generator_UserColumnName="MaYeuCau">
@@ -288,7 +359,7 @@ FROM            tbHopDongVay INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TaiSanTheChapExt" msprop:Generator_TableClassName="TaiSanTheChapExtDataTable" msprop:Generator_TableVarName="tableTaiSanTheChapExt" msprop:Generator_RowChangedName="TaiSanTheChapExtRowChanged" msprop:Generator_TablePropName="TaiSanTheChapExt" msprop:Generator_RowDeletingName="TaiSanTheChapExtRowDeleting" msprop:Generator_RowChangingName="TaiSanTheChapExtRowChanging" msprop:Generator_RowEvHandlerName="TaiSanTheChapExtRowChangeEventHandler" msprop:Generator_RowDeletedName="TaiSanTheChapExtRowDeleted" msprop:Generator_RowClassName="TaiSanTheChapExtRow" msprop:Generator_UserTableName="TaiSanTheChapExt" msprop:Generator_RowEvArgName="TaiSanTheChapExtRowChangeEvent">
+        <xs:element name="TaiSanTheChapExt" msprop:Generator_TableClassName="TaiSanTheChapExtDataTable" msprop:Generator_TableVarName="tableTaiSanTheChapExt" msprop:Generator_TablePropName="TaiSanTheChapExt" msprop:Generator_RowDeletingName="TaiSanTheChapExtRowDeleting" msprop:Generator_RowChangingName="TaiSanTheChapExtRowChanging" msprop:Generator_RowEvHandlerName="TaiSanTheChapExtRowChangeEventHandler" msprop:Generator_RowDeletedName="TaiSanTheChapExtRowDeleted" msprop:Generator_UserTableName="TaiSanTheChapExt" msprop:Generator_RowChangedName="TaiSanTheChapExtRowChanged" msprop:Generator_RowEvArgName="TaiSanTheChapExtRowChangeEvent" msprop:Generator_RowClassName="TaiSanTheChapExtRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaTaiSan" msprop:Generator_ColumnVarNameInTable="columnMaTaiSan" msprop:Generator_ColumnPropNameInRow="MaTaiSan" msprop:Generator_ColumnPropNameInTable="MaTaiSanColumn" msprop:Generator_UserColumnName="MaTaiSan">
@@ -316,7 +387,7 @@ FROM            tbHopDongVay INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="TrangThaiTaiSanCB" msprop:Generator_TableClassName="TrangThaiTaiSanCBDataTable" msprop:Generator_TableVarName="tableTrangThaiTaiSanCB" msprop:Generator_RowChangedName="TrangThaiTaiSanCBRowChanged" msprop:Generator_TablePropName="TrangThaiTaiSanCB" msprop:Generator_RowDeletingName="TrangThaiTaiSanCBRowDeleting" msprop:Generator_RowChangingName="TrangThaiTaiSanCBRowChanging" msprop:Generator_RowEvHandlerName="TrangThaiTaiSanCBRowChangeEventHandler" msprop:Generator_RowDeletedName="TrangThaiTaiSanCBRowDeleted" msprop:Generator_RowClassName="TrangThaiTaiSanCBRow" msprop:Generator_UserTableName="TrangThaiTaiSanCB" msprop:Generator_RowEvArgName="TrangThaiTaiSanCBRowChangeEvent">
+        <xs:element name="TrangThaiTaiSanCB" msprop:Generator_TableClassName="TrangThaiTaiSanCBDataTable" msprop:Generator_TableVarName="tableTrangThaiTaiSanCB" msprop:Generator_TablePropName="TrangThaiTaiSanCB" msprop:Generator_RowDeletingName="TrangThaiTaiSanCBRowDeleting" msprop:Generator_RowChangingName="TrangThaiTaiSanCBRowChanging" msprop:Generator_RowEvHandlerName="TrangThaiTaiSanCBRowChangeEventHandler" msprop:Generator_RowDeletedName="TrangThaiTaiSanCBRowDeleted" msprop:Generator_UserTableName="TrangThaiTaiSanCB" msprop:Generator_RowChangedName="TrangThaiTaiSanCBRowChanged" msprop:Generator_RowEvArgName="TrangThaiTaiSanCBRowChangeEvent" msprop:Generator_RowClassName="TrangThaiTaiSanCBRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaTrangThai" msprop:Generator_ColumnVarNameInTable="columnMaTrangThai" msprop:Generator_ColumnPropNameInRow="MaTrangThai" msprop:Generator_ColumnPropNameInTable="MaTrangThaiColumn" msprop:Generator_UserColumnName="MaTrangThai">
@@ -336,7 +407,7 @@ FROM            tbHopDongVay INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="HopDongVayExt" msprop:Generator_TableClassName="HopDongVayExtDataTable" msprop:Generator_TableVarName="tableHopDongVayExt" msprop:Generator_TablePropName="HopDongVayExt" msprop:Generator_RowDeletingName="HopDongVayExtRowDeleting" msprop:Generator_RowChangingName="HopDongVayExtRowChanging" msprop:Generator_RowEvHandlerName="HopDongVayExtRowChangeEventHandler" msprop:Generator_RowDeletedName="HopDongVayExtRowDeleted" msprop:Generator_UserTableName="HopDongVayExt" msprop:Generator_RowChangedName="HopDongVayExtRowChanged" msprop:Generator_RowEvArgName="HopDongVayExtRowChangeEvent" msprop:Generator_RowClassName="HopDongVayExtRow">
+        <xs:element name="HopDongVayExt" msprop:Generator_TableClassName="HopDongVayExtDataTable" msprop:Generator_TableVarName="tableHopDongVayExt" msprop:Generator_RowChangedName="HopDongVayExtRowChanged" msprop:Generator_TablePropName="HopDongVayExt" msprop:Generator_RowDeletingName="HopDongVayExtRowDeleting" msprop:Generator_RowChangingName="HopDongVayExtRowChanging" msprop:Generator_RowEvHandlerName="HopDongVayExtRowChangeEventHandler" msprop:Generator_RowDeletedName="HopDongVayExtRowDeleted" msprop:Generator_RowClassName="HopDongVayExtRow" msprop:Generator_UserTableName="HopDongVayExt" msprop:Generator_RowEvArgName="HopDongVayExtRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MaHopDong" msprop:Generator_ColumnVarNameInTable="columnMaHopDong" msprop:Generator_ColumnPropNameInRow="MaHopDong" msprop:Generator_ColumnPropNameInTable="MaHopDongColumn" msprop:Generator_UserColumnName="MaHopDong">
@@ -367,6 +438,36 @@ FROM            tbHopDongVay INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="GiaoDich" msprop:Generator_TableClassName="GiaoDichDataTable" msprop:Generator_TableVarName="tableGiaoDich" msprop:Generator_TablePropName="GiaoDich" msprop:Generator_RowDeletingName="GiaoDichRowDeleting" msprop:Generator_RowChangingName="GiaoDichRowChanging" msprop:Generator_RowEvHandlerName="GiaoDichRowChangeEventHandler" msprop:Generator_RowDeletedName="GiaoDichRowDeleted" msprop:Generator_UserTableName="GiaoDich" msprop:Generator_RowChangedName="GiaoDichRowChanged" msprop:Generator_RowEvArgName="GiaoDichRowChangeEvent" msprop:Generator_RowClassName="GiaoDichRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MaGiaoDich" msprop:Generator_ColumnVarNameInTable="columnMaGiaoDich" msprop:Generator_ColumnPropNameInRow="MaGiaoDich" msprop:Generator_ColumnPropNameInTable="MaGiaoDichColumn" msprop:Generator_UserColumnName="MaGiaoDich">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LoaiGiaoDich" msprop:Generator_ColumnVarNameInTable="columnLoaiGiaoDich" msprop:Generator_ColumnPropNameInRow="LoaiGiaoDich" msprop:Generator_ColumnPropNameInTable="LoaiGiaoDichColumn" msprop:Generator_UserColumnName="LoaiGiaoDich" type="xs:unsignedByte" />
+              <xs:element name="DonViGiaoDich" msprop:Generator_ColumnVarNameInTable="columnDonViGiaoDich" msprop:Generator_ColumnPropNameInRow="DonViGiaoDich" msprop:Generator_ColumnPropNameInTable="DonViGiaoDichColumn" msprop:Generator_UserColumnName="DonViGiaoDich" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="36" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GiaTri" msprop:Generator_ColumnVarNameInTable="columnGiaTri" msprop:Generator_ColumnPropNameInRow="GiaTri" msprop:Generator_ColumnPropNameInTable="GiaTriColumn" msprop:Generator_UserColumnName="GiaTri" type="xs:decimal" />
+              <xs:element name="ThoiDiemThucHien" msprop:Generator_ColumnVarNameInTable="columnThoiDiemThucHien" msprop:Generator_ColumnPropNameInRow="ThoiDiemThucHien" msprop:Generator_ColumnPropNameInTable="ThoiDiemThucHienColumn" msprop:Generator_UserColumnName="ThoiDiemThucHien" type="xs:dateTime" />
+              <xs:element name="MoTa" msprop:Generator_ColumnVarNameInTable="columnMoTa" msprop:Generator_ColumnPropNameInRow="MoTa" msprop:Generator_ColumnPropNameInTable="MoTaColumn" msprop:Generator_UserColumnName="MoTa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="512" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -392,6 +493,10 @@ FROM            tbHopDongVay INNER JOIN
     <xs:unique name="HopDongVayExt_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:HopDongVayExt" />
       <xs:field xpath="mstns:MaHopDong" />
+    </xs:unique>
+    <xs:unique name="GiaoDich_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:GiaoDich" />
+      <xs:field xpath="mstns:MaGiaoDich" />
     </xs:unique>
   </xs:element>
 </xs:schema>

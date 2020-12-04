@@ -12,11 +12,13 @@ namespace QLNH
 {
     public partial class ChiTieuBoSungForm : Form
     {
-        BusinessLogicTier.GiaoDichBUS busObj;
+        private BusinessLogicTier.GiaoDichBUS busObj;
+        private BusinessLogicTier.KhachHangBUS busObjKhachHang;
         public ChiTieuBoSungForm()
         {
             InitializeComponent();
             busObj = new BusinessLogicTier.GiaoDichBUS();
+            busObjKhachHang = new BusinessLogicTier.KhachHangBUS();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -40,7 +42,7 @@ namespace QLNH
                 //Button Them
                 GiaoDichChi transactionOut = new GiaoDichChi();
                 transactionOut.ThoiDiemThucHien = dateTimePicker2.Value;
-                transactionOut.DonViGiaoDich = textBox4.Text;
+                transactionOut.DonViGiaoDich = busObjKhachHang.GetKhachHangByMaKH(textBox4.Text);
                 transactionOut.GiaTri = Double.Parse(textBox2.Text);
                 transactionOut.MoTa = richTextBox2.Text;
 
@@ -68,6 +70,23 @@ namespace QLNH
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChiTieuBoSungForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.GiaoDich' table. You can move, or remove it, as needed.
+            this.giaoDichTableAdapter.Fill(this.quanLyNganHangDataSet.GiaoDich);
 
         }
     }

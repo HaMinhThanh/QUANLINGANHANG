@@ -402,7 +402,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Thời điểm vay";
+            this.label2.Text = "Thời điểm xét duyệt";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
@@ -469,6 +469,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "Thoát";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -495,7 +496,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Lý do";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // richTextBox1
             // 

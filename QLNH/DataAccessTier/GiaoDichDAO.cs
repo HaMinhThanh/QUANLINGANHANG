@@ -14,6 +14,7 @@ namespace DataAccessTier
         {
             GiaoDich result = null;
             SqlConnection conn = DBConnection.getConnection();
+            string MaDVGiaoDich = "";
 
             if (conn.State != System.Data.ConnectionState.Open)
             {
@@ -31,12 +32,15 @@ namespace DataAccessTier
                     else if (tranType == 2) result = new GiaoDichChi();
                     else throw new Exception("Unknown transaction type");
                     result.UUID = reader.GetString(0);
-                    result.DonViGiaoDich = reader.GetString(2);
+                    MaDVGiaoDich = reader.GetString(2);
                     result.GiaTri = reader.GetDouble(3);
                     result.ThoiDiemThucHien = reader.GetDateTime(4);
                     result.MoTa = reader.GetString(5);
                 }
                 reader.Close();
+
+                KhachHangDAO tempAccessObj = new KhachHangDAO();
+                result.DonViGiaoDich = tempAccessObj.GetKhachHangByMaKH(MaDVGiaoDich);
             }
             catch (SqlException SQLex)
             {
@@ -68,7 +72,7 @@ namespace DataAccessTier
 
                 cmd.Parameters.AddWithValue("@MaGiaoDich", entry.UUID);
                 cmd.Parameters.AddWithValue("@LoaiGiaoDich", LoaiGiaoDich);
-                cmd.Parameters.AddWithValue("@DonViGiaoDich", entry.DonViGiaoDich);
+                cmd.Parameters.AddWithValue("@DonViGiaoDich", entry.DonViGiaoDich.MaKH);
                 cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTri);
                 cmd.Parameters.AddWithValue("@ThoiDiem", entry.ThoiDiemThucHien);
                 cmd.Parameters.AddWithValue("@MoTa", entry.MoTa);

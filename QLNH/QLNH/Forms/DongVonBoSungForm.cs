@@ -12,10 +12,13 @@ namespace QLNH
 {
     public partial class DongVonBoSungForm : Form
     {
-        BusinessLogicTier.GiaoDichBUS busObj;
+        private BusinessLogicTier.GiaoDichBUS busObj;
+        private BusinessLogicTier.KhachHangBUS busObjKhachHang;
         public DongVonBoSungForm()
         {
             InitializeComponent();
+            busObj = new BusinessLogicTier.GiaoDichBUS();
+            busObjKhachHang = new BusinessLogicTier.KhachHangBUS();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace QLNH
                 //Button Them
                 GiaoDichThu transactionIn = new GiaoDichThu();
                 transactionIn.ThoiDiemThucHien = dateTimePicker2.Value;
-                transactionIn.DonViGiaoDich = textBox4.Text;
+                transactionIn.DonViGiaoDich = busObjKhachHang.GetKhachHangByMaKH(textBox4.Text);
                 transactionIn.GiaTri = Double.Parse(textBox5.Text);
                 transactionIn.MoTa = richTextBox2.Text;
 
@@ -67,6 +70,23 @@ namespace QLNH
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DongVonBoSungForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.GiaoDich' table. You can move, or remove it, as needed.
+            this.giaoDichTableAdapter.Fill(this.quanLyNganHangDataSet.GiaoDich);
 
         }
     }

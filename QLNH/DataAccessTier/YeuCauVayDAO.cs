@@ -37,7 +37,10 @@ namespace DataAccessTier
                     result.SoTienVay = reader.GetDouble(3);
                     result.LaiSuat = reader.GetDouble(4);
                     result.KyHan = reader.GetInt32(5);
-                    MaKQXetDuyet = reader.GetString(6);
+                    if (reader[6] == DBNull.Value)
+                        MaKQXetDuyet = "";
+                    else
+                        MaKQXetDuyet = reader.GetString(6);
                     result.ThoiDiemTiepNhan = reader.GetDateTime(7);
                 }
                 reader.Close();

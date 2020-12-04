@@ -33,5 +33,17 @@ namespace BusinessLogicTier
                 throw ex;
             }
         }
+
+        public string UpdateYeuCauChoVay(YeuCauChoVay entry)
+        {
+            try
+            {
+                return dataAccessObj.UpdateYeuCauChoVay(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

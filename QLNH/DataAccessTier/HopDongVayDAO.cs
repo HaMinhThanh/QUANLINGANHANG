@@ -38,7 +38,7 @@ namespace DataAccessTier
                 }
                 reader.Close();
 
-                // result.YeuCauVay = new YeuCauVayDAO().GetYeuCauVayByMaYC(MaYC)
+                result.YeuCauVay = new YeuCauVayDAO().GetYeuCauChoVayByMaYC(MaYC);
                 result.NVThietLap = (NhanVienTinDung) new NhanVienDAO().GetNhanVienByMaNV(MaNV);
                 result.TrangThai = new TrangThaiKhoanVayDAO().GetTrangThaiByMaTrangThai(MaTrangThai);
             }

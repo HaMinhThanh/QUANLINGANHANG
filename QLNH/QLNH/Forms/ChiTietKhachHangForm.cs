@@ -35,6 +35,10 @@ namespace QLNH.Forms
             try
             {
                 DataModel.KhachHang res = busObj.GetKhachHangByMaKH(maKH);
+
+                // TODO: This line of code loads data into the 'quanLyNganHangDataSet.GiaoDich' table. You can move, or remove it, as needed.
+                this.giaoDichTableAdapter.Fill(this.quanLyNganHangDataSet.GiaoDich);
+
                 textBox1.Text = res.MaKH;
                 textBox2.Text = res.HoTen;
                 dateTimePicker1.Value = res.NgaySinh;
@@ -43,12 +47,27 @@ namespace QLNH.Forms
                 textBox6.Text = res.GioiTinh;
                 textBox9.Text = res.SDT;
                 //TODO: comboBox and companyCustomer info
-
+                if (res is DataModel.KhachHangDoanhNghiep) {
+                    textBox3.Text = "Doanh nghiệp";
+                    textBox7.Text = ((DataModel.KhachHangDoanhNghiep)res).MaDKDoanhNghiep;
+                    textBox8.Text = ((DataModel.KhachHangDoanhNghiep)res).ChucVuKHDaiDien;
+                    textBox10.Text = ((DataModel.KhachHangDoanhNghiep)res).TenDoanhNghiep;
+                    textBox11.Text = ((DataModel.KhachHangDoanhNghiep)res).LinhVuc;
+                }
+                else
+                {
+                    textBox3.Text = "Cá nhân";
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
