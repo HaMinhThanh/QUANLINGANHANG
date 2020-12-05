@@ -13,5 +13,6 @@ namespace DataModel
         public NhanVienTinDung NVTiepNhan { get; set; }
         public DateTime NgayTiepNhan { get; set; }
         public KetQuaXetDuyet KQXetDuyet { get; set; }
+        public string LyDo { get; set; }
     }
 }

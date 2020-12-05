@@ -61,6 +61,7 @@
     <Compile Include="NhanVienXetDuyet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiSanTheChap.cs" />
+    <Compile Include="ThamSo.cs" />
     <Compile Include="TrangThaiKhoanVay.cs" />
     <Compile Include="TrangThaiTaiSan.cs" />
     <Compile Include="YeuCauChinhSuaHopDong.cs" />

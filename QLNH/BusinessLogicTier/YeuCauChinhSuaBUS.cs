@@ -21,5 +21,29 @@ namespace BusinessLogicTier
                 throw ex;
             }
         }
+
+        public bool AddYeuCauChinhSuaHopDong(YeuCauChinhSuaHopDong entry)
+        {
+            try
+            {
+                return dataAccessObj.AddYeuCauChinhSuaHopDong(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool UpdateYeuCauChinhSuaHopDong(YeuCauChinhSuaHopDong entry)
+        {
+            try
+            {
+                return dataAccessObj.UpdateYeuCauChinhSuaHopDong(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

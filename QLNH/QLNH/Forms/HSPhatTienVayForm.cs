@@ -59,7 +59,7 @@ namespace QLNH
                 entry.NVThucHien = (NhanVienKeToan) SessionState.NVDangNhap;
                 entry.GiaoDichThucHien.DonViGiaoDich = busObjKhachHang.GetKhachHangByMaKH(textBox6.Text);
                 entry.GiaoDichThucHien.GiaTri = (Double) numericUpDown1.Value;
-                entry.GiaoDichThucHien.MoTa = "Phát tiền cho khoản vay";
+                entry.GiaoDichThucHien.MoTa = "Phát tiền cho khoản vay " + selectedHD.MaHopDong;
                 entry.GiaoDichThucHien.ThoiDiemThucHien = dateTimePicker2.Value;
 
                 busObjGiaoDich.AddGiaoDich(entry.GiaoDichThucHien);

@@ -56,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlCommandTextBuilder.cs" />
     <Compile Include="TaiSanTheChapDAO.cs" />
+    <Compile Include="ThamSoDAO.cs" />
     <Compile Include="TrangThaiKhoanVayDAO.cs" />
     <Compile Include="TrangThaiTaiSanDAO.cs" />
     <Compile Include="YeuCauChinhSuaDAO.cs" />

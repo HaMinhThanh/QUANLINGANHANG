@@ -12,8 +12,8 @@ DROP TABLE tbDieuKhoanHopDong
 DROP TABLE tbYeuCauChoVay 
 DROP TABLE tbKQXetDuyet 
 DROP TABLE tbNhanVien 
-DROP TABLE tbKhachHang 
 DROP TABLE tbChiTietDoanhNghiep
+DROP TABLE tbKhachHang 
 DROP TABLE tbGiaoDich 
 DROP TABLE tbDieuKhoan 
 DROP TABLE tbDinhDanh

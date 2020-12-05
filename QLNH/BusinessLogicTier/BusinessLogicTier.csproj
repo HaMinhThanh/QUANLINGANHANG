@@ -54,6 +54,7 @@
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiSanTheChapBUS.cs" />
+    <Compile Include="ThamSoBUS.cs" />
     <Compile Include="TrangThaiKhoanVayBUS.cs" />
     <Compile Include="TrangThaiTaiSanBUS.cs" />
     <Compile Include="YeuCauChinhSuaBUS.cs" />

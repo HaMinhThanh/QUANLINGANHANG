@@ -177,7 +177,8 @@ CREATE TABLE tbYeuCauChinhSuaHopDong (
 	MaHopDong CHAR(36) NOT NULL,
 	MaNVTiepNhan CHAR(36) NOT NULL,
 	NgayTiepNhan DATE NOT NULL,
-	MaKQXetDuyet CHAR(36)
+	MaKQXetDuyet CHAR(36),
+	LyDo VARCHAR(512) NOT NULL
 	PRIMARY KEY (MaYeuCauChinhSua) 
 	FOREIGN KEY (MaHopDong) REFERENCES tbHopDongVay(MaHopDong),
 	FOREIGN KEY (MaNVTiepNhan) REFERENCES tbNhanVien(MaNV),
