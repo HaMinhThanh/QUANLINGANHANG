@@ -15,5 +15,12 @@ namespace QLNH
         {
             InitializeComponent();
         }
+
+        private void BaoCaoTaiChinhForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.GiaoDich' table. You can move, or remove it, as needed.
+            this.giaoDichTableAdapter.Fill(this.quanLyNganHangDataSet.GiaoDich);
+
+        }
     }
 }

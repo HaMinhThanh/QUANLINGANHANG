@@ -87,5 +87,16 @@ namespace QLNH
                 this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Forms.TraCuuLaiSuat newForm = new Forms.TraCuuLaiSuat(0);
+            newForm.ShowDialog();
+            if (newForm.DialogResult == DialogResult.OK)
+            {
+                numericUpDown2.Value = (Decimal) newForm.selectedCycle;
+                label11.Text = newForm.result.ToString();
+            }
+        }
     }
 }

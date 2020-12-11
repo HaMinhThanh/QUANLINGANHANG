@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCaoDoiTuongVayDAO.cs" />
     <Compile Include="DBConnection.cs" />
-    <Compile Include="DieuKhoanHopDongDAO.cs" />
+    <Compile Include="DieuKhoanDAO.cs" />
     <Compile Include="DinhDanhDAO.cs" />
+    <Compile Include="DSDieuKhoanDAO.cs" />
     <Compile Include="GiaoDichDAO.cs" />
     <Compile Include="GiayToChungThucDAO.cs" />
     <Compile Include="HoatDongDAO.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="SqlCommandTextBuilder.cs" />
     <Compile Include="TaiSanTheChapDAO.cs" />
     <Compile Include="ThamSoDAO.cs" />
+    <Compile Include="ThamSoKHLSDAO.cs" />
     <Compile Include="TrangThaiKhoanVayDAO.cs" />
     <Compile Include="TrangThaiTaiSanDAO.cs" />
     <Compile Include="YeuCauChinhSuaDAO.cs" />

@@ -19,6 +19,12 @@ CREATE TABLE tbDinhDanh (
 	PRIMARY KEY (MaDinhDanh)
 )
 
+CREATE TABLE tbThamSoKyHanLaiSuat (
+	KyHan INT NOT NULL,
+	LaiSuat DECIMAL(7, 3) NOT NULL
+	PRIMARY KEY (KyHan)
+)
+
 CREATE TABLE tbDieuKhoan (
 	MaDieuKhoan CHAR(36) NOT NULL,
 	MoTa NVARCHAR(512) NOT NULL

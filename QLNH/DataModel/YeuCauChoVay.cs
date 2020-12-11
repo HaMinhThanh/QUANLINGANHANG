@@ -16,6 +16,7 @@ namespace DataModel
         public double LaiSuat { get; set; }
         public int KyHan { get; set; }
         public List<TaiSanTheChap> DSTaiSanTheChap { get; set; }
+        public List<DieuKhoanChoVay> DSDieuKhoan { get; set; }
         public KetQuaXetDuyet KQXetDuyet { get; set; }
     }
 }

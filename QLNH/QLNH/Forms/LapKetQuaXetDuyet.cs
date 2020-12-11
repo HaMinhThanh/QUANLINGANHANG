@@ -15,6 +15,7 @@ namespace QLNH
     {
         public KetQuaXetDuyet result { get; set; }
         public YeuCauChoVay entry { get; set; }
+        public bool isChapNhan { get; set; } = false;
         public KetQuaXetDuyetBUS busObj;
 
         public LapKetQuaXetDuyet()
@@ -47,6 +48,11 @@ namespace QLNH
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void LapKetQuaXetDuyet_Load(object sender, EventArgs e)
+        {
+            checkBox1.Checked = isChapNhan;
         }
     }
 }

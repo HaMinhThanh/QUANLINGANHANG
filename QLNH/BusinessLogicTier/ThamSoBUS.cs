@@ -7,20 +7,35 @@ using DataAccessTier;
 
 namespace BusinessLogicTier
 {
-    class ThamSoBUS
+    public class ThamSoBUS
     {
         ThamSoDAO dataAccessObj;
+
         public ThamSoBUS()
         {
             dataAccessObj = new ThamSoDAO();
         }
         public ThamSo GetLatestThamSo()
         {
-            return dataAccessObj.GetLatestThamSo();
+            try
+            {
+                return dataAccessObj.GetLatestThamSo();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
         public bool AddThamSo(ThamSo entry)
         {
-            return dataAccessObj.AddThamSo(entry);
+            try
+            {
+                return dataAccessObj.AddThamSo(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

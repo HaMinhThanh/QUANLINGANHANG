@@ -44,6 +44,9 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
@@ -64,7 +67,6 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.maYeuCauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,27 +79,23 @@
             this.yeuCauVayBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
             this.yeuCauVayTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.YeuCauVayTableAdapter();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
-            this.tableLayoutPanel9.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yeuCauVayBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -314,6 +312,45 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown1.Location = new System.Drawing.Point(103, 120);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1215752192,
+            23,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
+            this.numericUpDown1.Size = new System.Drawing.Size(180, 20);
+            this.numericUpDown1.TabIndex = 22;
+            this.numericUpDown1.ThousandsSeparator = true;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown2.Location = new System.Drawing.Point(103, 172);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.ReadOnly = true;
+            this.numericUpDown2.Size = new System.Drawing.Size(180, 20);
+            this.numericUpDown2.TabIndex = 23;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown3.DecimalPlaces = 2;
+            this.numericUpDown3.Location = new System.Drawing.Point(103, 224);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.ReadOnly = true;
+            this.numericUpDown3.Size = new System.Drawing.Size(180, 20);
+            this.numericUpDown3.TabIndex = 24;
+            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
@@ -335,6 +372,7 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.button5, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button4, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 338);
@@ -551,8 +589,6 @@
             this.tableLayoutPanel9.ColumnCount = 2;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.87405F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.12595F));
-            this.tableLayoutPanel9.Controls.Add(this.button5, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.button6, 1, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(2, 337);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
@@ -564,27 +600,17 @@
             // 
             // button5
             // 
-            this.button5.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button5.Image = global::QLNH.Properties.Resources.Gear_icon;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(1, 2);
             this.button5.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(142, 39);
             this.button5.TabIndex = 0;
-            this.button5.Text = "Thêm điều khoản";
+            this.button5.Text = "Xác định điều khoản";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Image = global::QLNH.Properties.Resources.delete_icon;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(145, 2);
-            this.button6.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(143, 39);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Xóa điều khoản ";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox1
             // 
@@ -678,45 +704,6 @@
             // 
             this.yeuCauVayTableAdapter.ClearBeforeFill = true;
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown1.Location = new System.Drawing.Point(103, 120);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1215752192,
-            23,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(180, 20);
-            this.numericUpDown1.TabIndex = 22;
-            this.numericUpDown1.ThousandsSeparator = true;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown2.Location = new System.Drawing.Point(103, 172);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            360,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.ReadOnly = true;
-            this.numericUpDown2.Size = new System.Drawing.Size(180, 20);
-            this.numericUpDown2.TabIndex = 23;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Location = new System.Drawing.Point(103, 224);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.ReadOnly = true;
-            this.numericUpDown3.Size = new System.Drawing.Size(180, 20);
-            this.numericUpDown3.TabIndex = 24;
-            // 
             // XetDuyetChoVayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -733,20 +720,19 @@
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
-            this.tableLayoutPanel9.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yeuCauVayBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -780,7 +766,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.GroupBox groupBox1;

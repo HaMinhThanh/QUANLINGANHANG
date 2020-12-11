@@ -17,12 +17,12 @@ namespace QLNH
         private YeuCauVayBUS busObj;
         public XetDuyetChoVayForm()
         {
+            busObj = new YeuCauVayBUS();
             InitializeComponent();
         }
 
         private void XetDuyetChoVayForm_Load(object sender, EventArgs e) 
         {
-            busObj = new YeuCauVayBUS();
             // TODO: This line of code loads data into the 'quanLyNganHangDataSet.YeuCauVay' table. You can move, or remove it, as needed.
             
             this.yeuCauVayTableAdapter.Fill(this.quanLyNganHangDataSet.YeuCauVay);
@@ -31,7 +31,13 @@ namespace QLNH
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (selectedYC == null)
+            {
+                MessageBox.Show("Chưa chọn yêu cầu trước khi thao tác", "Thông báo");
+                return;
+            }
             LapKetQuaXetDuyet newForm = new LapKetQuaXetDuyet();
+            newForm.isChapNhan = true;
             newForm.ShowDialog();
             if (newForm.DialogResult == DialogResult.OK)
             {
@@ -43,7 +49,13 @@ namespace QLNH
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (selectedYC == null)
+            {
+                MessageBox.Show("Chưa chọn yêu cầu trước khi thao tác", "Thông báo");
+                return;
+            }
             LapKetQuaXetDuyet newForm = new LapKetQuaXetDuyet();
+            newForm.isChapNhan = false;
             newForm.ShowDialog();
             if (newForm.DialogResult == DialogResult.OK)
             {
@@ -83,6 +95,7 @@ namespace QLNH
                 textBox4.Text = selectedYC.KHYeuCau.DinhDanhKH.MaDinhDanh;
                 textBox5.Text = selectedYC.KHYeuCau.SDT;
                 label15.Text = selectedYC.KHYeuCau.GioiTinh;
+
             }
             catch (Exception ex)
             {
@@ -92,13 +105,30 @@ namespace QLNH
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Forms.ChiTietKhoanVay newForm = new Forms.ChiTietKhoanVay();
+            if (selectedYC == null)
+            {
+                MessageBox.Show("Chưa chọn yêu cầu trước khi thao tác", "Thông báo");
+                return;
+            }
+            Forms.ChiTietKhoanVay newForm = new Forms.ChiTietKhoanVay(selectedYC.MaYeuCau);
             newForm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (selectedYC == null)
+            {
+                MessageBox.Show("Chưa chọn yêu cầu trước khi thao tác", "Thông báo");
+                return;
+            }
+            XuLiYeuCauHĐForm newForm = new XuLiYeuCauHĐForm();
+            newForm.MaYeuCau = selectedYC.MaYeuCau;
+            newForm.Show();
         }
     }
 }

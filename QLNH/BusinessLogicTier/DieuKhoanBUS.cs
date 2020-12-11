@@ -8,9 +8,9 @@ using System.Text;
 
 namespace BusinessLogicTier
 {
-    public class DieuKhoanHopDongBUS
+    public class DieuKhoanBUS
     {
-        private DieuKhoanHopDongDAO dataAccessObj = new DieuKhoanHopDongDAO();
+        private DieuKhoanDAO dataAccessObj = new DieuKhoanDAO();
         public DieuKhoanChoVay GetDieuKhoanHopDongByMaDieuKhoan(string MaDieuKhoan)
         {
             try
@@ -40,6 +40,30 @@ namespace BusinessLogicTier
             try
             {
                 return dataAccessObj.AddDieuKhoan(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool UpdateDieuKhoan(DieuKhoanChoVay entry)
+        {
+            try
+            {
+                return dataAccessObj.UpdateDieuKhoan(entry);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool RemoveDieuKhoan(string entry_id)
+        {
+            try
+            {
+                return dataAccessObj.RemoveDieuKhoan(entry_id);
             }
             catch (Exception ex)
             {

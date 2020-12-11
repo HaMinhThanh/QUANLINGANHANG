@@ -98,7 +98,7 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel10, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(214, 122);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -113,7 +113,7 @@
             this.tableLayoutPanel5.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.numericUpDown3, 1, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -135,7 +135,7 @@
             // 
             this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown3.Location = new System.Drawing.Point(70, 10);
-            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(64, 20);
             this.numericUpDown3.TabIndex = 1;
@@ -148,7 +148,7 @@
             this.tableLayoutPanel10.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.numericUpDown10, 1, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(144, 2);
-            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -170,7 +170,7 @@
             // 
             this.numericUpDown10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown10.Location = new System.Drawing.Point(70, 10);
-            this.numericUpDown10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown10.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown10.Name = "numericUpDown10";
             this.numericUpDown10.Size = new System.Drawing.Size(65, 20);
             this.numericUpDown10.TabIndex = 1;
@@ -184,7 +184,7 @@
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel8, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel9, 1, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(214, 354);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -199,7 +199,7 @@
             this.tableLayoutPanel8.Controls.Add(this.label12, 0, 0);
             this.tableLayoutPanel8.Controls.Add(this.numericUpDown8, 1, 0);
             this.tableLayoutPanel8.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
             this.tableLayoutPanel8.RowCount = 1;
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -221,7 +221,7 @@
             // 
             this.numericUpDown8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown8.Location = new System.Drawing.Point(70, 10);
-            this.numericUpDown8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown8.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(64, 20);
             this.numericUpDown8.TabIndex = 1;
@@ -234,7 +234,7 @@
             this.tableLayoutPanel9.Controls.Add(this.label13, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.numericUpDown9, 1, 0);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(144, 2);
-            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 1;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -256,7 +256,7 @@
             // 
             this.numericUpDown9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown9.Location = new System.Drawing.Point(70, 10);
-            this.numericUpDown9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown9.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown9.Name = "numericUpDown9";
             this.numericUpDown9.Size = new System.Drawing.Size(65, 20);
             this.numericUpDown9.TabIndex = 1;
@@ -270,7 +270,7 @@
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.tableLayoutPanel7, 1, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(214, 296);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -285,7 +285,7 @@
             this.tableLayoutPanel6.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.numericUpDown6, 1, 0);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -307,7 +307,7 @@
             // 
             this.numericUpDown6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown6.Location = new System.Drawing.Point(70, 10);
-            this.numericUpDown6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown6.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.Size = new System.Drawing.Size(64, 20);
             this.numericUpDown6.TabIndex = 1;
@@ -320,7 +320,7 @@
             this.tableLayoutPanel7.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.numericUpDown7, 1, 0);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(144, 2);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -342,7 +342,7 @@
             // 
             this.numericUpDown7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown7.Location = new System.Drawing.Point(70, 10);
-            this.numericUpDown7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown7.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(65, 20);
             this.numericUpDown7.TabIndex = 1;
@@ -351,7 +351,7 @@
             // 
             this.numericUpDown5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown5.Location = new System.Drawing.Point(214, 251);
-            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown5.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown5.TabIndex = 15;
@@ -360,7 +360,7 @@
             // 
             this.numericUpDown4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown4.Location = new System.Drawing.Point(214, 193);
-            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown4.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown4.TabIndex = 14;
@@ -369,7 +369,7 @@
             // 
             this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown2.Location = new System.Drawing.Point(214, 77);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown2.TabIndex = 12;
@@ -378,7 +378,7 @@
             // 
             this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown1.Location = new System.Drawing.Point(214, 19);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown1.TabIndex = 11;
@@ -493,7 +493,7 @@
             this.tableLayoutPanel1.Controls.Add(this.button2, 1, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
@@ -517,12 +517,13 @@
             this.button1.Image = global::QLNH.Properties.Resources.star_full_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(2, 466);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(208, 54);
             this.button1.TabIndex = 25;
             this.button1.Text = "Mặc định";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label14
             // 
@@ -539,7 +540,7 @@
             // 
             this.numericUpDown11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown11.Location = new System.Drawing.Point(214, 425);
-            this.numericUpDown11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.numericUpDown11.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown11.TabIndex = 24;
@@ -550,12 +551,13 @@
             this.button4.Image = global::QLNH.Properties.Resources.Go_back_icon;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(214, 524);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(284, 47);
             this.button4.TabIndex = 26;
             this.button4.Text = "Thoát";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -563,7 +565,7 @@
             this.button2.Image = global::QLNH.Properties.Resources.Gear_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(214, 466);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(284, 54);
             this.button2.TabIndex = 27;
@@ -577,9 +579,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(500, 573);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuyDinhForm";
             this.Text = "QuyDinhForm";
+            this.Load += new System.EventHandler(this.QuyDinhForm_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();

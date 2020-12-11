@@ -63,7 +63,9 @@ namespace DataAccessTier
                     result.KQXetDuyet = tempAccessObj2.GetKQXetDuyetByMaKQ(MaKQXetDuyet);
                 }
                 TaiSanTheChapDAO tempAccessObj3 = new TaiSanTheChapDAO();
-                result.DSTaiSanTheChap = tempAccessObj3.GetTaiSanTheChapByMaYeuCauChoVay(MaYeuCau);                  
+                result.DSTaiSanTheChap = tempAccessObj3.GetTaiSanTheChapByMaYeuCauChoVay(MaYeuCau);
+                DSDieuKhoanDAO tempAccessObj4 = new DSDieuKhoanDAO();
+                result.DSDieuKhoan = tempAccessObj4.GetDieuKhoanHopDongByMaYeuCau(MaYeuCau);
             }
             catch (SqlException SQLex)
             {

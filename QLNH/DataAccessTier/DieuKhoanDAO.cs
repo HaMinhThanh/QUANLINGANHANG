@@ -9,9 +9,9 @@ using DataModel;
 
 namespace DataAccessTier
 {
-    public class DieuKhoanHopDongDAO
+    public class DieuKhoanDAO
     {
-        public DieuKhoanHopDongDAO() { }
+        public DieuKhoanDAO() { }
         public DieuKhoanChoVay GetDieuKhoanHopDongByMaDieuKhoan(string MaDieuKhoan)
         {
             DieuKhoanChoVay result = new DieuKhoanChoVay();
@@ -87,6 +87,60 @@ namespace DataAccessTier
 
                 int res = cmd.ExecuteNonQuery();
                 if (res != 1) throw new Exception("Can't add new term");
+                return true;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool UpdateDieuKhoan(DieuKhoanChoVay entry)
+        {
+            SqlConnection conn = DBConnection.getConnection();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            if (!entry.MaDieuKhoan.Equals("")) throw new Exception("entry not exist in database");
+            SqlCommand cmd = new SqlCommand("UPDATE tbDieuKhoan SET MoTa = @MoTa WHERE MaDieuKhoan = @MaDieuKhoan", conn);
+            try
+            {
+                cmd.Parameters.AddWithValue("@MaDieuKhoan", entry.MaDieuKhoan);
+                cmd.Parameters.AddWithValue("@MoTa", entry.MoTa);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't update queried term");
+                return true;
+            }
+            catch (SqlException SQLex)
+            {
+                throw SQLex;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool RemoveDieuKhoan(string MaDieuKhoan)
+        {
+            SqlConnection conn = DBConnection.getConnection();
+            if (conn.State != System.Data.ConnectionState.Open)
+            {
+                conn.Open();
+            }
+            SqlCommand cmd = new SqlCommand("DELETE FROM tbDieuKhoan WHERE MaDieuKhoan = @MaDieuKhoan", conn);
+            try
+            {
+                cmd.Parameters.AddWithValue("@MaDieuKhoan", MaDieuKhoan);
+
+                int res = cmd.ExecuteNonQuery();
+                if (res != 1) throw new Exception("Can't remove queried term");
                 return true;
             }
             catch (SqlException SQLex)

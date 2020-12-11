@@ -54,13 +54,13 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -277,11 +277,15 @@
             // 
             this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Miễn giảm lãi suất",
+            "Gia hạn khoản vay"});
             this.comboBox1.Location = new System.Drawing.Point(2, 7);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(284, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.Text = "<Chọn loại yêu cầu>";
             // 
             // tableLayoutPanel8
             // 
@@ -458,54 +462,6 @@
             this.label5.Text = "Mã khách hàng";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 106);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Thời điểm vay";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(2, 196);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(122, 13);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Số tiền vay (VNĐ)";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(2, 241);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(122, 13);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Kỳ hạn (tháng)";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(2, 286);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(122, 13);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Lãi suất (%)";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // textBox3
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -536,6 +492,54 @@
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(258, 20);
             this.textBox8.TabIndex = 30;
+            // 
+            // label12
+            // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(2, 286);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(122, 13);
+            this.label12.TabIndex = 6;
+            this.label12.Text = "Lãi suất (%)";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(2, 241);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(122, 13);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Kỳ hạn (tháng)";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(2, 196);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(122, 13);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Số tiền vay (VNĐ)";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(2, 106);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(122, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Thời điểm vay";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBox10
             // 

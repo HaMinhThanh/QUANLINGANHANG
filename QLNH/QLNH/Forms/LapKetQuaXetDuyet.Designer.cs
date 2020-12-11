@@ -549,6 +549,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LapKetQuaXetDuyet";
             this.Text = "LapKetQuaXetDuyet";
+            this.Load += new System.EventHandler(this.LapKetQuaXetDuyet_Load);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();

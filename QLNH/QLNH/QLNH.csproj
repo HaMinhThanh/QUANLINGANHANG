@@ -88,6 +88,12 @@
     <Compile Include="Forms\ChiTieuBoSungForm.Designer.cs">
       <DependentUpon>ChiTieuBoSungForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DanhSachDieuKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DanhSachDieuKhoan.Designer.cs">
+      <DependentUpon>DanhSachDieuKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DongVonBoSungForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,18 @@
     </Compile>
     <Compile Include="Forms\ChiTietKhoanVay.Designer.cs">
       <DependentUpon>ChiTietKhoanVay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TraCuuLaiSuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TraCuuLaiSuat.Designer.cs">
+      <DependentUpon>TraCuuLaiSuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XetDuyetYeuCauChinhSuaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XetDuyetYeuCauChinhSuaForm.Designer.cs">
+      <DependentUpon>XetDuyetYeuCauChinhSuaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="HelperFunction.cs" />
     <Compile Include="Forms\KiemTraHopDongQuaHan.cs">
@@ -232,6 +250,12 @@
     <Compile Include="Forms\TraCuuKhoanVay.Designer.cs">
       <DependentUpon>TraCuuKhoanVay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TraCuuKhachHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TraCuuKhachHangForm.Designer.cs">
+      <DependentUpon>TraCuuKhachHangForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Forms\BaoCaoTaiChinhDoiTuongVay.resx">
       <DependentUpon>BaoCaoTaiChinhDoiTuongVay.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChiTieuBoSungForm.resx">
       <DependentUpon>ChiTieuBoSungForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DanhSachDieuKhoan.resx">
+      <DependentUpon>DanhSachDieuKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\DongVonBoSungForm.resx">
       <DependentUpon>DongVonBoSungForm.cs</DependentUpon>
@@ -295,6 +322,12 @@
     <EmbeddedResource Include="Forms\KiemTraHopDongThanhLy.resx">
       <DependentUpon>KiemTraHopDongThanhLy.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TraCuuLaiSuat.resx">
+      <DependentUpon>TraCuuLaiSuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XetDuyetYeuCauChinhSuaForm.resx">
+      <DependentUpon>XetDuyetYeuCauChinhSuaForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -319,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\QuyetToanForm.resx">
       <DependentUpon>QuyetToanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TraCuuKhachHangForm.resx">
+      <DependentUpon>TraCuuKhachHangForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

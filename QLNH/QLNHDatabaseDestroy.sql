@@ -11,10 +11,10 @@ DROP TABLE tbHopDongVay
 DROP TABLE tbDieuKhoanHopDong 
 DROP TABLE tbYeuCauChoVay 
 DROP TABLE tbKQXetDuyet 
+DROP TABLE tbGiaoDich 
 DROP TABLE tbNhanVien 
 DROP TABLE tbChiTietDoanhNghiep
 DROP TABLE tbKhachHang 
-DROP TABLE tbGiaoDich 
 DROP TABLE tbDieuKhoan 
 DROP TABLE tbDinhDanh
 DROP TABLE tbTrangThaiTaiSan
