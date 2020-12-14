@@ -19,15 +19,11 @@ namespace QLNH.Forms
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HoatDong' table. You can move, or remove it, as needed.
-            this.hoatDongTableAdapter.Fill(this.quanLyNganHangDataSet.HoatDong);
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TaiSanTheChapExt' table. You can move, or remove it, as needed.
-            this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HopDongVayExt' table. You can move, or remove it, as needed.
-            this.hopDongVayExtTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExt);
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.KhachHang' table. You can move, or remove it, as needed.
-            this.khachHangTableAdapter.Fill(this.quanLyNganHangDataSet.KhachHang);
-
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TrangThaiTaiSanCB' table. You can move, or remove it, as needed.
+            this.trangThaiTaiSanCBTableAdapter.Fill(this.quanLyNganHangDataSet.TrangThaiTaiSanCB);
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TrangThaiHopDongVayCB' table. You can move, or remove it, as needed.
+            this.trangThaiHopDongVayCBTableAdapter.Fill(this.quanLyNganHangDataSet.TrangThaiHopDongVayCB);
+            label1.Text = "Xin chào, " + SessionState.NVDangNhap.HoTen;
             TableLayoutPanel dynamicTableLayoutPanel = new TableLayoutPanel();
 
             //dynamicTableLayoutPanel.Location = new System.Drawing.Point(3, 110);
@@ -133,8 +129,19 @@ namespace QLNH.Forms
                 btnXuLiYeuCauHD.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnXuLiYeuCauHD);
 
+                Button btnXuLiTaiSanTheChap = new Button();
+                //btnXuLiYeuCauHD.Location = new Point(3, 283);
+                btnXuLiTaiSanTheChap.Size = new Size(299, 44);
+                btnXuLiTaiSanTheChap.Text = "Định giá tài sản thế chấp";
+                btnXuLiTaiSanTheChap.Click += btnXuLiTaiSanTheChap_Click;
+                btnXuLiTaiSanTheChap.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnXuLiTaiSanTheChap.TabIndex = 5;
+                btnXuLiTaiSanTheChap.Dock = System.Windows.Forms.DockStyle.Fill;
+                Controls.Add(btnXuLiTaiSanTheChap);
+
                 dynamicTableLayoutPanel.Controls.Add(btnXetDuyetChoVay, 0, 1);
                 dynamicTableLayoutPanel.Controls.Add(btnXuLiYeuCauHD, 0, 2);
+                dynamicTableLayoutPanel.Controls.Add(btnXuLiTaiSanTheChap, 0, 3);
                 Controls.Add(dynamicTableLayoutPanel);
             } 
             else if (SessionState.NVDangNhap is DataModel.NhanVienKeToan)
@@ -281,6 +288,12 @@ namespace QLNH.Forms
             tableLayoutPanel1.Controls.Add(dynamicTableLayoutPanel);
         }
 
+        private void btnXuLiTaiSanTheChap_Click(object sender, EventArgs e)
+        {
+            DinhGiaTaiSanTheChapForm newForm = new DinhGiaTaiSanTheChapForm();
+            newForm.Show();
+        }
+
         private void BtnPhieuPhatTien_Click(object sender, EventArgs e)
         {
             HSPhatTienVayForm newForm = new HSPhatTienVayForm();
@@ -321,8 +334,8 @@ namespace QLNH.Forms
         {
             //throw new NotImplementedException();
             
-            //DanhSachHopDongQuaHanForm newForm = new DanhSachHopDongQuaHanForm();
-            //newForm.Show();
+            KiemTraHopDongQuaHan newForm = new KiemTraHopDongQuaHan();
+            newForm.Show();
         }
 
         private void BtnChiTieuBoSung_Click(object sender, EventArgs e)
@@ -345,8 +358,8 @@ namespace QLNH.Forms
         {
             //throw new NotImplementedException();
 
-            //DanhSachHopDongThanhLyForm newForm = new DanhSachThanhLyQuaHanForm();
-            //newForm.Show();
+            KiemTraHopDongThanhLy newForm = new KiemTraHopDongThanhLy();
+            newForm.Show();
         }
 
         private void BtnDonGHMG_Click(object sender, EventArgs e)
@@ -377,7 +390,7 @@ namespace QLNH.Forms
         {
             //throw new NotImplementedException();
 
-            XuLiYeuCauHĐForm newForm = new XuLiYeuCauHĐForm();
+            XetDuyetYeuCauChinhSuaForm newForm = new XetDuyetYeuCauChinhSuaForm();
             newForm.Show();
         }
 
@@ -438,12 +451,95 @@ namespace QLNH.Forms
 
         private void button10_Click(object sender, EventArgs e)
         {
+            //MaKhachHang, HoTenKhachHang, DinhDanh, LoaiKhachHang
+            string filter = "";
+
+            if (!textBox1.Text.Equals(""))
+                filter += String.Format("MaKH = '{0}' AND ", textBox1.Text);
+            if (!textBox3.Text.Equals(""))
+                filter += String.Format("HoTen LIKE '*{0}*' AND ", textBox3.Text);
+            if (comboBox13.SelectedItem != null && comboBox13.SelectedIndex != 0 && !textBox2.Text.Equals(""))
+                filter += String.Format("LoaiDinhDanh = {0} AND GiaTri LIKE '*{1}' AND ", comboBox13.SelectedIndex, textBox2.Text);
+            if (comboBox10.SelectedItem != null && comboBox10.SelectedIndex != 0)
+            {
+                if (comboBox10.SelectedIndex == 0)
+                    filter += String.Format("MaDoanhNghiepDaiDien IS NULL AND ");
+                else if (comboBox10.SelectedIndex == 1)
+                    filter += String.Format("MaDoanhNghiepDaiDien IS NOT NULL AND ");
+            }
+            if (!filter.Equals(""))
+                filter = filter.Substring(0, filter.LastIndexOf("AND") - 1);
+            else
+            {
+                MessageBox.Show("Xin hãy chọn 1 tiêu chuẩn tra cứu", "Thông báo");
+                return;
+            }
+            ((BindingSource)dataGridView2.DataSource).Filter = filter;
             this.khachHangTableAdapter.Fill(this.quanLyNganHangDataSet.KhachHang);
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+            string filter = "";
+
+            if (!textBox9.Text.Equals(""))
+                filter += String.Format("MaTaiSan = '{0}' AND ", textBox9.Text);
+            if (!textBox11.Text.Equals(""))
+                filter += String.Format("MoTa LIKE '*{0}*' AND ", textBox11.Text);
+            if (numericUpDown2.Value > 0)
+                filter += String.Format("DinhGia >= {0} AND ", numericUpDown2.Value);
+            if (comboBox12.SelectedItem != null)
+                filter += String.Format("MaTrangThai = '{0}' AND ", comboBox12.SelectedValue);
+
+            if (!filter.Equals(""))
+                filter = filter.Substring(0, filter.LastIndexOf("AND") - 1);
+            else
+            {
+                MessageBox.Show("Xin hãy chọn 1 tiêu chuẩn tra cứu", "Thông báo");
+                return;
+            }
+            ((BindingSource)dataGridView4.DataSource).Filter = filter;
             this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string filter = "";
+
+            if (!textBox5.Text.Equals(""))
+                filter += String.Format("MaHopDong = '{0}' AND ", textBox5.Text);
+            if (numericUpDown1.Value > 0)
+                filter += String.Format("GiaTriHienTai >= {0} AND ", numericUpDown1.Value);
+            if (comboBox11.SelectedItem != null)
+                filter += String.Format("MaTrangThai = '{0}' AND ", comboBox11.SelectedValue);
+            if (!textBox6.Text.Equals(""))
+                filter += String.Format("HoTen LIKE '*{0}*' AND ", textBox6.Text);
+            if (dateTimePicker4.Value <= DateTime.Now)
+                filter += String.Format("NgayThietLap >= #{0}# AND ", dateTimePicker4.Value.ToString("MM/dd/yyyy"));
+
+            if (!filter.Equals(""))
+                filter = filter.Substring(0, filter.LastIndexOf("AND") - 1);
+            else
+            {
+                MessageBox.Show("Xin hãy chọn 1 tiêu chuẩn tra cứu", "Thông báo");
+                return;
+            }
+            ((BindingSource)dataGridView3.DataSource).Filter = filter;
+            this.hopDongVayExtTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExt);
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            //(InRange) ThoiDiemThucHien
+            string startDate = dateTimePicker2.Value.ToString("MM/dd/yyyy");
+            string endDate = dateTimePicker3.Value.ToString("MM/dd/yyyy");
+            ((BindingSource)dataGridView5.DataSource).Filter = String.Format("ThoiDiemThucHien >= #{0}# AND ThoiDiemThucHien <= #{1}#", startDate, endDate);
+            this.hoatDongTableAdapter.Fill(this.quanLyNganHangDataSet.HoatDong);
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

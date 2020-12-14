@@ -35,6 +35,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -69,21 +70,26 @@
             this.maHopDongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoTenDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaTriHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maTrangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayThietLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.laiSuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kiHanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hopDongVayExtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.button11 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.trangThaiHopDongVayCBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label20 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -95,14 +101,17 @@
             this.taiSanTheChapExtBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.comboBox12 = new System.Windows.Forms.ComboBox();
+            this.trangThaiTaiSanCBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -147,6 +156,8 @@
             this.hopDongVayExtTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.HopDongVayExtTableAdapter();
             this.taiSanTheChapExtTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.TaiSanTheChapExtTableAdapter();
             this.hoatDongTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.HoatDongTableAdapter();
+            this.trangThaiHopDongVayCBTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.TrangThaiHopDongVayCBTableAdapter();
+            this.trangThaiTaiSanCBTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.TrangThaiTaiSanCBTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -165,12 +176,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trangThaiHopDongVayCBBindingSource)).BeginInit();
+            this.tableLayoutPanel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.taiSanTheChapExtBindingSource)).BeginInit();
             this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trangThaiTaiSanCBBindingSource)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -250,9 +267,18 @@
             // 
             // hệThốngToolStripMenuItem
             // 
+            this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logOutToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.logOutToolStripMenuItem.Text = "Đăng xuất";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // tabControl1
             // 
@@ -314,6 +340,7 @@
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
             this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maKHDataGridViewTextBoxColumn,
@@ -338,6 +365,7 @@
             // maKHDataGridViewTextBoxColumn
             // 
             this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.FillWeight = 50F;
             this.maKHDataGridViewTextBoxColumn.HeaderText = "MaKH";
             this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
             this.maKHDataGridViewTextBoxColumn.ReadOnly = true;
@@ -352,6 +380,7 @@
             // ngaySinhDataGridViewTextBoxColumn
             // 
             this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.FillWeight = 50F;
             this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
             this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
             this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
@@ -359,6 +388,7 @@
             // sDTDataGridViewTextBoxColumn
             // 
             this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
+            this.sDTDataGridViewTextBoxColumn.FillWeight = 50F;
             this.sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
             this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
             this.sDTDataGridViewTextBoxColumn.ReadOnly = true;
@@ -373,6 +403,7 @@
             // gioiTinhDataGridViewTextBoxColumn
             // 
             this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.FillWeight = 10F;
             this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
             this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
             this.gioiTinhDataGridViewTextBoxColumn.ReadOnly = true;
@@ -380,6 +411,7 @@
             // loaiDinhDanhDataGridViewTextBoxColumn
             // 
             this.loaiDinhDanhDataGridViewTextBoxColumn.DataPropertyName = "LoaiDinhDanh";
+            this.loaiDinhDanhDataGridViewTextBoxColumn.FillWeight = 20F;
             this.loaiDinhDanhDataGridViewTextBoxColumn.HeaderText = "LoaiDinhDanh";
             this.loaiDinhDanhDataGridViewTextBoxColumn.Name = "loaiDinhDanhDataGridViewTextBoxColumn";
             this.loaiDinhDanhDataGridViewTextBoxColumn.ReadOnly = true;
@@ -484,6 +516,7 @@
             this.button10.TabIndex = 4;
             this.button10.Text = "Tra cứu";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox1
             // 
@@ -507,11 +540,16 @@
             // 
             this.comboBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            "<Chọn loại khách hàng>",
+            "Cá nhân",
+            "Doanh Nghiệp"});
             this.comboBox10.Location = new System.Drawing.Point(478, 34);
             this.comboBox10.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(201, 21);
             this.comboBox10.TabIndex = 8;
+            this.comboBox10.Text = "<Chọn loại khách hàng>";
             // 
             // tableLayoutPanel3
             // 
@@ -533,11 +571,17 @@
             // 
             this.comboBox13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Items.AddRange(new object[] {
+            "<Chọn>",
+            "CMND",
+            "CCCD",
+            "Passport"});
             this.comboBox13.Location = new System.Drawing.Point(2, 2);
             this.comboBox13.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(61, 21);
             this.comboBox13.TabIndex = 0;
+            this.comboBox13.Text = "<Chọn>";
             // 
             // textBox2
             // 
@@ -594,15 +638,16 @@
             this.dataGridView3.AllowUserToAddRows = false;
             this.dataGridView3.AllowUserToDeleteRows = false;
             this.dataGridView3.AutoGenerateColumns = false;
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHopDongDataGridViewTextBoxColumn,
             this.hoTenDataGridViewTextBoxColumn1,
             this.giaTriHienTaiDataGridViewTextBoxColumn,
-            this.maTrangThaiDataGridViewTextBoxColumn,
             this.ngayThietLapDataGridViewTextBoxColumn,
             this.laiSuatDataGridViewTextBoxColumn,
-            this.kiHanDataGridViewTextBoxColumn});
+            this.kiHanDataGridViewTextBoxColumn,
+            this.MaTrangThai});
             this.dataGridView3.DataSource = this.hopDongVayExtBindingSource;
             this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView3.Location = new System.Drawing.Point(2, 15);
@@ -635,13 +680,6 @@
             this.giaTriHienTaiDataGridViewTextBoxColumn.Name = "giaTriHienTaiDataGridViewTextBoxColumn";
             this.giaTriHienTaiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // maTrangThaiDataGridViewTextBoxColumn
-            // 
-            this.maTrangThaiDataGridViewTextBoxColumn.DataPropertyName = "MaTrangThai";
-            this.maTrangThaiDataGridViewTextBoxColumn.HeaderText = "MaTrangThai";
-            this.maTrangThaiDataGridViewTextBoxColumn.Name = "maTrangThaiDataGridViewTextBoxColumn";
-            this.maTrangThaiDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
             // ngayThietLapDataGridViewTextBoxColumn
             // 
             this.ngayThietLapDataGridViewTextBoxColumn.DataPropertyName = "NgayThietLap";
@@ -663,6 +701,13 @@
             this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
             this.kiHanDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // MaTrangThai
+            // 
+            this.MaTrangThai.DataPropertyName = "MaTrangThai";
+            this.MaTrangThai.HeaderText = "MaTrangThai";
+            this.MaTrangThai.Name = "MaTrangThai";
+            this.MaTrangThai.ReadOnly = true;
+            // 
             // hopDongVayExtBindingSource
             // 
             this.hopDongVayExtBindingSource.DataMember = "HopDongVayExt";
@@ -676,15 +721,16 @@
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel9.Controls.Add(this.label17, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label18, 0, 1);
-            this.tableLayoutPanel9.Controls.Add(this.label19, 2, 0);
-            this.tableLayoutPanel9.Controls.Add(this.label20, 2, 1);
             this.tableLayoutPanel9.Controls.Add(this.button11, 3, 2);
             this.tableLayoutPanel9.Controls.Add(this.textBox5, 1, 0);
-            this.tableLayoutPanel9.Controls.Add(this.textBox7, 3, 0);
-            this.tableLayoutPanel9.Controls.Add(this.textBox8, 3, 1);
             this.tableLayoutPanel9.Controls.Add(this.comboBox11, 1, 1);
-            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Controls.Add(this.label20, 0, 1);
+            this.tableLayoutPanel9.Controls.Add(this.label2, 2, 1);
+            this.tableLayoutPanel9.Controls.Add(this.label18, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.textBox6, 3, 1);
+            this.tableLayoutPanel9.Controls.Add(this.dateTimePicker4, 1, 2);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel14, 3, 0);
+            this.tableLayoutPanel9.Controls.Add(this.label19, 2, 0);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(2, 2);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
@@ -706,39 +752,6 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Mã khoản vay";
             // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(2, 38);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(132, 13);
-            this.label18.TabIndex = 1;
-            this.label18.Text = "Loại hình vay";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(342, 8);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(132, 13);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Mã khách hàng";
-            // 
-            // label20
-            // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(342, 38);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(132, 13);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Tình trạng";
-            // 
             // button11
             // 
             this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -751,6 +764,7 @@
             this.button11.TabIndex = 4;
             this.button11.Text = "Tra cứu";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // textBox5
             // 
@@ -761,33 +775,124 @@
             this.textBox5.Size = new System.Drawing.Size(200, 20);
             this.textBox5.TabIndex = 5;
             // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(478, 5);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(201, 20);
-            this.textBox7.TabIndex = 7;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(478, 35);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(201, 20);
-            this.textBox8.TabIndex = 8;
-            // 
             // comboBox11
             // 
             this.comboBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox11.DataSource = this.trangThaiHopDongVayCBBindingSource;
+            this.comboBox11.DisplayMember = "TenTrangThai";
             this.comboBox11.FormattingEnabled = true;
             this.comboBox11.Location = new System.Drawing.Point(138, 34);
             this.comboBox11.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(200, 21);
             this.comboBox11.TabIndex = 9;
+            this.comboBox11.ValueMember = "MaTrangThai";
+            // 
+            // trangThaiHopDongVayCBBindingSource
+            // 
+            this.trangThaiHopDongVayCBBindingSource.DataMember = "TrangThaiHopDongVayCB";
+            this.trangThaiHopDongVayCBBindingSource.DataSource = this.quanLyNganHangDataSet;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(2, 38);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(132, 13);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Tình trạng";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(343, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Họ tên khách hàng";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(3, 74);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(130, 13);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "Ngày thiết lập";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox6.Location = new System.Drawing.Point(479, 35);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(199, 20);
+            this.textBox6.TabIndex = 13;
+            // 
+            // dateTimePicker4
+            // 
+            this.dateTimePicker4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePicker4.Location = new System.Drawing.Point(139, 70);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(198, 20);
+            this.dateTimePicker4.TabIndex = 14;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 2;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel14.Controls.Add(this.comboBox15, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.numericUpDown1, 1, 0);
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(479, 3);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 1;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(199, 24);
+            this.tableLayoutPanel14.TabIndex = 15;
+            // 
+            // comboBox15
+            // 
+            this.comboBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox15.Enabled = false;
+            this.comboBox15.FormattingEnabled = true;
+            this.comboBox15.Location = new System.Drawing.Point(3, 3);
+            this.comboBox15.Name = "comboBox15";
+            this.comboBox15.Size = new System.Drawing.Size(50, 21);
+            this.comboBox15.TabIndex = 0;
+            this.comboBox15.Text = ">=";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Location = new System.Drawing.Point(59, 3);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(137, 20);
+            this.numericUpDown1.TabIndex = 1;
+            this.numericUpDown1.ThousandsSeparator = true;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(343, 8);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(130, 13);
+            this.label19.TabIndex = 16;
+            this.label19.Text = "Giá trị";
             // 
             // tabPage4
             // 
@@ -835,6 +940,7 @@
             this.dataGridView4.AllowUserToAddRows = false;
             this.dataGridView4.AllowUserToDeleteRows = false;
             this.dataGridView4.AutoGenerateColumns = false;
+            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maTaiSanDataGridViewTextBoxColumn,
@@ -893,14 +999,14 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
             this.tableLayoutPanel11.Controls.Add(this.label21, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.label22, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.label23, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.label24, 2, 1);
             this.tableLayoutPanel11.Controls.Add(this.button12, 3, 2);
             this.tableLayoutPanel11.Controls.Add(this.textBox9, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.textBox11, 3, 0);
-            this.tableLayoutPanel11.Controls.Add(this.textBox12, 3, 1);
-            this.tableLayoutPanel11.Controls.Add(this.comboBox12, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.comboBox12, 3, 1);
+            this.tableLayoutPanel11.Controls.Add(this.tableLayoutPanel4, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.label22, 0, 1);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(2, 2);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(2);
@@ -923,17 +1029,6 @@
             this.label21.TabIndex = 0;
             this.label21.Text = "Mã tài sản thế chấp";
             // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(2, 38);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(132, 13);
-            this.label22.TabIndex = 1;
-            this.label22.Text = "Mã khoản vay";
-            // 
             // label23
             // 
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -943,7 +1038,7 @@
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(132, 13);
             this.label23.TabIndex = 2;
-            this.label23.Text = "Tên tài sản";
+            this.label23.Text = "Mô tả";
             // 
             // label24
             // 
@@ -968,6 +1063,7 @@
             this.button12.TabIndex = 4;
             this.button12.Text = "Tra cứu";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // textBox9
             // 
@@ -987,24 +1083,77 @@
             this.textBox11.Size = new System.Drawing.Size(201, 20);
             this.textBox11.TabIndex = 7;
             // 
-            // textBox12
-            // 
-            this.textBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox12.Location = new System.Drawing.Point(478, 35);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(201, 20);
-            this.textBox12.TabIndex = 8;
-            // 
             // comboBox12
             // 
             this.comboBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox12.DataSource = this.trangThaiTaiSanCBBindingSource;
+            this.comboBox12.DisplayMember = "TenTrangThai";
             this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(138, 34);
+            this.comboBox12.Location = new System.Drawing.Point(478, 34);
             this.comboBox12.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(200, 21);
+            this.comboBox12.Size = new System.Drawing.Size(201, 21);
             this.comboBox12.TabIndex = 9;
+            this.comboBox12.ValueMember = "MaTrangThai";
+            // 
+            // trangThaiTaiSanCBBindingSource
+            // 
+            this.trangThaiTaiSanCBBindingSource.DataMember = "TrangThaiTaiSanCB";
+            this.trangThaiTaiSanCBBindingSource.DataSource = this.quanLyNganHangDataSet;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.tableLayoutPanel4.Controls.Add(this.numericUpDown2, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.comboBox14, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(139, 33);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(198, 24);
+            this.tableLayoutPanel4.TabIndex = 10;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Location = new System.Drawing.Point(59, 3);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(136, 20);
+            this.numericUpDown2.TabIndex = 0;
+            this.numericUpDown2.ThousandsSeparator = true;
+            // 
+            // comboBox14
+            // 
+            this.comboBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox14.Enabled = false;
+            this.comboBox14.FormattingEnabled = true;
+            this.comboBox14.Location = new System.Drawing.Point(3, 3);
+            this.comboBox14.Name = "comboBox14";
+            this.comboBox14.Size = new System.Drawing.Size(50, 21);
+            this.comboBox14.TabIndex = 1;
+            this.comboBox14.Text = ">=";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(3, 38);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(130, 13);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Định giá";
             // 
             // tabPage5
             // 
@@ -1052,6 +1201,7 @@
             this.dataGridView5.AllowUserToAddRows = false;
             this.dataGridView5.AllowUserToDeleteRows = false;
             this.dataGridView5.AutoGenerateColumns = false;
+            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHoatDongDataGridViewTextBoxColumn,
@@ -1168,6 +1318,7 @@
             this.button13.TabIndex = 4;
             this.button13.Text = "Tra cứu";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // dateTimePicker2
             // 
@@ -1440,6 +1591,14 @@
             // 
             this.hoatDongTableAdapter.ClearBeforeFill = true;
             // 
+            // trangThaiHopDongVayCBTableAdapter
+            // 
+            this.trangThaiHopDongVayCBTableAdapter.ClearBeforeFill = true;
+            // 
+            // trangThaiTaiSanCBTableAdapter
+            // 
+            this.trangThaiTaiSanCBTableAdapter.ClearBeforeFill = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1476,6 +1635,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trangThaiHopDongVayCBBindingSource)).EndInit();
+            this.tableLayoutPanel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -1483,6 +1645,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.taiSanTheChapExtBindingSource)).EndInit();
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trangThaiTaiSanCBBindingSource)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -1523,25 +1688,19 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dataGridView5;
@@ -1585,23 +1744,8 @@
         private QuanLyNganHangDataSet quanLyNganHangDataSet;
         private System.Windows.Forms.BindingSource khachHangBindingSource;
         private QuanLyNganHangDataSetTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maKHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loaiDinhDanhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giaTriDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource hopDongVayExtBindingSource;
         private QuanLyNganHangDataSetTableAdapters.HopDongVayExtTableAdapter hopDongVayExtTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maHopDongDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giaTriHienTaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maTrangThaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayThietLapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn laiSuatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kiHanDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource taiSanTheChapExtBindingSource;
         private QuanLyNganHangDataSetTableAdapters.TaiSanTheChapExtTableAdapter taiSanTheChapExtTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn maTaiSanDataGridViewTextBoxColumn;
@@ -1615,5 +1759,37 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn thoiDiemThucHienDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moTaDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenDangNhapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn diaChiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loaiDinhDanhDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaTriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource trangThaiHopDongVayCBBindingSource;
+        private QuanLyNganHangDataSetTableAdapters.TrangThaiHopDongVayCBTableAdapter trangThaiHopDongVayCBTableAdapter;
+        private System.Windows.Forms.BindingSource trangThaiTaiSanCBBindingSource;
+        private QuanLyNganHangDataSetTableAdapters.TrangThaiTaiSanCBTableAdapter trangThaiTaiSanCBTableAdapter;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHopDongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaTriHienTaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayThietLapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn laiSuatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kiHanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaTrangThai;
     }
 }

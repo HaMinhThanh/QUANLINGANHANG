@@ -40,6 +40,7 @@ namespace QLNH.Forms
             }
             LapKetQuaXetDuyet newForm = new LapKetQuaXetDuyet();
             newForm.isChapNhan = true;
+            newForm.entry = selectedYC.HopDong.YeuCauVay;
             newForm.ShowDialog();
             if (newForm.DialogResult == DialogResult.OK)
             {
@@ -70,6 +71,7 @@ namespace QLNH.Forms
             }
             LapKetQuaXetDuyet newForm = new LapKetQuaXetDuyet();
             newForm.isChapNhan = false;
+            newForm.entry = selectedYC.HopDong.YeuCauVay;
             newForm.ShowDialog();
             if (newForm.DialogResult == DialogResult.OK)
             {
@@ -126,13 +128,13 @@ namespace QLNH.Forms
                 numericUpDown6.Value = (Decimal)selectedYC.HopDong.YeuCauVay.LaiSuat;
                 textBox8.Text = selectedYC.HopDong.TrangThai.TenTrangThai;
 
-                if (selectedYC is YeuCauChinhSuaKiHan)
+                if (selectedYC.ctKiHan != null)
                 {
-                    numericUpDown2.Value = (Decimal) ((YeuCauChinhSuaKiHan)selectedYC).GiaTriMoi;
+                    numericUpDown2.Value = (Decimal) selectedYC.ctKiHan.GiaTriMoi;
                 }
-                else if (selectedYC is YeuCauChinhSuaLaiSuat)
+                else if (selectedYC.ctLaiSuat != null)
                 {
-                    numericUpDown1.Value = (Decimal)((YeuCauChinhSuaLaiSuat)selectedYC).GiaTriMoi;
+                    numericUpDown1.Value = (Decimal) selectedYC.ctLaiSuat.GiaTriMoi;
                 }
                 textBox1.Text = selectedYC.HopDong.MaHopDong;
                 textBox2.Text = selectedYC.HopDong.TrangThai.TenTrangThai;

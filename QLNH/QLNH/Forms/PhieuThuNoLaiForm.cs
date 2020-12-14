@@ -16,13 +16,16 @@ namespace QLNH
         private HoatDongThuTienBUS busObj;
         private GiaoDichBUS busObjGiaoDich;
         private KhachHangBUS busObjKhachHang;
+        private HopDongVayBUS busObjHopDong;
         private HopDongChoVay selectedHD = null;
+        private DataModel.KhachHang selectedKH = null;
 
         public PhieuThuNoLaiForm()
         {
             busObj = new HoatDongThuTienBUS();
             busObjGiaoDich = new GiaoDichBUS();
             busObjKhachHang = new KhachHangBUS();
+            busObjHopDong = new HopDongVayBUS();
             InitializeComponent();
         }
 
@@ -57,13 +60,18 @@ namespace QLNH
                 entry.GiaoDichThucHien = new GiaoDichThu();
                 entry.HopDong = selectedHD;
                 entry.NVThucHien = (NhanVienKeToan)SessionState.NVDangNhap;
-                entry.GiaoDichThucHien.DonViGiaoDich = busObjKhachHang.GetKhachHangByMaKH(textBox2.Text);
+                entry.GiaoDichThucHien.DonViGiaoDich = selectedKH;
                 entry.GiaoDichThucHien.GiaTri = (Double)numericUpDown1.Value;
                 entry.GiaoDichThucHien.MoTa = "Thu tiền cho khoản vay " + selectedHD.MaHopDong;
                 entry.GiaoDichThucHien.ThoiDiemThucHien = DateTime.Now;
 
                 busObjGiaoDich.AddGiaoDich(entry.GiaoDichThucHien);
                 busObj.AddHoatDongThuTien(entry);
+
+                entry.HopDong.GiaTriConLai -= entry.GiaoDichThucHien.GiaTri;
+
+                busObjHopDong.UpdateHopDongVay(entry.HopDong);
+                
             }
             catch (Exception ex)
             {
@@ -78,12 +86,18 @@ namespace QLNH
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            TraCuuKhachHangForm newForm = new TraCuuKhachHangForm();
+            newForm.ShowDialog();
+            if (newForm.DialogResult == DialogResult.OK)
+            {
+                selectedKH = newForm.result;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            KhachHang newForm = new KhachHang();
+            newForm.Show();
         }
     }
 }

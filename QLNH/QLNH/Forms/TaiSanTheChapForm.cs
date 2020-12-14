@@ -87,11 +87,9 @@ namespace QLNH
             comboBox1.SelectedIndex = 0;
         }
 
-        private void TaiSanTheChapForm_Load_1(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TrangThaiTaiSanCB' table. You can move, or remove it, as needed.
-            this.trangThaiTaiSanCBTableAdapter.Fill(this.quanLyNganHangDataSet.TrangThaiTaiSanCB);
-
+            this.Close();
         }
     }
 }

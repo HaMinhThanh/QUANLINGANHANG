@@ -31,10 +31,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -89,6 +91,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Image = global::QLNH.Properties.Resources.delete_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(262, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(260, 42);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Xóa điều khoản";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button3
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -103,20 +119,6 @@
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Image = global::QLNH.Properties.Resources.delete_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(262, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(260, 42);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Xóa điều khoản";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
             // 
@@ -133,6 +135,9 @@
             // 
             // listView1
             // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(2, 15);
@@ -140,7 +145,17 @@
             this.listView1.Size = new System.Drawing.Size(519, 313);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Mã Điều khoản";
+            this.columnHeader1.Width = 94;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Điều khoản";
+            this.columnHeader2.Width = 453;
             // 
             // XuLiYeuCauHĐForm
             // 
@@ -167,5 +182,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

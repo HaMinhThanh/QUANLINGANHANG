@@ -32,12 +32,13 @@ namespace DataAccessTier
                     DSMaDieuKhoan.Add(reader.GetString(1));
                 }
 
+                reader.Close();
+
                 DieuKhoanDAO tempAccessObj = new DieuKhoanDAO();
                 foreach(string val in DSMaDieuKhoan)
                 {
                     result.Add(tempAccessObj.GetDieuKhoanHopDongByMaDieuKhoan(val));
                 }
-                reader.Close();
             }
             catch (SqlException SQLex)
             {

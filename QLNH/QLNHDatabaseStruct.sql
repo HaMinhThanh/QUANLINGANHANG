@@ -83,7 +83,7 @@ CREATE TABLE tbNhanVien (
 CREATE TABLE tbKQXetDuyet (
 	MaKQXetDuyet CHAR(36) NOT NULL,
 	MaNVXetDuyet CHAR(36) NOT NULL,
-	coChapNhan BINARY NOT NULL,
+	coChapNhan BIT NOT NULL,
 	LyDo NVARCHAR(512)
 	PRIMARY KEY (MaKQXetDuyet)
 	FOREIGN KEY (MaNVXetDuyet) REFERENCES tbNhanVien(MaNV)
@@ -118,7 +118,8 @@ CREATE TABLE tbHopDongVay (
 	MaNVTiepNhan CHAR(36) NOT NULL,
 	NgayThietLap DATE NOT NULL,
 	GiaTriHienTai DECIMAL(32, 2) NOT NULL,
-	MaTrangThai CHAR(36)
+	MaTrangThai CHAR(36),
+	NgayCapNhatCuoi DATE NOT NULL
 	PRIMARY KEY (MaHopDong)
 	FOREIGN KEY (MaYeuCau) REFERENCES tbYeuCauChoVay(MaYeuCau),
 	FOREIGN KEY (MaNVTiepNhan) REFERENCES tbNhanVien(MaNV),
@@ -211,11 +212,11 @@ CREATE TABLE tbThamSo (
 	ThoiGianApDung DATETIME NOT NULL,
 	VonVayCaNhanToiDa DECIMAL(32, 2) NOT NULL,
 	VonVayToChucToiDa DECIMAL(32, 2) NOT NULL,
-	YeuCauGiayToXacThuc BINARY NOT NULL,
+	YeuCauGiayToXacThuc BIT NOT NULL,
 	TuoiDuocVayToiThieu INTEGER NOT NULL,
 	KyHanToiDa INTEGER NOT NULL,
 	KyHanToiThieu INTEGER NOT NULL,
-	DinhGiaToiThieu DECIMAL(7, 3) NOT NULL,
+	DinhGiaToiThieu DECIMAL(32, 2) NOT NULL,
 	LaiSuatToiThieu DECIMAL(7, 3) NOT NULL,
 	LaiSuatToiDa DECIMAL(7, 3) NOT NULL,
 	ThoiGianThongBaoTraNo DECIMAL(5, 0) NOT NULL
@@ -226,8 +227,8 @@ CREATE TABLE tbBaoCaoDoiTuongVay (
 	MaBaoCao CHAR(36) NOT NULL,
 	MaKHBaoCao CHAR(36) NOT NULL,
 	NgayBaoCao DATE NOT NULL,
-	SuDungVonDungMucDich BINARY NOT NULL,
-	TaiSanTheChapDamBao BINARY NOT NULL,
+	SuDungVonDungMucDich BIT NOT NULL,
+	TaiSanTheChapDamBao BIT NOT NULL,
 	DanhGia NVARCHAR(2048)
 	PRIMARY KEY (MaBaoCao)
 	FOREIGN KEY (MaKHBaoCao) REFERENCES tbKhachHang(MaKH)

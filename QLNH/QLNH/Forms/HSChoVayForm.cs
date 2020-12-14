@@ -36,7 +36,22 @@ namespace QLNH
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.KhachHang' table. You can move, or remove it, as needed.
+            string filter = "";
+
+            if (!textBox6.Text.Equals(""))
+                filter += String.Format("MaKH = '{0}' AND ", textBox6.Text);
+            if (!textBox7.Text.Equals(""))
+                filter += String.Format("HoTen LIKE '*{0}*' AND ", textBox7.Text);
+            if (comboBox2.SelectedItem != null && comboBox2.SelectedIndex != 0 && !textBox3.Text.Equals(""))
+                filter += String.Format("LoaiDinhDanh = {0} AND GiaTri LIKE '*{1}' AND ", comboBox2.SelectedIndex, textBox3.Text);
+            if (!filter.Equals(""))
+                filter = filter.Substring(0, filter.LastIndexOf("AND") - 1);
+            else
+            {
+                MessageBox.Show("Xin hãy chọn 1 tiêu chuẩn tra cứu", "Thông báo");
+                return;
+            }
+            ((BindingSource)dataGridView2.DataSource).Filter = filter;
             this.khachHangTableAdapter.Fill(this.quanLyNganHangDataSet.KhachHang);
         }
 

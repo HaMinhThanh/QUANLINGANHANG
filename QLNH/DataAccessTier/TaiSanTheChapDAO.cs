@@ -31,9 +31,9 @@ namespace DataAccessTier
                 if (reader.Read())
                 {
                     result.MaTSTC = reader.GetString(0);
-                    result.MoTa = reader.GetString(1);
-                    result.DinhGia = (Double) reader.GetDecimal(2);
-                    matrangthai = reader.GetString(3);
+                    result.MoTa = reader.GetString(2);
+                    result.DinhGia = (Double) reader.GetDecimal(3);
+                    matrangthai = reader.GetString(4);
                 }
                 reader.Close();
 
@@ -67,7 +67,7 @@ namespace DataAccessTier
             {
                 conn.Open();
             }
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tbTaiSanTheChap WHERE MaYeuCauChoVay = @MaYeuCauChoVay", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbTaiSanTheChap WHERE MaYeuCau = @MaYeuCauChoVay", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaYeuCauChoVay", MaYC);
@@ -77,9 +77,9 @@ namespace DataAccessTier
                     TaiSanTheChap taiSanTheChap = new TaiSanTheChap();
                     string matrangthai = "";
                     taiSanTheChap.MaTSTC = reader.GetString(0);
-                    taiSanTheChap.MoTa = reader.GetString(1);
-                    taiSanTheChap.DinhGia = (Double) reader.GetDecimal(2);
-                    matrangthai = reader.GetString(3);
+                    taiSanTheChap.MoTa = reader.GetString(2);
+                    taiSanTheChap.DinhGia = (Double) reader.GetDecimal(3);
+                    matrangthai = reader.GetString(4);
 
                     results.Add(taiSanTheChap);
                     DSMaTrangThai.Add(matrangthai);
@@ -102,6 +102,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
             return results;

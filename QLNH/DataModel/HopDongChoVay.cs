@@ -14,16 +14,17 @@ namespace DataModel
         public DateTime NgayThietLap { get; set; }
         public double GiaTriConLai { get; set; }
         public TrangThaiKhoanVay TrangThai { get; set; }
+        public DateTime ngayCapNhatGanNhat { get; set; } = DateTime.Now;
 
         public bool ApplyModification(YeuCauChinhSuaHopDong entry)
         {
-            if (entry is YeuCauChinhSuaKiHan)
+            if (entry.ctKiHan != null)
             {
-                this.YeuCauVay.KyHan += ((YeuCauChinhSuaKiHan)entry).GiaTriMoi;
+                this.YeuCauVay.KyHan += entry.ctKiHan.GiaTriMoi;
             }
-            else if (entry is YeuCauChinhSuaLaiSuat)
+            else if (entry.ctLaiSuat != null)
             {
-                this.YeuCauVay.LaiSuat = ((YeuCauChinhSuaLaiSuat)entry).GiaTriMoi;
+                this.YeuCauVay.LaiSuat = entry.ctLaiSuat.GiaTriMoi;
             }
             return true;
         }

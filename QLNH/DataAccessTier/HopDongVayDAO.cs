@@ -35,6 +35,7 @@ namespace DataAccessTier
                     result.NgayThietLap = reader.GetDateTime(3);
                     result.GiaTriConLai = reader.GetDouble(4);
                     MaTrangThai = reader.GetString(5);
+                    result.ngayCapNhatGanNhat = reader.GetDateTime(6);
                 }
                 reader.Close();
 
@@ -61,15 +62,18 @@ namespace DataAccessTier
                 conn.Open();
             }
             if (entry.MaHopDong.Equals("")) entry.MaHopDong = Guid.NewGuid().ToString();
-            SqlCommand cmd = new SqlCommand("INSERT INTO tbHopDongVay VALUES (@MaHopDong, @MaYeuCau, @MaNV, @NgayLap, @GiaTri, @MaTrangThai)", conn);
+            entry.ngayCapNhatGanNhat = DateTime.Now;
+            SqlCommand cmd = new SqlCommand("INSERT INTO tbHopDongVay VALUES (@MaHopDong, @MaYeuCau, @MaNV, @NgayLap, @GiaTri, @MaTrangThai, @NgayCapNhat)", conn);
             try
             {
+                
                 cmd.Parameters.AddWithValue("@MaHopDong", entry.MaHopDong);
                 cmd.Parameters.AddWithValue("@MaYeuCau", entry.YeuCauVay.MaYeuCau);
                 cmd.Parameters.AddWithValue("@MaNV", entry.NVThietLap.MaNV);
                 cmd.Parameters.AddWithValue("@NgayLap", entry.NgayThietLap);
                 cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTriConLai);
                 cmd.Parameters.AddWithValue("@MaTrangThai", entry.TrangThai.UUID);
+                cmd.Parameters.AddWithValue("@NgayCapNhat", entry.ngayCapNhatGanNhat);
 
                 int res = cmd.ExecuteNonQuery();
                 if (res != 1) throw new Exception("Can't add new contract");
@@ -81,6 +85,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
         }
@@ -93,7 +98,8 @@ namespace DataAccessTier
                 conn.Open();
             }
             if (entry.MaHopDong.Equals("")) throw new Exception("Unknown contract");
-            SqlCommand cmd = new SqlCommand("UPDATE tbHopDongVay SET MaYeuCau = @MaYeuCau, MaNVTiepNhan = @MaNV, NgayThietLap = @NgayLap, GiaTriHienTai = @GiaTri, MaTrangThai = @MaTrangThai WHERE MaHopDong = @MaHopDong,", conn);
+            entry.ngayCapNhatGanNhat = DateTime.Now;
+            SqlCommand cmd = new SqlCommand("UPDATE tbHopDongVay SET MaYeuCau = @MaYeuCau, MaNVTiepNhan = @MaNV, NgayThietLap = @NgayLap, GiaTriHienTai = @GiaTri, MaTrangThai = @MaTrangThai, NgayCapNhatCuoi = @NgayCapNhat WHERE MaHopDong = @MaHopDong,", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaYeuCau", entry.YeuCauVay.MaYeuCau);
@@ -102,6 +108,7 @@ namespace DataAccessTier
                 cmd.Parameters.AddWithValue("@GiaTri", entry.GiaTriConLai);
                 cmd.Parameters.AddWithValue("@MaTrangThai", entry.TrangThai.UUID);
                 cmd.Parameters.AddWithValue("@MaHopDong", entry.MaHopDong);
+                cmd.Parameters.AddWithValue("@NgayCapNhat", entry.ngayCapNhatGanNhat);
 
                 int res = cmd.ExecuteNonQuery();
                 if (res != 1) throw new Exception("Can't update contract");

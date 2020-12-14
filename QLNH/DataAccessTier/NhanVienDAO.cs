@@ -57,6 +57,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
             return result;
@@ -109,6 +110,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
             return result;

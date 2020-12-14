@@ -38,6 +38,7 @@ namespace QLNH
             }
             LapKetQuaXetDuyet newForm = new LapKetQuaXetDuyet();
             newForm.isChapNhan = true;
+            newForm.entry = selectedYC;
             newForm.ShowDialog();
             if (newForm.DialogResult == DialogResult.OK)
             {
@@ -56,6 +57,7 @@ namespace QLNH
             }
             LapKetQuaXetDuyet newForm = new LapKetQuaXetDuyet();
             newForm.isChapNhan = false;
+            newForm.entry = selectedYC;
             newForm.ShowDialog();
             if (newForm.DialogResult == DialogResult.OK)
             {
@@ -86,6 +88,7 @@ namespace QLNH
             {
                 selectedYC = busObj.GetYeuCauChoVayByMaYC(MaYeuCau);
                 textBox6.Text = selectedYC.ThoiDiemTiepNhan.ToString();
+
                 numericUpDown1.Value = new Decimal(selectedYC.SoTienVay);
                 numericUpDown2.Value = new Decimal(selectedYC.KyHan);
                 numericUpDown3.Value = new Decimal(selectedYC.LaiSuat);
@@ -110,7 +113,7 @@ namespace QLNH
                 MessageBox.Show("Chưa chọn yêu cầu trước khi thao tác", "Thông báo");
                 return;
             }
-            Forms.ChiTietKhoanVay newForm = new Forms.ChiTietKhoanVay(selectedYC.MaYeuCau);
+            Forms.ChiTietKhoanVay newForm = new Forms.ChiTietKhoanVay(selectedYC.MaYeuCau, true);
             newForm.Show();
         }
 

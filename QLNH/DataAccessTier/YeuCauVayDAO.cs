@@ -34,8 +34,8 @@ namespace DataAccessTier
                     result.MaYeuCau = reader.GetString(0);
                     MaKHYC = reader.GetString(1);
                     MaNVTiepNhan = reader.GetString(2);
-                    result.SoTienVay = reader.GetDouble(3);
-                    result.LaiSuat = reader.GetDouble(4);
+                    result.SoTienVay = (double) reader.GetDecimal(3);
+                    result.LaiSuat = (double) reader.GetDecimal(4);
                     result.KyHan = reader.GetInt32(5);
                     if (reader[6] == DBNull.Value)
                         MaKQXetDuyet = "";
@@ -69,10 +69,12 @@ namespace DataAccessTier
             }
             catch (SqlException SQLex)
             {
+                Console.WriteLine(SQLex.StackTrace);
                 throw SQLex;
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
             return result;
@@ -109,10 +111,12 @@ namespace DataAccessTier
             }
             catch (SqlException SQLex)
             {
+                Console.WriteLine(SQLex.StackTrace);
                 throw SQLex;
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
 
@@ -148,10 +152,12 @@ namespace DataAccessTier
             }
             catch (SqlException SQLex)
             {
+                Console.WriteLine(SQLex.StackTrace);
                 throw SQLex;
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
 

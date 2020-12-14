@@ -28,30 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.yeuCauVayExtRightBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
@@ -66,13 +64,26 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.yeuCauVayExtRightTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.YeuCauVayExtRightTableAdapter();
+            this.maYeuCauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soTienVayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laiSuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kiHanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maKQXetDuyetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHopDong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yeuCauVayExtRightBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -90,7 +101,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel6, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -99,16 +110,50 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listView1);
+            this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(2, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(303, 404);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách điều khoản";
+            this.groupBox1.Text = "Danh sách yêu cầu đã xử lý";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maYeuCauDataGridViewTextBoxColumn,
+            this.soTienVayDataGridViewTextBoxColumn,
+            this.laiSuatDataGridViewTextBoxColumn,
+            this.kiHanDataGridViewTextBoxColumn,
+            this.maKQXetDuyetDataGridViewTextBoxColumn,
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn,
+            this.MaHopDong});
+            this.dataGridView1.DataSource = this.yeuCauVayExtRightBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 15);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(299, 387);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // yeuCauVayExtRightBindingSource
+            // 
+            this.yeuCauVayExtRightBindingSource.DataMember = "YeuCauVayExtRight";
+            this.yeuCauVayExtRightBindingSource.DataSource = this.quanLyNganHangDataSet;
+            // 
+            // quanLyNganHangDataSet
+            // 
+            this.quanLyNganHangDataSet.DataSetName = "QuanLyNganHangDataSet";
+            this.quanLyNganHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tableLayoutPanel2
             // 
@@ -118,7 +163,7 @@
             this.tableLayoutPanel2.Controls.Add(this.groupBox2, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(309, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.79839F));
@@ -131,44 +176,16 @@
             this.tableLayoutPanel5.ColumnCount = 2;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.87405F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.12595F));
-            this.tableLayoutPanel5.Controls.Add(this.button5, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.button6, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.button3, 1, 1);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(2, 304);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.33333F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.66667F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(299, 98);
             this.tableLayoutPanel5.TabIndex = 3;
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.Image = global::QLNH.Properties.Resources.add_icon;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1, 2);
-            this.button5.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(147, 48);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Thêm điều khoản";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.Image = global::QLNH.Properties.Resources.delete_icon;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(150, 2);
-            this.button6.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(148, 48);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Xóa điều khoản ";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -182,15 +199,16 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Xem thông tin";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tableLayoutPanel4);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(2, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(299, 298);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -202,18 +220,16 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.51231F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.48769F));
             this.tableLayoutPanel4.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.label10, 1, 3);
-            this.tableLayoutPanel4.Controls.Add(this.label11, 1, 4);
             this.tableLayoutPanel4.Controls.Add(this.textBox6, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.textBox7, 1, 1);
-            this.tableLayoutPanel4.Controls.Add(this.textBox8, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label4, 0, 1);
+            this.tableLayoutPanel4.Controls.Add(this.numericUpDown1, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.label5, 0, 2);
+            this.tableLayoutPanel4.Controls.Add(this.numericUpDown2, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.label6, 0, 3);
+            this.tableLayoutPanel4.Controls.Add(this.numericUpDown3, 1, 3);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(2, 15);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28572F));
@@ -237,47 +253,21 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // label3
+            // textBox6
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 77);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Loại hình vay";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 127);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 26);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Số tiền vay (VNĐ)";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 189);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Kỳ hạn (tháng)";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox6.Location = new System.Drawing.Point(97, 18);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(196, 20);
+            this.textBox6.TabIndex = 20;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 246);
+            this.label6.Location = new System.Drawing.Point(2, 189);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
@@ -285,57 +275,70 @@
             this.label6.Text = "Lãi suất (%)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // label5
             // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(97, 189);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(196, 13);
-            this.label10.TabIndex = 18;
-            this.label10.Text = "Kì hạn";
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(2, 133);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Kỳ hạn (tháng)";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label11
+            // numericUpDown1
             // 
-            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(97, 246);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(196, 13);
-            this.label11.TabIndex = 19;
-            this.label11.Text = "Lãi suất";
+            this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Location = new System.Drawing.Point(98, 74);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(194, 20);
+            this.numericUpDown1.TabIndex = 23;
+            this.numericUpDown1.ThousandsSeparator = true;
             // 
-            // textBox6
+            // numericUpDown2
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Location = new System.Drawing.Point(97, 18);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(196, 20);
-            this.textBox6.TabIndex = 20;
+            this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown2.Location = new System.Drawing.Point(98, 130);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(194, 20);
+            this.numericUpDown2.TabIndex = 24;
             // 
-            // textBox7
+            // numericUpDown3
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Location = new System.Drawing.Point(97, 74);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(196, 20);
-            this.textBox7.TabIndex = 21;
+            this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown3.DecimalPlaces = 2;
+            this.numericUpDown3.Location = new System.Drawing.Point(98, 186);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(194, 20);
+            this.numericUpDown3.TabIndex = 25;
             // 
-            // textBox8
+            // label4
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Location = new System.Drawing.Point(97, 130);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(196, 20);
-            this.textBox8.TabIndex = 22;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(2, 71);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 26);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Số tiền vay (VNĐ)";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel6
             // 
@@ -345,7 +348,7 @@
             this.tableLayoutPanel6.Controls.Add(this.groupBox4, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(616, 2);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.79839F));
@@ -358,12 +361,10 @@
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Controls.Add(this.button4, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button5, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(2, 304);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.14943F));
@@ -372,53 +373,29 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(300, 98);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
-            // button4
+            // button5
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Image = global::QLNH.Properties.Resources.Go_back_icon;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(151, 52);
-            this.button4.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 44);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Thoát";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Image = global::QLNH.Properties.Resources.delete_icon;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(151, 2);
-            this.button2.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(148, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Từ chối";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Image = global::QLNH.Properties.Resources.Actions_dialog_ok_apply_icon;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1, 2);
-            this.button1.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 46);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Chấp nhận";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(151, 52);
+            this.button5.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(148, 44);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "Thiết lập hợp đồng";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel7);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(2, 2);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(300, 298);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
@@ -443,7 +420,7 @@
             this.tableLayoutPanel7.Controls.Add(this.textBox1, 1, 2);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(2, 15);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 6;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -525,7 +502,7 @@
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(104, 13);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(190, 20);
@@ -535,7 +512,7 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(104, 59);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(190, 20);
@@ -545,7 +522,7 @@
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Location = new System.Drawing.Point(104, 151);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(190, 20);
@@ -555,7 +532,7 @@
             // 
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Location = new System.Drawing.Point(104, 197);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(190, 20);
@@ -576,22 +553,78 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(104, 105);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(190, 20);
             this.textBox1.TabIndex = 13;
             // 
-            // listView1
+            // yeuCauVayExtRightTableAdapter
             // 
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(2, 15);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(299, 387);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.List;
+            this.yeuCauVayExtRightTableAdapter.ClearBeforeFill = true;
+            // 
+            // maYeuCauDataGridViewTextBoxColumn
+            // 
+            this.maYeuCauDataGridViewTextBoxColumn.DataPropertyName = "MaYeuCau";
+            this.maYeuCauDataGridViewTextBoxColumn.FillWeight = 40F;
+            this.maYeuCauDataGridViewTextBoxColumn.HeaderText = "MaYeuCau";
+            this.maYeuCauDataGridViewTextBoxColumn.Name = "maYeuCauDataGridViewTextBoxColumn";
+            this.maYeuCauDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maYeuCauDataGridViewTextBoxColumn.Width = 85;
+            // 
+            // soTienVayDataGridViewTextBoxColumn
+            // 
+            this.soTienVayDataGridViewTextBoxColumn.DataPropertyName = "SoTienVay";
+            this.soTienVayDataGridViewTextBoxColumn.FillWeight = 40F;
+            this.soTienVayDataGridViewTextBoxColumn.HeaderText = "SoTienVay";
+            this.soTienVayDataGridViewTextBoxColumn.Name = "soTienVayDataGridViewTextBoxColumn";
+            this.soTienVayDataGridViewTextBoxColumn.ReadOnly = true;
+            this.soTienVayDataGridViewTextBoxColumn.Width = 84;
+            // 
+            // laiSuatDataGridViewTextBoxColumn
+            // 
+            this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
+            this.laiSuatDataGridViewTextBoxColumn.FillWeight = 20F;
+            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "LaiSuat";
+            this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
+            this.laiSuatDataGridViewTextBoxColumn.ReadOnly = true;
+            this.laiSuatDataGridViewTextBoxColumn.Width = 68;
+            // 
+            // kiHanDataGridViewTextBoxColumn
+            // 
+            this.kiHanDataGridViewTextBoxColumn.DataPropertyName = "KiHan";
+            this.kiHanDataGridViewTextBoxColumn.FillWeight = 20F;
+            this.kiHanDataGridViewTextBoxColumn.HeaderText = "KiHan";
+            this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
+            this.kiHanDataGridViewTextBoxColumn.ReadOnly = true;
+            this.kiHanDataGridViewTextBoxColumn.Width = 61;
+            // 
+            // maKQXetDuyetDataGridViewTextBoxColumn
+            // 
+            this.maKQXetDuyetDataGridViewTextBoxColumn.DataPropertyName = "MaKQXetDuyet";
+            this.maKQXetDuyetDataGridViewTextBoxColumn.FillWeight = 20F;
+            this.maKQXetDuyetDataGridViewTextBoxColumn.HeaderText = "MaKQXetDuyet";
+            this.maKQXetDuyetDataGridViewTextBoxColumn.Name = "maKQXetDuyetDataGridViewTextBoxColumn";
+            this.maKQXetDuyetDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maKQXetDuyetDataGridViewTextBoxColumn.Width = 106;
+            // 
+            // thoiDiemTiepNhanDataGridViewTextBoxColumn
+            // 
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.DataPropertyName = "ThoiDiemTiepNhan";
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.FillWeight = 20F;
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.HeaderText = "ThoiDiemTiepNhan";
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.Name = "thoiDiemTiepNhanDataGridViewTextBoxColumn";
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.ReadOnly = true;
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.Width = 124;
+            // 
+            // MaHopDong
+            // 
+            this.MaHopDong.DataPropertyName = "MaHopDong";
+            this.MaHopDong.FillWeight = 10F;
+            this.MaHopDong.HeaderText = "MaHopDong";
+            this.MaHopDong.Name = "MaHopDong";
+            this.MaHopDong.ReadOnly = true;
+            this.MaHopDong.Width = 93;
             // 
             // XacNhanHopDongForm
             // 
@@ -599,16 +632,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 408);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "XacNhanHopDongForm";
             this.Text = "XacNhanHopDongForm";
+            this.Load += new System.EventHandler(this.XacNhanHopDongForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yeuCauVayExtRightBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -626,12 +666,9 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
@@ -648,16 +685,23 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private QuanLyNganHangDataSet quanLyNganHangDataSet;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.BindingSource yeuCauVayExtRightBindingSource;
+        private QuanLyNganHangDataSetTableAdapters.YeuCauVayExtRightTableAdapter yeuCauVayExtRightTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maYeuCauDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soTienVayDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn laiSuatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kiHanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maKQXetDuyetDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn thoiDiemTiepNhanDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHopDong;
     }
 }

@@ -82,7 +82,7 @@ namespace QLNH.Forms
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             numericUpDown1.Value = Decimal.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             numericUpDown2.Value = Decimal.Parse(dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());

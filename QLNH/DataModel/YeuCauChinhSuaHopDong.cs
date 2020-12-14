@@ -14,5 +14,7 @@ namespace DataModel
         public DateTime NgayTiepNhan { get; set; }
         public KetQuaXetDuyet KQXetDuyet { get; set; }
         public string LyDo { get; set; }
+        public YeuCauChinhSuaKiHan ctKiHan { get; set; }
+        public YeuCauChinhSuaLaiSuat ctLaiSuat { get; set; }
     }
 }

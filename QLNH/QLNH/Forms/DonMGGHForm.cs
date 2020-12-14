@@ -51,21 +51,19 @@ namespace QLNH
             YeuCauChinhSuaHopDong entry = new YeuCauChinhSuaHopDong();
             if (numericUpDown1.Value != 0)
             {
-                entry = new YeuCauChinhSuaLaiSuat();
                 entry.HopDong = selectedHD;
                 entry.NgayTiepNhan = DateTime.Now;
                 entry.NVTiepNhan = (NhanVienTinDung) SessionState.NVDangNhap;
                 entry.LyDo = richTextBox1.Text;
-                ((YeuCauChinhSuaLaiSuat)entry).GiaTriMoi = (Double)numericUpDown1.Value;
+                entry.ctLaiSuat.GiaTriMoi = (Double)numericUpDown1.Value;
             }
             else if (numericUpDown2.Value != 0)
             {
-                entry = new YeuCauChinhSuaKiHan();
                 entry.HopDong = selectedHD;
                 entry.NgayTiepNhan = DateTime.Now;
                 entry.NVTiepNhan = (NhanVienTinDung)SessionState.NVDangNhap;
                 entry.LyDo = richTextBox1.Text;
-                ((YeuCauChinhSuaLaiSuat)entry).GiaTriMoi = (Int32)numericUpDown2.Value;
+                entry.ctKiHan.GiaTriMoi = (Int32)numericUpDown2.Value;
             }
 
             try

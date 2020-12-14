@@ -293,6 +293,10 @@
             // 
             this.comboBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            "<Chọn loại khách hàng>",
+            "Cá nhân",
+            "Doanh nghiệp"});
             this.comboBox10.Location = new System.Drawing.Point(558, 36);
             this.comboBox10.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox10.Name = "comboBox10";
@@ -319,11 +323,17 @@
             // 
             this.comboBox13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.comboBox13.FormattingEnabled = true;
+            this.comboBox13.Items.AddRange(new object[] {
+            "<Chọn>",
+            "CMND",
+            "CCCD",
+            "Passport"});
             this.comboBox13.Location = new System.Drawing.Point(2, 2);
             this.comboBox13.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox13.Name = "comboBox13";
             this.comboBox13.Size = new System.Drawing.Size(72, 21);
             this.comboBox13.TabIndex = 0;
+            this.comboBox13.Text = "<Chọn>";
             // 
             // textBox2
             // 

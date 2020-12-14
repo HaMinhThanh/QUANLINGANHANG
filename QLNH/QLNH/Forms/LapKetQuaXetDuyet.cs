@@ -14,7 +14,7 @@ namespace QLNH
     public partial class LapKetQuaXetDuyet : Form
     {
         public KetQuaXetDuyet result { get; set; }
-        public YeuCauChoVay entry { get; set; }
+        public YeuCauChoVay entry { get; set; } = null;
         public bool isChapNhan { get; set; } = false;
         public KetQuaXetDuyetBUS busObj;
 
@@ -53,6 +53,15 @@ namespace QLNH
         private void LapKetQuaXetDuyet_Load(object sender, EventArgs e)
         {
             checkBox1.Checked = isChapNhan;
+            if (entry != null)
+            {
+                textBox3.Text = entry.KHYeuCau.MaKH;
+                textBox4.Text = entry.KHYeuCau.HoTen;
+                textBox10.Text = entry.ThoiDiemTiepNhan.ToString();
+                numericUpDown1.Value = (Decimal)entry.SoTienVay;
+                numericUpDown2.Value = (Decimal)entry.KyHan;
+                numericUpDown3.Value = (Decimal)entry.LaiSuat;
+            }
         }
     }
 }

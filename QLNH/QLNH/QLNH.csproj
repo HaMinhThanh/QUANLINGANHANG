@@ -94,6 +94,12 @@
     <Compile Include="Forms\DanhSachDieuKhoan.Designer.cs">
       <DependentUpon>DanhSachDieuKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\DinhGiaTaiSanTheChapForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DinhGiaTaiSanTheChapForm.Designer.cs">
+      <DependentUpon>DinhGiaTaiSanTheChapForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\DongVonBoSungForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -271,6 +277,9 @@
     <EmbeddedResource Include="Forms\DanhSachDieuKhoan.resx">
       <DependentUpon>DanhSachDieuKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DinhGiaTaiSanTheChapForm.resx">
+      <DependentUpon>DinhGiaTaiSanTheChapForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\DongVonBoSungForm.resx">
       <DependentUpon>DongVonBoSungForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,8 +390,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="QuanLyNganHang_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Programming-Show-Property-icon.png" />
     <None Include="Resources\Loupe-icon1.png" />

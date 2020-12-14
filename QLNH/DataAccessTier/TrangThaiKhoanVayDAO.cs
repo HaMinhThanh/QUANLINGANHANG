@@ -27,7 +27,7 @@ namespace DataAccessTier
                 {
                     result.UUID = reader.GetString(0);
                     result.TenTrangThai = reader.GetString(1);
-                    result.MucRuiRo = reader.GetInt32(2);
+                    result.MucRuiRo = reader.GetByte(2);
                 }
                 reader.Close();
             }
@@ -37,6 +37,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
             return result;

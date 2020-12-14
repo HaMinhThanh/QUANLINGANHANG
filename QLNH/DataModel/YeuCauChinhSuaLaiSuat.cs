@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataModel
 {
-    public class YeuCauChinhSuaLaiSuat : YeuCauChinhSuaHopDong
+    public class YeuCauChinhSuaLaiSuat
     {
         public double GiaTriMoi { get; set; }
     }
