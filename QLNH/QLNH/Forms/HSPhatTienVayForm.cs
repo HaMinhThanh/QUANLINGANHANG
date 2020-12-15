@@ -16,7 +16,8 @@ namespace QLNH
         private HoatDongPhatTienBUS busObj;
         private GiaoDichBUS busObjGiaoDich;
         private KhachHangBUS busObjKhachHang;
-        private HopDongChoVay selectedHD = null; 
+        private HopDongChoVay selectedHD = null;
+        private DataModel.KhachHang selectedKH = null;
 
         public HSPhatTienVayForm()
         {
@@ -34,7 +35,8 @@ namespace QLNH
             {
                 selectedHD = newForm.result;
                 textBox5.Text = selectedHD.MaHopDong;
-                textBox6.Text = selectedHD.YeuCauVay.KHYeuCau.MaKH;
+                selectedKH = selectedHD.YeuCauVay.KHYeuCau;
+                textBox6.Text = selectedKH.HoTen;
                 textBox3.Text = selectedHD.YeuCauVay.KHYeuCau.MaKH;
                 textBox12.Text = selectedHD.YeuCauVay.KHYeuCau.HoTen;
                 textBox8.Text = selectedHD.NgayThietLap.ToString();
@@ -57,13 +59,15 @@ namespace QLNH
                 entry.GiaoDichThucHien = new GiaoDichChi();
                 entry.HopDong = selectedHD;
                 entry.NVThucHien = (NhanVienKeToan) SessionState.NVDangNhap;
-                entry.GiaoDichThucHien.DonViGiaoDich = busObjKhachHang.GetKhachHangByMaKH(textBox6.Text);
+                entry.GiaoDichThucHien.DonViGiaoDich = selectedKH;
                 entry.GiaoDichThucHien.GiaTri = (Double) numericUpDown1.Value;
                 entry.GiaoDichThucHien.MoTa = "Phát tiền cho khoản vay " + selectedHD.MaHopDong;
                 entry.GiaoDichThucHien.ThoiDiemThucHien = dateTimePicker2.Value;
 
                 busObjGiaoDich.AddGiaoDich(entry.GiaoDichThucHien);
                 busObj.AddHoatDongPhatTien(entry);
+                MessageBox.Show("Thêm biên bản phát tiền thành công", "Thông báo");
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -78,7 +82,38 @@ namespace QLNH
 
         private void button3_Click(object sender, EventArgs e)
         {
+            TraCuuKhachHangForm newForm = new TraCuuKhachHangForm();
+            newForm.ShowDialog();
+            if (newForm.DialogResult == DialogResult.OK)
+            {
+                selectedKH = newForm.result;
+                textBox6.Text = selectedKH.HoTen;
+            }
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            KhachHang newForm = new KhachHang();
+            newForm.Show();
+        }
+
+        private void HSPhatTienVayForm_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = SessionState.NVDangNhap.HoTen;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double input = (double) numericUpDown1.Value;
+                if (Double.IsNaN(input)) throw new Exception("Invalid number format");
+                label2.Text = HelperFunction.Number2Pronounce(input);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");
+            }
         }
     }
 }

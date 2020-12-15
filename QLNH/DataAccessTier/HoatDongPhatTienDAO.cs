@@ -46,7 +46,7 @@ namespace DataAccessTier
                 conn.Open();
             }
             if (entry.UUID.Equals("")) entry.UUID = Guid.NewGuid().ToString();
-            SqlCommand cmd = new SqlCommand("INSERT INTO tbDieuKhoan VALUES (@MaHoatDong, @MaHopDong, @MaNV, @ThoiDiem, @MaGiaoDich)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO tbHoatDongPhatTien VALUES (@MaHoatDong, @MaHopDong, @MaNV, @ThoiDiem, @MaGiaoDich)", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaHoatDong", entry.UUID);
@@ -61,10 +61,12 @@ namespace DataAccessTier
             }
             catch (SqlException SQLex)
             {
+                Console.WriteLine(SQLex.StackTrace);
                 throw SQLex;
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
         }

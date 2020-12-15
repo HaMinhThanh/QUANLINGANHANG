@@ -36,9 +36,9 @@ namespace QLNH
                 filter += String.Format("LoaiDinhDanh = {0} AND GiaTri LIKE '*{1}' AND ", comboBox13.SelectedIndex, textBox2.Text);
             if (comboBox10.SelectedItem != null && comboBox10.SelectedIndex != 0)
             {
-                if (comboBox10.SelectedIndex == 0)
+                if (comboBox10.SelectedIndex == 1)
                     filter += String.Format("MaDoanhNghiepDaiDien IS NULL AND ");
-                else if (comboBox10.SelectedIndex == 1)
+                else if (comboBox10.SelectedIndex == 2)
                     filter += String.Format("MaDoanhNghiepDaiDien IS NOT NULL AND ");
             }
             if (!filter.Equals(""))

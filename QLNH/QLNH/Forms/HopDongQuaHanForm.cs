@@ -16,9 +16,11 @@ namespace QLNH
         private HopDongVayBUS busObj;
         private string MaHD = "";
         private HopDongChoVay selectedHD;
+        private TrangThaiKhoanVayBUS busObjTrangThai;
         public HopDongQuaHanForm(string MaHD)
         {
             busObj = new HopDongVayBUS();
+            busObjTrangThai = new TrangThaiKhoanVayBUS();
             this.MaHD = MaHD;
             InitializeComponent();
         }
@@ -38,9 +40,10 @@ namespace QLNH
                 numericUpDown4.Value = (Decimal) selectedHD.GiaTriConLai;
                 textBox9.Text = "";
 
-                // TODO: This line of code loads data into the 'quanLyNganHangDataSet.DanhGiaTaiChinhExt' table. You can move, or remove it, as needed.
+                //filter
                 this.danhGiaTaiChinhExtTableAdapter.Fill(this.quanLyNganHangDataSet.DanhGiaTaiChinhExt);
-                // TODO: This line of code loads data into the 'quanLyNganHangDataSet.GiaoDich' table. You can move, or remove it, as needed.
+
+                //filter
                 this.giaoDichTableAdapter.Fill(this.quanLyNganHangDataSet.GiaoDich);
             }
             catch (Exception ex)
@@ -52,7 +55,17 @@ namespace QLNH
         private void button1_Click(object sender, EventArgs e)
         {
             //TODO: change status and update database
-            selectedHD.TrangThai = new TrangThaiKhoanVay();
+            try
+            {
+                selectedHD.TrangThai = busObjTrangThai.GetTrangThaiByMaTrangThai("00000000-0000-0000-0000-000000000003");
+                busObj.UpdateHopDongVay(selectedHD);
+                MessageBox.Show("Đã cập nhật thông tin hợp đồng vay", "Thông báo");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
     }
 }

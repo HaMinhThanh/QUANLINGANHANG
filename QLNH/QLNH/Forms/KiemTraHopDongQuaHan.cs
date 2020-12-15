@@ -29,7 +29,27 @@ namespace QLNH
         private void button2_Click(object sender, EventArgs e)
         {
 
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HopDongVayExt' table. You can move, or remove it, as needed.
+            string filter = "";
+
+            if (!textBox8.Text.Equals(""))
+                filter += String.Format("MaHopDong = '{0}' AND ", textBox8.Text);
+            if (numericUpDown1.Value > 0)
+                filter += String.Format("GiaTriHienTai >= {0} AND ", numericUpDown1.Value);
+            if (comboBox1.SelectedItem != null)
+                filter += String.Format("MaTrangThai = '{0}' AND ", comboBox1.SelectedValue);
+            if (!textBox1.Text.Equals(""))
+                filter += String.Format("HoTen LIKE '*{0}*' AND ", textBox1.Text);
+            if (dateTimePicker1.Value <= DateTime.Now)
+                filter += String.Format("NgayThietLap >= #{0}# AND ", dateTimePicker1.Value.ToString("MM/dd/yyyy"));
+
+            if (!filter.Equals(""))
+                filter = filter.Substring(0, filter.LastIndexOf("AND") - 1);
+            else
+            {
+                MessageBox.Show("Xin hãy chọn 1 tiêu chuẩn tra cứu", "Thông báo");
+                return;
+            }
+            ((BindingSource)dataGridView1.DataSource).Filter = filter;
             this.hopDongVayExtTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExt);
         }
 

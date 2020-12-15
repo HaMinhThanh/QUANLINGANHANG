@@ -15,6 +15,7 @@ namespace QLNH
     {
         private KhachHangBUS busObj = new KhachHangBUS();
         private DinhDanhBUS busObjDinhDanh = new DinhDanhBUS();
+        private bool forceClose = false;
         public KhachHang()
         {
             InitializeComponent();
@@ -55,6 +56,7 @@ namespace QLNH
                 busObjDinhDanh.AddDinhDanh(entry.DinhDanhKH);
                 busObj.AddKhachHang(entry);
                 MessageBox.Show("Thêm khách hàng thành công", "Thông báo");
+                forceClose = true;
                 this.Close();
             }
             catch (Exception ex)
@@ -70,6 +72,7 @@ namespace QLNH
 
         private void KhachHang_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (forceClose) return;
             if (MessageBox.Show("Bạn có muốn thoát khỏi biểu mẫu, các thay đổi có thể chưa được lưu lại?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 e.Cancel = true;

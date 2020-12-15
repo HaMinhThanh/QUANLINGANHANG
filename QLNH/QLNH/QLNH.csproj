@@ -387,11 +387,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="QuanLyNganHang.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="QuanLyNganHang_log.ldf">
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Programming-Show-Property-icon.png" />
     <None Include="Resources\Loupe-icon1.png" />

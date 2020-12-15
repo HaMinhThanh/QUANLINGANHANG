@@ -16,6 +16,7 @@ namespace QLNH
         private HopDongVayBUS busObj;
         private string MaHD = "";
         private HopDongChoVay selectedHD;
+        private TrangThaiKhoanVayBUS busObjTrangThai;
         public ThanhLyHopDongForm(string MaHD)
         {
             busObj = new HopDongVayBUS();
@@ -54,6 +55,23 @@ namespace QLNH
         private void button1_Click(object sender, EventArgs e)
         {
             //create transaction and update loan's status
+            if (selectedHD.GiaTriConLai != 0)
+            {
+                MessageBox.Show("Chưa thể thanh lý hợp đồng do số tiền vay chưa được trả hoàn thiện", "Thông báo");
+                return;
+            }
+
+            try
+            {
+                selectedHD.TrangThai = busObjTrangThai.GetTrangThaiByMaTrangThai("00000000-0000-0000-0000-000000000004");
+                busObj.UpdateHopDongVay(selectedHD);
+                MessageBox.Show("Đã cập nhật thông tin hợp đồng vay", "Thông báo");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
     }
 }

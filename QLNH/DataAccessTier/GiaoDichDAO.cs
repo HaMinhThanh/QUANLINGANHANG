@@ -83,10 +83,12 @@ namespace DataAccessTier
             }
             catch (SqlException SQLex)
             {
+                Console.WriteLine(SQLex.StackTrace);
                 throw SQLex;
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
             finally

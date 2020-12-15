@@ -52,7 +52,7 @@ namespace QLNH
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Chức năng đang được xây dựng", "Thông báo");
         }
 
         private void button2_Click(object sender, EventArgs e)

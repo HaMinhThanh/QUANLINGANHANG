@@ -99,12 +99,34 @@ namespace QLNH.Forms
                 btnXacNhanHD.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnXacNhanHD);
 
+                Button btnDonGHMG = new Button();
+                //btnDonGHMG.Location = new Point(3, 115);
+                btnDonGHMG.Size = new Size(299, 44);
+                btnDonGHMG.Text = "Lập Đơn GHMG";
+                btnDonGHMG.Click += BtnDonGHMG_Click;
+                btnDonGHMG.TextAlign = ContentAlignment.MiddleCenter;
+                btnDonGHMG.TabIndex = 2;
+                btnDonGHMG.Dock = DockStyle.Fill;
+                Controls.Add(btnDonGHMG);
+
+                Button btnBaoCaoDoiTuong = new Button();
+                //btnBaoCaoDoiTuong.Location = new Point(3, 451);
+                btnBaoCaoDoiTuong.Size = new Size(299, 44);
+                btnBaoCaoDoiTuong.Text = "Báo Cáo Đối Tượng Vay";
+                btnBaoCaoDoiTuong.Click += BtnBaoCaoDoiTuong_Click;
+                btnBaoCaoDoiTuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnBaoCaoDoiTuong.TabIndex = 8;
+                btnBaoCaoDoiTuong.Dock = System.Windows.Forms.DockStyle.Fill;
+                Controls.Add(btnBaoCaoDoiTuong);
+
                 dynamicTableLayoutPanel.Controls.Add(btnHSChoVay, 0, 1);
                 dynamicTableLayoutPanel.Controls.Add(btnTaiSanTheChap, 0, 2);
                 dynamicTableLayoutPanel.Controls.Add(btnThemKhachHang, 0, 3);
                 dynamicTableLayoutPanel.Controls.Add(btnXacNhanHD, 0, 4);
-                
-            
+                dynamicTableLayoutPanel.Controls.Add(btnBaoCaoDoiTuong, 0, 5);
+                dynamicTableLayoutPanel.Controls.Add(btnDonGHMG, 0, 6);
+
+
                 Controls.Add(dynamicTableLayoutPanel);
             }
             else if(SessionState.NVDangNhap is DataModel.NhanVienXetDuyet)
@@ -183,25 +205,7 @@ namespace QLNH.Forms
             } 
             else //if (SessionState.NVDangNhap is DataModel.NhanVienQuanLy)
             {
-                Button btnHSPhatTien = new Button();
-                //btnHSPhatTien.Location = new Point(3, 59);
-                btnHSPhatTien.Size = new Size(299, 44);
-                btnHSPhatTien.Text = "Tạo Hồ Sơ Phát Tiền Vay";
-                btnHSPhatTien.Click += BtnHSPhatTien_Click;
-                btnHSPhatTien.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                btnHSPhatTien.TabIndex = 1;
-                btnHSPhatTien.Dock = System.Windows.Forms.DockStyle.Fill;                
-                Controls.Add(btnHSPhatTien);
 
-                Button btnDonGHMG = new Button();
-                //btnDonGHMG.Location = new Point(3, 115);
-                btnDonGHMG.Size = new Size(299, 44);
-                btnDonGHMG.Text = "Lập Đơn GHMG";
-                btnDonGHMG.Click += BtnDonGHMG_Click;
-                btnDonGHMG.TextAlign = ContentAlignment.MiddleCenter;
-                btnDonGHMG.TabIndex = 2;
-                btnDonGHMG.Dock = DockStyle.Fill;
-                Controls.Add(btnDonGHMG);
 
                 Button btnThanhLy = new Button();
                 //btnThanhLy.Location = new Point(3, 171);
@@ -253,16 +257,6 @@ namespace QLNH.Forms
                 btnQuyetToan.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnQuyetToan);
 
-                Button btnBaoCaoDoiTuong = new Button();
-                //btnBaoCaoDoiTuong.Location = new Point(3, 451);
-                btnBaoCaoDoiTuong.Size = new Size(299, 44);
-                btnBaoCaoDoiTuong.Text = "Báo Cáo Đối Tượng Vay";
-                btnBaoCaoDoiTuong.Click += BtnBaoCaoDoiTuong_Click;
-                btnBaoCaoDoiTuong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-                btnBaoCaoDoiTuong.TabIndex = 8;
-                btnBaoCaoDoiTuong.Dock = System.Windows.Forms.DockStyle.Fill;
-                Controls.Add(btnBaoCaoDoiTuong);
-
                 Button btnBaoCaoTaiChinh = new Button();
                // btnBaoCaoTaiChinh.Location = new Point(3, 507);
                 //btnBaoCaoTaiChinh.Size = new Size(250, 44);
@@ -273,15 +267,12 @@ namespace QLNH.Forms
                 btnBaoCaoTaiChinh.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnBaoCaoTaiChinh);                
                 
-                dynamicTableLayoutPanel.Controls.Add(btnHSPhatTien, 0, 1);             
-                dynamicTableLayoutPanel.Controls.Add(btnDonGHMG, 0, 2);
-                dynamicTableLayoutPanel.Controls.Add(btnThanhLy, 0, 3);
-                dynamicTableLayoutPanel.Controls.Add(btnDongVonBoSung, 0, 4);
-                dynamicTableLayoutPanel.Controls.Add(btnChiTieuBoSung, 0, 5);
-                dynamicTableLayoutPanel.Controls.Add(btnHDQuaHan, 0, 6);
-                dynamicTableLayoutPanel.Controls.Add(btnQuyetToan, 0, 7);
-                dynamicTableLayoutPanel.Controls.Add(btnBaoCaoDoiTuong, 0, 8);
-                dynamicTableLayoutPanel.Controls.Add(btnBaoCaoTaiChinh, 0, 9);            
+                dynamicTableLayoutPanel.Controls.Add(btnThanhLy, 0, 1);
+                dynamicTableLayoutPanel.Controls.Add(btnHDQuaHan, 0, 2);
+                dynamicTableLayoutPanel.Controls.Add(btnDongVonBoSung, 0, 3);
+                dynamicTableLayoutPanel.Controls.Add(btnChiTieuBoSung, 0, 4);
+                dynamicTableLayoutPanel.Controls.Add(btnQuyetToan, 0, 5);
+                dynamicTableLayoutPanel.Controls.Add(btnBaoCaoTaiChinh, 0, 6);            
 
                 Controls.Add(dynamicTableLayoutPanel);
             }
@@ -462,9 +453,9 @@ namespace QLNH.Forms
                 filter += String.Format("LoaiDinhDanh = {0} AND GiaTri LIKE '*{1}' AND ", comboBox13.SelectedIndex, textBox2.Text);
             if (comboBox10.SelectedItem != null && comboBox10.SelectedIndex != 0)
             {
-                if (comboBox10.SelectedIndex == 0)
+                if (comboBox10.SelectedIndex == 1)
                     filter += String.Format("MaDoanhNghiepDaiDien IS NULL AND ");
-                else if (comboBox10.SelectedIndex == 1)
+                else if (comboBox10.SelectedIndex == 2)
                     filter += String.Format("MaDoanhNghiepDaiDien IS NOT NULL AND ");
             }
             if (!filter.Equals(""))

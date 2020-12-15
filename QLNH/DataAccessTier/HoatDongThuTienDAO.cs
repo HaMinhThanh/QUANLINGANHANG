@@ -51,7 +51,7 @@ namespace DataAccessTier
             {
                 cmd.Parameters.AddWithValue("@MaHoatDong", entry.UUID);
                 cmd.Parameters.AddWithValue("@MaHopDong", entry.HopDong.MaHopDong);
-                cmd.Parameters.AddWithValue("@MaKH", entry.KHChiTra.MaKH);
+                cmd.Parameters.AddWithValue("@MaKH", entry.GiaoDichThucHien.DonViGiaoDich.MaKH);
                 cmd.Parameters.AddWithValue("@MaNV", entry.NVThucHien.MaNV);
                 cmd.Parameters.AddWithValue("@ThoiDiem", entry.GiaoDichThucHien.ThoiDiemThucHien);
                 cmd.Parameters.AddWithValue("@MaGiaoDich", entry.GiaoDichThucHien.UUID);

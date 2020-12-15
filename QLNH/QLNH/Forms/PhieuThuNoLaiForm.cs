@@ -37,7 +37,8 @@ namespace QLNH
             {
                 selectedHD = newForm.result;
                 textBox1.Text = selectedHD.MaHopDong;
-                textBox2.Text = selectedHD.YeuCauVay.KHYeuCau.MaKH;
+                selectedKH = selectedHD.YeuCauVay.KHYeuCau;
+                textBox2.Text = selectedKH.HoTen;
                 textBox4.Text = selectedHD.YeuCauVay.KHYeuCau.MaKH;
                 textBox11.Text = selectedHD.YeuCauVay.KHYeuCau.HoTen;
                 textBox7.Text = selectedHD.NgayThietLap.ToString();
@@ -71,7 +72,8 @@ namespace QLNH
                 entry.HopDong.GiaTriConLai -= entry.GiaoDichThucHien.GiaTri;
 
                 busObjHopDong.UpdateHopDongVay(entry.HopDong);
-                
+                MessageBox.Show("Thêm biên bản thu nợ lãi thành công", "Thông báo");
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -91,6 +93,7 @@ namespace QLNH
             if (newForm.DialogResult == DialogResult.OK)
             {
                 selectedKH = newForm.result;
+                textBox2.Text = selectedKH.HoTen;
             }
         }
 
@@ -98,6 +101,20 @@ namespace QLNH
         {
             KhachHang newForm = new KhachHang();
             newForm.Show();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                double input = (double)numericUpDown1.Value;
+                if (Double.IsNaN(input)) throw new Exception("Invalid number format");
+                label7.Text = HelperFunction.Number2Pronounce(input);
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");
+            }
         }
     }
 }

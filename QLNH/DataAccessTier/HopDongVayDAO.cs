@@ -33,7 +33,7 @@ namespace DataAccessTier
                     MaYC = reader.GetString(1);
                     MaNV = reader.GetString(2);
                     result.NgayThietLap = reader.GetDateTime(3);
-                    result.GiaTriConLai = reader.GetDouble(4);
+                    result.GiaTriConLai = (double) reader.GetDecimal(4);
                     MaTrangThai = reader.GetString(5);
                     result.ngayCapNhatGanNhat = reader.GetDateTime(6);
                 }
@@ -49,6 +49,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
             return result;
@@ -99,7 +100,7 @@ namespace DataAccessTier
             }
             if (entry.MaHopDong.Equals("")) throw new Exception("Unknown contract");
             entry.ngayCapNhatGanNhat = DateTime.Now;
-            SqlCommand cmd = new SqlCommand("UPDATE tbHopDongVay SET MaYeuCau = @MaYeuCau, MaNVTiepNhan = @MaNV, NgayThietLap = @NgayLap, GiaTriHienTai = @GiaTri, MaTrangThai = @MaTrangThai, NgayCapNhatCuoi = @NgayCapNhat WHERE MaHopDong = @MaHopDong,", conn);
+            SqlCommand cmd = new SqlCommand("UPDATE tbHopDongVay SET MaYeuCau = @MaYeuCau, MaNVTiepNhan = @MaNV, NgayThietLap = @NgayLap, GiaTriHienTai = @GiaTri, MaTrangThai = @MaTrangThai, NgayCapNhatCuoi = @NgayCapNhat WHERE MaHopDong = @MaHopDong", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaYeuCau", entry.YeuCauVay.MaYeuCau);
