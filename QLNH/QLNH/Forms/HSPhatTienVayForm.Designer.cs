@@ -594,7 +594,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HSPhatTienVayForm";
-            this.Text = "HSPhatTienVayForm";
+            this.Text = "Biên bản phát tiền vay";
             this.Load += new System.EventHandler(this.HSPhatTienVayForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

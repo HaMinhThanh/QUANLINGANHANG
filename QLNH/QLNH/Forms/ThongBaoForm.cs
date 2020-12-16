@@ -24,9 +24,11 @@ namespace QLNH
 
         private void ThongBaoForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.HopDongVayExt' table. You can move, or remove it, as needed.
-            this.hopDongVayExtTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExt);
-
+            long elapsedTicks = DateTime.Now.Ticks - (new DateTime(1900, 1, 1)).Ticks;
+            int days = (int) new TimeSpan(elapsedTicks).TotalDays;
+            days += (int) numericUpDown1.Value;
+            ((BindingSource)dataGridView1.DataSource).Filter = String.Format("Expr1 < {0}", days) ;
+            this.hopDongVayExtDateTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExtDate);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -58,6 +60,15 @@ namespace QLNH
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            long elapsedTicks = DateTime.Now.Ticks - (new DateTime(1900, 1, 1)).Ticks;
+            int days = (int)new TimeSpan(elapsedTicks).TotalDays;
+            days += (int)numericUpDown1.Value;
+            ((BindingSource)dataGridView1.DataSource).Filter = String.Format("Expr1 < {0}", days);
+            this.hopDongVayExtDateTableAdapter.Fill(this.quanLyNganHangDataSet.HopDongVayExtDate);
         }
     }
 }

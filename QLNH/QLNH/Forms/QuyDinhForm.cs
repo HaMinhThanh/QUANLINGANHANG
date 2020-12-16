@@ -28,15 +28,18 @@ namespace QLNH.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
+            loadedThamSo.ThoiGianApDung = DateTime.Now;
             loadedThamSo.VonVayCaNhanToiDa = (Double) numericUpDown1.Value;
             loadedThamSo.VonVayToChucToiDa = (Double) numericUpDown2.Value;
-            loadedThamSo.KyHanToiThieu = (Int32) numericUpDown3.Value;
-            loadedThamSo.KyHanToiDa = (Int32)numericUpDown10.Value;
+            loadedThamSo.KyHanToiThieu = (Int32) numericUpDown10.Value;
+            loadedThamSo.KyHanToiDa = (Int32)numericUpDown3.Value;
             loadedThamSo.TuoiDuocVayToiThieu = (Int32)numericUpDown4.Value;
             loadedThamSo.DinhGiaToiThieu = (Double) numericUpDown5.Value;
             loadedThamSo.LaiSuatToiThieu = (Double) numericUpDown6.Value;
             loadedThamSo.LaiSuatToiDa = (Double) numericUpDown7.Value;
             loadedThamSo.ThoiGianThongBaoTraNo = (Int32) numericUpDown9.Value;
+
+            MessageBox.Show("Quy định được thay đổi thành công", "Thông báo");
 
             try
             {
@@ -55,8 +58,8 @@ namespace QLNH.Forms
                 loadedThamSo = busObj.GetLatestThamSo();
                 numericUpDown1.Value = (Decimal)loadedThamSo.VonVayCaNhanToiDa;
                 numericUpDown2.Value = (Decimal)loadedThamSo.VonVayToChucToiDa;
-                numericUpDown3.Value = (Decimal)loadedThamSo.KyHanToiThieu;
-                numericUpDown10.Value = (Decimal)loadedThamSo.KyHanToiDa;
+                numericUpDown10.Value = (Decimal)loadedThamSo.KyHanToiThieu;
+                numericUpDown3.Value = (Decimal)loadedThamSo.KyHanToiDa;
                 numericUpDown4.Value = (Decimal)loadedThamSo.TuoiDuocVayToiThieu;
                 numericUpDown5.Value = (Decimal)loadedThamSo.DinhGiaToiThieu;
                 numericUpDown6.Value = (Decimal)loadedThamSo.LaiSuatToiThieu;
@@ -74,6 +77,20 @@ namespace QLNH.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //nothing
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            TraCuuLaiSuat newForm = new TraCuuLaiSuat(1);
+            newForm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Forms.DanhSachDieuKhoan newForm = new DanhSachDieuKhoan(1);
+            newForm.Show();
 
         }
     }

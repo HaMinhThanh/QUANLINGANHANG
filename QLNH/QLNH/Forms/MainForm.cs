@@ -257,6 +257,16 @@ namespace QLNH.Forms
                 btnQuyetToan.Dock = System.Windows.Forms.DockStyle.Fill;
                 Controls.Add(btnQuyetToan);
 
+                Button btnQuyDinh = new Button();
+                //btnQuyDinh.Location = new Point(3, 395);
+                btnQuyDinh.Size = new Size(299, 44);
+                btnQuyDinh.Text = "Thay đổi quy định";
+                btnQuyDinh.Click += btnQuyDinh_Click;
+                btnQuyDinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnQuyDinh.TabIndex = 7;
+                btnQuyDinh.Dock = System.Windows.Forms.DockStyle.Fill;
+                Controls.Add(btnQuyDinh);
+
                 Button btnBaoCaoTaiChinh = new Button();
                // btnBaoCaoTaiChinh.Location = new Point(3, 507);
                 //btnBaoCaoTaiChinh.Size = new Size(250, 44);
@@ -272,11 +282,18 @@ namespace QLNH.Forms
                 dynamicTableLayoutPanel.Controls.Add(btnDongVonBoSung, 0, 3);
                 dynamicTableLayoutPanel.Controls.Add(btnChiTieuBoSung, 0, 4);
                 dynamicTableLayoutPanel.Controls.Add(btnQuyetToan, 0, 5);
-                dynamicTableLayoutPanel.Controls.Add(btnBaoCaoTaiChinh, 0, 6);            
+                dynamicTableLayoutPanel.Controls.Add(btnBaoCaoTaiChinh, 0, 6);
+                dynamicTableLayoutPanel.Controls.Add(btnQuyDinh, 0, 7);
 
                 Controls.Add(dynamicTableLayoutPanel);
             }
             tableLayoutPanel1.Controls.Add(dynamicTableLayoutPanel);
+        }
+
+        private void btnQuyDinh_Click(object sender, EventArgs e)
+        {
+            QuyDinhForm newForm = new QuyDinhForm();
+            newForm.Show();
         }
 
         private void btnXuLiTaiSanTheChap_Click(object sender, EventArgs e)
@@ -419,7 +436,8 @@ namespace QLNH.Forms
 
         private void BtnDonMGGH_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            DonMGGHForm newForm = new DonMGGHForm();
+            newForm.Show();
         }
 
         private void BtnHSChoVay_Click(object sender, EventArgs e)

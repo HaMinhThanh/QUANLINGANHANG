@@ -80,6 +80,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -90,6 +92,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(313, 444);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
@@ -97,14 +100,16 @@
             // kyHanDataGridViewTextBoxColumn
             // 
             this.kyHanDataGridViewTextBoxColumn.DataPropertyName = "KyHan";
-            this.kyHanDataGridViewTextBoxColumn.HeaderText = "KyHan";
+            this.kyHanDataGridViewTextBoxColumn.HeaderText = "Kì hạn (tháng)";
             this.kyHanDataGridViewTextBoxColumn.Name = "kyHanDataGridViewTextBoxColumn";
+            this.kyHanDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // laiSuatDataGridViewTextBoxColumn
             // 
             this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
-            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "LaiSuat";
+            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "Lãi suất (%/tháng)";
             this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
+            this.laiSuatDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tableLayoutPanel2
             // 
@@ -158,6 +163,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown1.Enabled = false;
             this.numericUpDown1.Location = new System.Drawing.Point(3, 33);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(122, 20);
             this.numericUpDown1.TabIndex = 2;
@@ -166,6 +176,7 @@
             // 
             this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown2.DecimalPlaces = 2;
             this.numericUpDown2.Enabled = false;
             this.numericUpDown2.Location = new System.Drawing.Point(3, 93);
             this.numericUpDown2.Name = "numericUpDown2";
@@ -176,6 +187,8 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Enabled = false;
+            this.button1.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(3, 270);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 52);
@@ -188,6 +201,8 @@
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Enabled = false;
+            this.button2.Image = global::QLNH.Properties.Resources.floppy_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(3, 328);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(122, 52);
@@ -200,6 +215,8 @@
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Enabled = false;
+            this.button3.Image = global::QLNH.Properties.Resources.delete_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(3, 386);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(122, 55);
@@ -219,7 +236,7 @@
             this.ClientSize = new System.Drawing.Size(453, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TraCuuLaiSuat";
-            this.Text = "TraCuuLaiSuat";
+            this.Text = "Tra cứu kì hạn lãi suất";
             this.Load += new System.EventHandler(this.TraCuuLaiSuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.thamSoKyHanLaiSuatBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();

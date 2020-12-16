@@ -570,6 +570,7 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(331, 107);
@@ -579,56 +580,56 @@
             // maKHDataGridViewTextBoxColumn
             // 
             this.maKHDataGridViewTextBoxColumn.DataPropertyName = "MaKH";
-            this.maKHDataGridViewTextBoxColumn.HeaderText = "MaKH";
+            this.maKHDataGridViewTextBoxColumn.HeaderText = "Mã KH";
             this.maKHDataGridViewTextBoxColumn.Name = "maKHDataGridViewTextBoxColumn";
             this.maKHDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // hoTenDataGridViewTextBoxColumn
             // 
             this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
             this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
             this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ngaySinhDataGridViewTextBoxColumn
             // 
             this.ngaySinhDataGridViewTextBoxColumn.DataPropertyName = "NgaySinh";
-            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "NgaySinh";
+            this.ngaySinhDataGridViewTextBoxColumn.HeaderText = "Ngày sinh";
             this.ngaySinhDataGridViewTextBoxColumn.Name = "ngaySinhDataGridViewTextBoxColumn";
             this.ngaySinhDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sDTDataGridViewTextBoxColumn
             // 
             this.sDTDataGridViewTextBoxColumn.DataPropertyName = "SDT";
-            this.sDTDataGridViewTextBoxColumn.HeaderText = "SDT";
+            this.sDTDataGridViewTextBoxColumn.HeaderText = "SĐT";
             this.sDTDataGridViewTextBoxColumn.Name = "sDTDataGridViewTextBoxColumn";
             this.sDTDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // diaChiDataGridViewTextBoxColumn
             // 
             this.diaChiDataGridViewTextBoxColumn.DataPropertyName = "DiaChi";
-            this.diaChiDataGridViewTextBoxColumn.HeaderText = "DiaChi";
+            this.diaChiDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
             this.diaChiDataGridViewTextBoxColumn.Name = "diaChiDataGridViewTextBoxColumn";
             this.diaChiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // gioiTinhDataGridViewTextBoxColumn
             // 
             this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
+            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "Giới tính";
             this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
             this.gioiTinhDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // loaiDinhDanhDataGridViewTextBoxColumn
             // 
             this.loaiDinhDanhDataGridViewTextBoxColumn.DataPropertyName = "LoaiDinhDanh";
-            this.loaiDinhDanhDataGridViewTextBoxColumn.HeaderText = "LoaiDinhDanh";
+            this.loaiDinhDanhDataGridViewTextBoxColumn.HeaderText = "Loại định danh";
             this.loaiDinhDanhDataGridViewTextBoxColumn.Name = "loaiDinhDanhDataGridViewTextBoxColumn";
             this.loaiDinhDanhDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // giaTriDataGridViewTextBoxColumn
             // 
             this.giaTriDataGridViewTextBoxColumn.DataPropertyName = "GiaTri";
-            this.giaTriDataGridViewTextBoxColumn.HeaderText = "GiaTri";
+            this.giaTriDataGridViewTextBoxColumn.HeaderText = "Chuỗi định danh";
             this.giaTriDataGridViewTextBoxColumn.Name = "giaTriDataGridViewTextBoxColumn";
             this.giaTriDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -718,6 +719,7 @@
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(690, 176);
@@ -726,28 +728,28 @@
             // maTaiSanDataGridViewTextBoxColumn
             // 
             this.maTaiSanDataGridViewTextBoxColumn.DataPropertyName = "MaTaiSan";
-            this.maTaiSanDataGridViewTextBoxColumn.HeaderText = "MaTaiSan";
+            this.maTaiSanDataGridViewTextBoxColumn.HeaderText = "Mã tài sản";
             this.maTaiSanDataGridViewTextBoxColumn.Name = "maTaiSanDataGridViewTextBoxColumn";
             this.maTaiSanDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // moTaDataGridViewTextBoxColumn
             // 
             this.moTaDataGridViewTextBoxColumn.DataPropertyName = "MoTa";
-            this.moTaDataGridViewTextBoxColumn.HeaderText = "MoTa";
+            this.moTaDataGridViewTextBoxColumn.HeaderText = "Mô tả";
             this.moTaDataGridViewTextBoxColumn.Name = "moTaDataGridViewTextBoxColumn";
             this.moTaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dinhGiaDataGridViewTextBoxColumn
             // 
             this.dinhGiaDataGridViewTextBoxColumn.DataPropertyName = "DinhGia";
-            this.dinhGiaDataGridViewTextBoxColumn.HeaderText = "DinhGia";
+            this.dinhGiaDataGridViewTextBoxColumn.HeaderText = "Định giá";
             this.dinhGiaDataGridViewTextBoxColumn.Name = "dinhGiaDataGridViewTextBoxColumn";
             this.dinhGiaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tenTrangThaiDataGridViewTextBoxColumn
             // 
             this.tenTrangThaiDataGridViewTextBoxColumn.DataPropertyName = "TenTrangThai";
-            this.tenTrangThaiDataGridViewTextBoxColumn.HeaderText = "TenTrangThai";
+            this.tenTrangThaiDataGridViewTextBoxColumn.HeaderText = "Trạng thái";
             this.tenTrangThaiDataGridViewTextBoxColumn.Name = "tenTrangThaiDataGridViewTextBoxColumn";
             this.tenTrangThaiDataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -772,7 +774,8 @@
             this.Controls.Add(this.tableLayoutPanel2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HSChoVayForm";
-            this.Text = "HSChoVayForm";
+            this.Text = "Nộp hồ sơ cho vay mới";
+            this.Activated += new System.EventHandler(this.HSChoVayForm_Activated);
             this.Load += new System.EventHandler(this.HSChoVayForm_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -840,6 +843,11 @@
         private QuanLyNganHangDataSet quanLyNganHangDataSet;
         private System.Windows.Forms.BindingSource khachHangBindingSource;
         private QuanLyNganHangDataSetTableAdapters.KhachHangTableAdapter khachHangTableAdapter;
+        private System.Windows.Forms.BindingSource taiSanTheChapExtBindingSource;
+        private QuanLyNganHangDataSetTableAdapters.TaiSanTheChapExtTableAdapter taiSanTheChapExtTableAdapter;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridViewTextBoxColumn maKHDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaySinhDataGridViewTextBoxColumn;
@@ -848,14 +856,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loaiDinhDanhDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaTriDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource taiSanTheChapExtBindingSource;
-        private QuanLyNganHangDataSetTableAdapters.TaiSanTheChapExtTableAdapter taiSanTheChapExtTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn maTaiSanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moTaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dinhGiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenTrangThaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Button button4;
     }
 }

@@ -51,18 +51,16 @@ namespace QLNH
                 MessageBox.Show("Xin hãy chọn 1 tiêu chuẩn tra cứu", "Thông báo");
                 return;
             }
-            ((BindingSource)dataGridView2.DataSource).Filter = filter;
+            ((BindingSource)dataGridView1.DataSource).Filter = filter;
             this.khachHangTableAdapter.Fill(this.quanLyNganHangDataSet.KhachHang);
         }
 
         private void HSChoVayForm_Load(object sender, EventArgs e)
         {
-            this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TaiSanTheChapExt' table. You can move, or remove it, as needed.
             TaiSanTheChapForm newForm = new TaiSanTheChapForm();
             newForm.MaYeuCau = MaYeuCau;
             newForm.Show();
@@ -83,6 +81,8 @@ namespace QLNH
                 MessageBox.Show("Thêm yêu cầu vay thành công", "Thông báo");
                 button3.Enabled = true;
                 dataGridView2.Enabled = true;
+                ((BindingSource)dataGridView2.DataSource).Filter = String.Format("MaYeuCau = '{0}'", MaYeuCau);
+                this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
             }
             catch (Exception ex)
             {

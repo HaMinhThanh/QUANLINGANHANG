@@ -55,7 +55,7 @@ namespace DataAccessTier
             return result;
         }
 
-        public bool AddHopDongVay(HopDongChoVay entry)
+        public string AddHopDongVay(HopDongChoVay entry)
         {
             SqlConnection conn = DBConnection.getConnection();
             if (conn.State != System.Data.ConnectionState.Open)
@@ -78,7 +78,7 @@ namespace DataAccessTier
 
                 int res = cmd.ExecuteNonQuery();
                 if (res != 1) throw new Exception("Can't add new contract");
-                return true;
+                return entry.MaHopDong;
             }
             catch (SqlException SQLex)
             {

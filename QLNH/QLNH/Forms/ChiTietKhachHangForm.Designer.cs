@@ -65,15 +65,14 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
-            this.giaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.giaoDichTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.GiaoDichTableAdapter();
             this.maGiaoDichDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loaiGiaoDichDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donViGiaoDichDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaTriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thoiDiemThucHienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaTriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moTaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loaiGiaoDichDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaoDichBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
+            this.giaoDichTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.GiaoDichTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -83,8 +82,8 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -96,7 +95,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -126,7 +125,7 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 1, 6);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -210,7 +209,7 @@
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox1.Location = new System.Drawing.Point(119, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(244, 20);
@@ -220,7 +219,7 @@
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Location = new System.Drawing.Point(119, 66);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(244, 20);
@@ -230,7 +229,7 @@
             // 
             this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox5.Location = new System.Drawing.Point(119, 219);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(244, 20);
@@ -240,7 +239,7 @@
             // 
             this.dateTimePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Location = new System.Drawing.Point(119, 117);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(244, 20);
             this.dateTimePicker1.TabIndex = 11;
@@ -271,7 +270,7 @@
             // 
             this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox9.Location = new System.Drawing.Point(119, 367);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
             this.textBox9.Size = new System.Drawing.Size(244, 20);
@@ -281,7 +280,7 @@
             // 
             this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox6.Location = new System.Drawing.Point(119, 270);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Name = "textBox6";
             this.textBox6.ReadOnly = true;
             this.textBox6.Size = new System.Drawing.Size(244, 20);
@@ -296,7 +295,7 @@
             this.tableLayoutPanel4.Controls.Add(this.textBox4, 1, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(119, 155);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -313,7 +312,7 @@
             "CCCD",
             "Passport"});
             this.comboBox1.Location = new System.Drawing.Point(2, 13);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(64, 21);
             this.comboBox1.TabIndex = 0;
@@ -322,7 +321,7 @@
             // 
             this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.Location = new System.Drawing.Point(70, 13);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
             this.textBox4.Size = new System.Drawing.Size(172, 20);
@@ -337,7 +336,7 @@
             this.tableLayoutPanel5.Controls.Add(this.button2, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(119, 308);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -348,7 +347,7 @@
             // 
             this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.Location = new System.Drawing.Point(2, 13);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(158, 20);
@@ -360,7 +359,7 @@
             this.button2.Image = global::QLNH.Properties.Resources.Programming_Show_Property_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(164, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(78, 26);
             this.button2.TabIndex = 1;
@@ -377,7 +376,7 @@
             this.tableLayoutPanel3.Controls.Add(this.groupBox2, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(371, 2);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.3945F));
@@ -394,7 +393,7 @@
             this.button1.Image = global::QLNH.Properties.Resources.Go_back_icon;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(257, 362);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 34);
             this.button1.TabIndex = 1;
@@ -407,9 +406,9 @@
             this.groupBox1.Controls.Add(this.tableLayoutPanel6);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(2, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(361, 170);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -430,7 +429,7 @@
             this.tableLayoutPanel6.Controls.Add(this.textBox11, 1, 3);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(2, 15);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 4;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.4128F));
@@ -488,7 +487,7 @@
             // 
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox7.Location = new System.Drawing.Point(137, 9);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
             this.textBox7.Name = "textBox7";
             this.textBox7.ReadOnly = true;
             this.textBox7.Size = new System.Drawing.Size(218, 20);
@@ -498,7 +497,7 @@
             // 
             this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox8.Location = new System.Drawing.Point(137, 46);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox8.Margin = new System.Windows.Forms.Padding(2);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
             this.textBox8.Size = new System.Drawing.Size(218, 20);
@@ -508,7 +507,7 @@
             // 
             this.textBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox10.Location = new System.Drawing.Point(137, 82);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
             this.textBox10.Size = new System.Drawing.Size(218, 20);
@@ -518,7 +517,7 @@
             // 
             this.textBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox11.Location = new System.Drawing.Point(137, 122);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox11.Margin = new System.Windows.Forms.Padding(2);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
             this.textBox11.Size = new System.Drawing.Size(218, 20);
@@ -529,9 +528,9 @@
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(2, 176);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(361, 182);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
@@ -539,74 +538,70 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maGiaoDichDataGridViewTextBoxColumn,
-            this.loaiGiaoDichDataGridViewTextBoxColumn,
-            this.donViGiaoDichDataGridViewTextBoxColumn,
-            this.giaTriDataGridViewTextBoxColumn,
             this.thoiDiemThucHienDataGridViewTextBoxColumn,
-            this.moTaDataGridViewTextBoxColumn});
+            this.giaTriDataGridViewTextBoxColumn,
+            this.moTaDataGridViewTextBoxColumn,
+            this.loaiGiaoDichDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.giaoDichBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(2, 15);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(357, 165);
             this.dataGridView1.TabIndex = 0;
             // 
-            // quanLyNganHangDataSet
+            // maGiaoDichDataGridViewTextBoxColumn
             // 
-            this.quanLyNganHangDataSet.DataSetName = "QuanLyNganHangDataSet";
-            this.quanLyNganHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.maGiaoDichDataGridViewTextBoxColumn.DataPropertyName = "MaGiaoDich";
+            this.maGiaoDichDataGridViewTextBoxColumn.HeaderText = "Mã giao dịch";
+            this.maGiaoDichDataGridViewTextBoxColumn.Name = "maGiaoDichDataGridViewTextBoxColumn";
+            // 
+            // thoiDiemThucHienDataGridViewTextBoxColumn
+            // 
+            this.thoiDiemThucHienDataGridViewTextBoxColumn.DataPropertyName = "ThoiDiemThucHien";
+            this.thoiDiemThucHienDataGridViewTextBoxColumn.HeaderText = "Thời gian";
+            this.thoiDiemThucHienDataGridViewTextBoxColumn.Name = "thoiDiemThucHienDataGridViewTextBoxColumn";
+            // 
+            // giaTriDataGridViewTextBoxColumn
+            // 
+            this.giaTriDataGridViewTextBoxColumn.DataPropertyName = "GiaTri";
+            this.giaTriDataGridViewTextBoxColumn.HeaderText = "Giá trị";
+            this.giaTriDataGridViewTextBoxColumn.Name = "giaTriDataGridViewTextBoxColumn";
+            // 
+            // moTaDataGridViewTextBoxColumn
+            // 
+            this.moTaDataGridViewTextBoxColumn.DataPropertyName = "MoTa";
+            this.moTaDataGridViewTextBoxColumn.HeaderText = "Mô tả";
+            this.moTaDataGridViewTextBoxColumn.Name = "moTaDataGridViewTextBoxColumn";
+            // 
+            // loaiGiaoDichDataGridViewTextBoxColumn
+            // 
+            this.loaiGiaoDichDataGridViewTextBoxColumn.DataPropertyName = "LoaiGiaoDich";
+            this.loaiGiaoDichDataGridViewTextBoxColumn.HeaderText = "Loại giao dịch";
+            this.loaiGiaoDichDataGridViewTextBoxColumn.Name = "loaiGiaoDichDataGridViewTextBoxColumn";
             // 
             // giaoDichBindingSource
             // 
             this.giaoDichBindingSource.DataMember = "GiaoDich";
             this.giaoDichBindingSource.DataSource = this.quanLyNganHangDataSet;
             // 
+            // quanLyNganHangDataSet
+            // 
+            this.quanLyNganHangDataSet.DataSetName = "QuanLyNganHangDataSet";
+            this.quanLyNganHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // giaoDichTableAdapter
             // 
             this.giaoDichTableAdapter.ClearBeforeFill = true;
-            // 
-            // maGiaoDichDataGridViewTextBoxColumn
-            // 
-            this.maGiaoDichDataGridViewTextBoxColumn.DataPropertyName = "MaGiaoDich";
-            this.maGiaoDichDataGridViewTextBoxColumn.HeaderText = "MaGiaoDich";
-            this.maGiaoDichDataGridViewTextBoxColumn.Name = "maGiaoDichDataGridViewTextBoxColumn";
-            // 
-            // loaiGiaoDichDataGridViewTextBoxColumn
-            // 
-            this.loaiGiaoDichDataGridViewTextBoxColumn.DataPropertyName = "LoaiGiaoDich";
-            this.loaiGiaoDichDataGridViewTextBoxColumn.HeaderText = "LoaiGiaoDich";
-            this.loaiGiaoDichDataGridViewTextBoxColumn.Name = "loaiGiaoDichDataGridViewTextBoxColumn";
-            // 
-            // donViGiaoDichDataGridViewTextBoxColumn
-            // 
-            this.donViGiaoDichDataGridViewTextBoxColumn.DataPropertyName = "DonViGiaoDich";
-            this.donViGiaoDichDataGridViewTextBoxColumn.HeaderText = "DonViGiaoDich";
-            this.donViGiaoDichDataGridViewTextBoxColumn.Name = "donViGiaoDichDataGridViewTextBoxColumn";
-            // 
-            // giaTriDataGridViewTextBoxColumn
-            // 
-            this.giaTriDataGridViewTextBoxColumn.DataPropertyName = "GiaTri";
-            this.giaTriDataGridViewTextBoxColumn.HeaderText = "GiaTri";
-            this.giaTriDataGridViewTextBoxColumn.Name = "giaTriDataGridViewTextBoxColumn";
-            // 
-            // thoiDiemThucHienDataGridViewTextBoxColumn
-            // 
-            this.thoiDiemThucHienDataGridViewTextBoxColumn.DataPropertyName = "ThoiDiemThucHien";
-            this.thoiDiemThucHienDataGridViewTextBoxColumn.HeaderText = "ThoiDiemThucHien";
-            this.thoiDiemThucHienDataGridViewTextBoxColumn.Name = "thoiDiemThucHienDataGridViewTextBoxColumn";
-            // 
-            // moTaDataGridViewTextBoxColumn
-            // 
-            this.moTaDataGridViewTextBoxColumn.DataPropertyName = "MoTa";
-            this.moTaDataGridViewTextBoxColumn.HeaderText = "MoTa";
-            this.moTaDataGridViewTextBoxColumn.Name = "moTaDataGridViewTextBoxColumn";
             // 
             // ChiTietKhachHangForm
             // 
@@ -614,9 +609,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(738, 402);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ChiTietKhachHangForm";
-            this.Text = "ChiTietKhachHangForm";
+            this.Text = "Chi tiết khách hàng";
             this.Load += new System.EventHandler(this.ChiTietKhachHangForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -631,8 +626,8 @@
             this.tableLayoutPanel6.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaoDichBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -679,10 +674,9 @@
         private System.Windows.Forms.BindingSource giaoDichBindingSource;
         private QuanLyNganHangDataSetTableAdapters.GiaoDichTableAdapter giaoDichTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn maGiaoDichDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loaiGiaoDichDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn donViGiaoDichDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giaTriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thoiDiemThucHienDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaTriDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moTaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loaiGiaoDichDataGridViewTextBoxColumn;
     }
 }

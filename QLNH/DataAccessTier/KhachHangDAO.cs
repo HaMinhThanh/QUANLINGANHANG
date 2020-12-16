@@ -81,7 +81,7 @@ namespace DataAccessTier
             {
                 conn.Open();
             }
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tbKhachHangDoanhNghiep WHERE MaDoanhNghiep = @MaDN", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbChiTietDoanhNghiep WHERE MaDoanhNghiep = @MaDN", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaDN", MaDN);

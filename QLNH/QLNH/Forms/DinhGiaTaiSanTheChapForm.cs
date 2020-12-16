@@ -26,7 +26,7 @@ namespace QLNH.Forms
 
         private void DinhGiaTaiSanTheChapForm_Load(object sender, EventArgs e)
         {
-            ((BindingSource)dataGridView1.DataSource).Filter = "DinhGia = -1";
+            ((BindingSource)dataGridView1.DataSource).Filter = "DinhGia = -1 OR DinhGia IS NULL";
             // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TaiSanTheChapExt' table. You can move, or remove it, as needed.
             this.taiSanTheChapExtTableAdapter.Fill(this.quanLyNganHangDataSet.TaiSanTheChapExt);
             this.trangThaiTaiSanCBTableAdapter.Fill(this.quanLyNganHangDataSet.TrangThaiTaiSanCB);

@@ -49,6 +49,7 @@
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -66,19 +67,17 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.yeuCauVayBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
+            this.yeuCauVayTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.YeuCauVayTableAdapter();
             this.maYeuCauDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expr1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soTienVayDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.laiSuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kiHanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.thoiDiemTiepNhanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.yeuCauVayBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
-            this.yeuCauVayTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.YeuCauVayTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -384,6 +383,20 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(291, 44);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
+            // button5
+            // 
+            this.button5.Image = global::QLNH.Properties.Resources.Gear_icon;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(1, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(142, 39);
+            this.button5.TabIndex = 0;
+            this.button5.Text = "Xác định điều khoản";
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
             this.button4.Image = global::QLNH.Properties.Resources.Go_back_icon;
@@ -598,20 +611,6 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(290, 45);
             this.tableLayoutPanel9.TabIndex = 4;
             // 
-            // button5
-            // 
-            this.button5.Image = global::QLNH.Properties.Resources.Gear_icon;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1, 2);
-            this.button5.Margin = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(142, 39);
-            this.button5.TabIndex = 0;
-            this.button5.Text = "Xác định điều khoản";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dataGridView1);
@@ -627,12 +626,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maYeuCauDataGridViewTextBoxColumn,
             this.hoTenDataGridViewTextBoxColumn,
-            this.expr1DataGridViewTextBoxColumn,
             this.soTienVayDataGridViewTextBoxColumn,
             this.laiSuatDataGridViewTextBoxColumn,
             this.kiHanDataGridViewTextBoxColumn,
@@ -642,53 +642,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(2, 15);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(286, 314);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // maYeuCauDataGridViewTextBoxColumn
-            // 
-            this.maYeuCauDataGridViewTextBoxColumn.DataPropertyName = "MaYeuCau";
-            this.maYeuCauDataGridViewTextBoxColumn.HeaderText = "MaYeuCau";
-            this.maYeuCauDataGridViewTextBoxColumn.Name = "maYeuCauDataGridViewTextBoxColumn";
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            // 
-            // expr1DataGridViewTextBoxColumn
-            // 
-            this.expr1DataGridViewTextBoxColumn.DataPropertyName = "Expr1";
-            this.expr1DataGridViewTextBoxColumn.HeaderText = "Expr1";
-            this.expr1DataGridViewTextBoxColumn.Name = "expr1DataGridViewTextBoxColumn";
-            // 
-            // soTienVayDataGridViewTextBoxColumn
-            // 
-            this.soTienVayDataGridViewTextBoxColumn.DataPropertyName = "SoTienVay";
-            this.soTienVayDataGridViewTextBoxColumn.HeaderText = "SoTienVay";
-            this.soTienVayDataGridViewTextBoxColumn.Name = "soTienVayDataGridViewTextBoxColumn";
-            // 
-            // laiSuatDataGridViewTextBoxColumn
-            // 
-            this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
-            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "LaiSuat";
-            this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
-            // 
-            // kiHanDataGridViewTextBoxColumn
-            // 
-            this.kiHanDataGridViewTextBoxColumn.DataPropertyName = "KiHan";
-            this.kiHanDataGridViewTextBoxColumn.HeaderText = "KiHan";
-            this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
-            // 
-            // thoiDiemTiepNhanDataGridViewTextBoxColumn
-            // 
-            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.DataPropertyName = "ThoiDiemTiepNhan";
-            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.HeaderText = "ThoiDiemTiepNhan";
-            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.Name = "thoiDiemTiepNhanDataGridViewTextBoxColumn";
             // 
             // yeuCauVayBindingSource
             // 
@@ -704,6 +663,42 @@
             // 
             this.yeuCauVayTableAdapter.ClearBeforeFill = true;
             // 
+            // maYeuCauDataGridViewTextBoxColumn
+            // 
+            this.maYeuCauDataGridViewTextBoxColumn.DataPropertyName = "MaYeuCau";
+            this.maYeuCauDataGridViewTextBoxColumn.HeaderText = "Mã yêu cầu";
+            this.maYeuCauDataGridViewTextBoxColumn.Name = "maYeuCauDataGridViewTextBoxColumn";
+            // 
+            // hoTenDataGridViewTextBoxColumn
+            // 
+            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
+            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            // 
+            // soTienVayDataGridViewTextBoxColumn
+            // 
+            this.soTienVayDataGridViewTextBoxColumn.DataPropertyName = "SoTienVay";
+            this.soTienVayDataGridViewTextBoxColumn.HeaderText = "Số tiền vay";
+            this.soTienVayDataGridViewTextBoxColumn.Name = "soTienVayDataGridViewTextBoxColumn";
+            // 
+            // laiSuatDataGridViewTextBoxColumn
+            // 
+            this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
+            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "Lãi suất";
+            this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
+            // 
+            // kiHanDataGridViewTextBoxColumn
+            // 
+            this.kiHanDataGridViewTextBoxColumn.DataPropertyName = "KiHan";
+            this.kiHanDataGridViewTextBoxColumn.HeaderText = "Kì hạn";
+            this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
+            // 
+            // thoiDiemTiepNhanDataGridViewTextBoxColumn
+            // 
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.DataPropertyName = "ThoiDiemTiepNhan";
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.HeaderText = "Thời điểm nhận";
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.Name = "thoiDiemTiepNhanDataGridViewTextBoxColumn";
+            // 
             // XetDuyetChoVayForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -712,7 +707,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "XetDuyetChoVayForm";
-            this.Text = "XetDuyetChoVayForm";
+            this.Text = "Xét duyệt cho vay";
             this.Load += new System.EventHandler(this.XetDuyetChoVayForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -779,15 +774,15 @@
         private QuanLyNganHangDataSet quanLyNganHangDataSet;
         private System.Windows.Forms.BindingSource yeuCauVayBindingSource;
         private QuanLyNganHangDataSetTableAdapters.YeuCauVayTableAdapter yeuCauVayTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expr1DataGridViewTextBoxColumn;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.DataGridViewTextBoxColumn maYeuCauDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expr1DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soTienVayDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn laiSuatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kiHanDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn thoiDiemTiepNhanDataGridViewTextBoxColumn;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
     }
 }

@@ -44,7 +44,7 @@ namespace DataAccessTier
             {
                 conn.Open();
             }
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tbDieuKhoan WHERE MoTa LIKE @MoTa", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbHoatDong WHERE MoTa LIKE @MoTa", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MoTa", "%" + MoTa + "%");
@@ -70,7 +70,7 @@ namespace DataAccessTier
             {
                 conn.Open();
             }
-            SqlCommand cmd = new SqlCommand("SELECT * FROM tbDieuKhoan WHERE ThoiDiemThucHien >= @ThoiDiemBatDau AND ThoiDiemThucHien <= @ThoiDiemKetThuc ", conn);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tbHoatDong WHERE ThoiDiemThucHien >= @ThoiDiemBatDau AND ThoiDiemThucHien <= @ThoiDiemKetThuc ", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@ThoiDiemBatDau", startTime);
@@ -97,7 +97,7 @@ namespace DataAccessTier
                 conn.Open();
             }
             if (entry.UUID.Equals("")) entry.UUID = Guid.NewGuid().ToString();
-            SqlCommand cmd = new SqlCommand("INSERT INTO tbDieuKhoan VALUES (@MaHoatDong, @MaNV, @ThoiDiem, @MoTa)", conn);
+            SqlCommand cmd = new SqlCommand("INSERT INTO tbHoatDong VALUES (@MaHoatDong, @MaNV, @ThoiDiem, @MoTa)", conn);
             try
             {
                 cmd.Parameters.AddWithValue("@MaHoatDong", entry.UUID);

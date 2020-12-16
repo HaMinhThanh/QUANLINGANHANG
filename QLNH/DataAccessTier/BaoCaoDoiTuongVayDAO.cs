@@ -21,7 +21,7 @@ namespace DataAccessTier
             try
             {
                 cmd.Parameters.AddWithValue("@MaBaoCao", entry.MaBaoCao);
-                cmd.Parameters.AddWithValue("@MaKHBaoCao", entry.DoiTuongBaoCao.DinhDanhKH);
+                cmd.Parameters.AddWithValue("@MaKHBaoCao", entry.DoiTuongBaoCao.MaKH);
                 cmd.Parameters.AddWithValue("@NgayBaoCao", DateTime.Now);
                 cmd.Parameters.AddWithValue("@SuDungVon", entry.suDungVonDungMucDich);
                 cmd.Parameters.AddWithValue("@TSTCDamBao", entry.trangThaiTaiSanDamBao);

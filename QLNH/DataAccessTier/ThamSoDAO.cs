@@ -20,7 +20,7 @@ namespace DataAccessTier
             }
             try
             {
-                SqlCommand cmd = new SqlCommand("SELECT TOP 1 FROM tbThamSo ORDER BY ThoiGianApDung DESC", conn);
+                SqlCommand cmd = new SqlCommand("SELECT TOP 1 * FROM tbThamSo ORDER BY ThoiGianApDung DESC", conn);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
@@ -32,9 +32,9 @@ namespace DataAccessTier
                     result.KyHanToiDa = reader.GetInt32(5);
                     result.KyHanToiThieu = reader.GetInt32(6);
                     result.DinhGiaToiThieu = (Double) reader.GetDecimal(7);
-                    result.LaiSuatToiDa = (Double) reader.GetDecimal(8);
-                    result.LaiSuatToiThieu = (Double)reader.GetDecimal(9);
-                    result.ThoiGianThongBaoTraNo = reader.GetInt32(10);
+                    result.LaiSuatToiThieu = (Double) reader.GetDecimal(8);
+                    result.LaiSuatToiDa = (Double)reader.GetDecimal(9);
+                    result.ThoiGianThongBaoTraNo = (Int32) reader.GetDecimal(10);
                 }
                 reader.Close();
             }
@@ -44,6 +44,7 @@ namespace DataAccessTier
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.StackTrace);
                 throw ex;
             }
             return result;
@@ -58,12 +59,12 @@ namespace DataAccessTier
             try
             {
                 SqlCommand cmd = new SqlCommand("INSERT INTO tbThamSo VALUES " +
-                    "(@ThoiGianApDung, @VonVayCaNhanToiDa, @VonVayToChucToiDa, @YeuCauGiayToXacThuc, @TuoiDuocVayToiThieu, @KyHanToiDa, @KyHanToiThieu, @DinhGiaToiThieu, @LaiSuatToiDa, @LaiSuatToiThieu, @ThoiGianThongBaoTraNo)", 
+                    "(@ThoiGianApDung, @VonVayCaNhanToiDa, @VonVayToChucToiDa, @YeuCauGiayToXacThuc, @TuoiDuocVayToiThieu, @KyHanToiDa, @KyHanToiThieu, @DinhGiaToiThieu, @LaiSuatToiThieu, @LaiSuatToiDa, @ThoiGianThongBaoTraNo)", 
                     conn);
                 cmd.Parameters.AddWithValue("@ThoiGianApDung", entry.ThoiGianApDung);
                 cmd.Parameters.AddWithValue("@VonVayCaNhanToiDa", entry.VonVayCaNhanToiDa);
                 cmd.Parameters.AddWithValue("@VonVayToChucToiDa", entry.VonVayToChucToiDa);
-                cmd.Parameters.AddWithValue("@YeuCauXacThuc", entry.YeuCauGiayToXacThuc);
+                cmd.Parameters.AddWithValue("@YeuCauGiayToXacThuc", entry.YeuCauGiayToXacThuc);
                 cmd.Parameters.AddWithValue("@TuoiDuocVayToiThieu", entry.TuoiDuocVayToiThieu);
                 cmd.Parameters.AddWithValue("@KyHanToiDa", entry.KyHanToiDa);
                 cmd.Parameters.AddWithValue("@KyHanToiThieu", entry.KyHanToiThieu);

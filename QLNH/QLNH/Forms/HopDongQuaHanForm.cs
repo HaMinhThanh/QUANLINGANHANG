@@ -38,13 +38,15 @@ namespace QLNH
                 numericUpDown2.Value = (Decimal) selectedHD.YeuCauVay.KyHan;
                 numericUpDown3.Value = (Decimal) selectedHD.YeuCauVay.LaiSuat;
                 numericUpDown4.Value = (Decimal) selectedHD.GiaTriConLai;
-                textBox9.Text = "";
 
                 //filter
-                this.danhGiaTaiChinhExtTableAdapter.Fill(this.quanLyNganHangDataSet.DanhGiaTaiChinhExt);
-
-                //filter
+                ((BindingSource)dataGridView1.DataSource).Filter = String.Format("MoTa LIKE '*{0}'", selectedHD.MaHopDong);
                 this.giaoDichTableAdapter.Fill(this.quanLyNganHangDataSet.GiaoDich);
+
+                //filter
+                ((BindingSource)dataGridView2.DataSource).Filter = String.Format("MaKHBaoCao = '{0}'", selectedHD.YeuCauVay.KHYeuCau.MaKH);
+                this.danhGiaTaiChinhExtTableAdapter.Fill(this.quanLyNganHangDataSet.DanhGiaTaiChinhExt);
+                
             }
             catch (Exception ex)
             {

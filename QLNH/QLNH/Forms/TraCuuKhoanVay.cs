@@ -24,6 +24,8 @@ namespace QLNH
 
         private void TraCuuKhoanVay_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet.TrangThaiHopDongVayCB' table. You can move, or remove it, as needed.
+            this.trangThaiHopDongVayCBTableAdapter.Fill(this.quanLyNganHangDataSet.TrangThaiHopDongVayCB);
 
         }
 

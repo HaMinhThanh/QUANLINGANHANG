@@ -37,6 +37,7 @@ namespace QLNH.Forms
                 DataModel.KhachHang res = busObj.GetKhachHangByMaKH(maKH);
 
                 // TODO: This line of code loads data into the 'quanLyNganHangDataSet.GiaoDich' table. You can move, or remove it, as needed.
+                ((BindingSource)dataGridView1.DataSource).Filter = String.Format("DonViGiaoDich = '{0}'", res.DinhDanhKH);
                 this.giaoDichTableAdapter.Fill(this.quanLyNganHangDataSet.GiaoDich);
 
                 textBox1.Text = res.MaKH;

@@ -364,13 +364,14 @@
             // 
             // button2
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.Image = global::QLNH.Properties.Resources.Loupe_icon1;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(206, 26);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(80, 19);
+            this.button2.Size = new System.Drawing.Size(80, 20);
             this.button2.TabIndex = 0;
             this.button2.Text = "Tra cứu khoản ";
             this.button2.UseVisualStyleBackColor = true;
@@ -583,25 +584,52 @@
             // numericUpDown3
             // 
             this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown3.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown3.Location = new System.Drawing.Point(129, 147);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.ReadOnly = true;
             this.numericUpDown3.Size = new System.Drawing.Size(256, 20);
             this.numericUpDown3.TabIndex = 36;
+            this.numericUpDown3.ThousandsSeparator = true;
             // 
             // numericUpDown4
             // 
             this.numericUpDown4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown4.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown4.Location = new System.Drawing.Point(129, 192);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.ReadOnly = true;
             this.numericUpDown4.Size = new System.Drawing.Size(256, 20);
             this.numericUpDown4.TabIndex = 37;
+            this.numericUpDown4.ThousandsSeparator = true;
             // 
             // numericUpDown5
             // 
             this.numericUpDown5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown5.Location = new System.Drawing.Point(129, 237);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.ReadOnly = true;
             this.numericUpDown5.Size = new System.Drawing.Size(256, 20);
@@ -610,6 +638,7 @@
             // numericUpDown6
             // 
             this.numericUpDown6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown6.DecimalPlaces = 2;
             this.numericUpDown6.Location = new System.Drawing.Point(129, 282);
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.ReadOnly = true;
@@ -624,7 +653,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DonMGGHForm";
-            this.Text = "DonMGGHForm";
+            this.Text = "Đơn miễn giảm gia hạn hợp đồng";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

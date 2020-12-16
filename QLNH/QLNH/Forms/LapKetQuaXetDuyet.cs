@@ -55,6 +55,7 @@ namespace QLNH
             checkBox1.Checked = isChapNhan;
             if (entry != null)
             {
+                textBox2.Text = SessionState.NVDangNhap.HoTen;
                 textBox3.Text = entry.KHYeuCau.MaKH;
                 textBox4.Text = entry.KHYeuCau.HoTen;
                 textBox10.Text = entry.ThoiDiemTiepNhan.ToString();

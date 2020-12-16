@@ -44,7 +44,7 @@ namespace QLNH.Forms
             //search
             try
             {
-                ((BindingSource)dataGridView1.DataSource).Filter = "MoTa LIKE %" + textBox2.Text +"%";
+                ((BindingSource)dataGridView1.DataSource).Filter = "MoTa LIKE '*" + textBox2.Text +"*'";
                 this.dieuKhoanTableAdapter.Fill(this.quanLyNganHangDataSet.DieuKhoan);
             }
             catch (Exception ex)

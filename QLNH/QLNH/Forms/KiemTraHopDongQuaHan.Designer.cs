@@ -32,15 +32,6 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.maHopDongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaTriHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maTrangThaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngayThietLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.laiSuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kiHanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hopDongVayExtBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
@@ -58,9 +49,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.hopDongVayExtTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.HopDongVayExtTableAdapter();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.button2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -75,21 +63,32 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.maHopDongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoTenDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaTriHienTaiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngayThietLapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.laiSuatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kiHanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hopDongVayExtBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyNganHangDataSet = new QLNH.QuanLyNganHangDataSet();
+            this.hopDongVayExtTableAdapter = new QLNH.QuanLyNganHangDataSetTableAdapters.HopDongVayExtTableAdapter();
             this.tableLayoutPanel6.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel6
@@ -124,12 +123,12 @@
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maHopDongDataGridViewTextBoxColumn,
             this.hoTenDataGridViewTextBoxColumn,
             this.giaTriHienTaiDataGridViewTextBoxColumn,
-            this.maTrangThaiDataGridViewTextBoxColumn,
             this.ngayThietLapDataGridViewTextBoxColumn,
             this.laiSuatDataGridViewTextBoxColumn,
             this.kiHanDataGridViewTextBoxColumn});
@@ -139,63 +138,12 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(458, 250);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // maHopDongDataGridViewTextBoxColumn
-            // 
-            this.maHopDongDataGridViewTextBoxColumn.DataPropertyName = "MaHopDong";
-            this.maHopDongDataGridViewTextBoxColumn.HeaderText = "MaHopDong";
-            this.maHopDongDataGridViewTextBoxColumn.Name = "maHopDongDataGridViewTextBoxColumn";
-            // 
-            // hoTenDataGridViewTextBoxColumn
-            // 
-            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.HeaderText = "HoTen";
-            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
-            // 
-            // giaTriHienTaiDataGridViewTextBoxColumn
-            // 
-            this.giaTriHienTaiDataGridViewTextBoxColumn.DataPropertyName = "GiaTriHienTai";
-            this.giaTriHienTaiDataGridViewTextBoxColumn.HeaderText = "GiaTriHienTai";
-            this.giaTriHienTaiDataGridViewTextBoxColumn.Name = "giaTriHienTaiDataGridViewTextBoxColumn";
-            // 
-            // maTrangThaiDataGridViewTextBoxColumn
-            // 
-            this.maTrangThaiDataGridViewTextBoxColumn.DataPropertyName = "MaTrangThai";
-            this.maTrangThaiDataGridViewTextBoxColumn.HeaderText = "MaTrangThai";
-            this.maTrangThaiDataGridViewTextBoxColumn.Name = "maTrangThaiDataGridViewTextBoxColumn";
-            // 
-            // ngayThietLapDataGridViewTextBoxColumn
-            // 
-            this.ngayThietLapDataGridViewTextBoxColumn.DataPropertyName = "NgayThietLap";
-            this.ngayThietLapDataGridViewTextBoxColumn.HeaderText = "NgayThietLap";
-            this.ngayThietLapDataGridViewTextBoxColumn.Name = "ngayThietLapDataGridViewTextBoxColumn";
-            // 
-            // laiSuatDataGridViewTextBoxColumn
-            // 
-            this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
-            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "LaiSuat";
-            this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
-            // 
-            // kiHanDataGridViewTextBoxColumn
-            // 
-            this.kiHanDataGridViewTextBoxColumn.DataPropertyName = "KiHan";
-            this.kiHanDataGridViewTextBoxColumn.HeaderText = "KiHan";
-            this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
-            // 
-            // hopDongVayExtBindingSource
-            // 
-            this.hopDongVayExtBindingSource.DataMember = "HopDongVayExt";
-            this.hopDongVayExtBindingSource.DataSource = this.quanLyNganHangDataSet;
-            // 
-            // quanLyNganHangDataSet
-            // 
-            this.quanLyNganHangDataSet.DataSetName = "QuanLyNganHangDataSet";
-            this.quanLyNganHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox2
             // 
@@ -422,42 +370,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin tra cứu";
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(470, 410);
-            this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 414);
-            this.tableLayoutPanel1.TabIndex = 1;
-            // 
-            // hopDongVayExtTableAdapter
-            // 
-            this.hopDongVayExtTableAdapter.ClearBeforeFill = true;
-            // 
             // tableLayoutPanel4
             // 
             this.tableLayoutPanel4.ColumnCount = 4;
@@ -637,6 +549,94 @@
             this.label4.TabIndex = 34;
             this.label4.Text = "Ngày thiết lập";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 67F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(470, 410);
+            this.tableLayoutPanel2.TabIndex = 3;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(862, 414);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // maHopDongDataGridViewTextBoxColumn
+            // 
+            this.maHopDongDataGridViewTextBoxColumn.DataPropertyName = "MaHopDong";
+            this.maHopDongDataGridViewTextBoxColumn.HeaderText = "Mã hợp đồng";
+            this.maHopDongDataGridViewTextBoxColumn.Name = "maHopDongDataGridViewTextBoxColumn";
+            this.maHopDongDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hoTenDataGridViewTextBoxColumn
+            // 
+            this.hoTenDataGridViewTextBoxColumn.DataPropertyName = "HoTen";
+            this.hoTenDataGridViewTextBoxColumn.HeaderText = "Họ tên";
+            this.hoTenDataGridViewTextBoxColumn.Name = "hoTenDataGridViewTextBoxColumn";
+            this.hoTenDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // giaTriHienTaiDataGridViewTextBoxColumn
+            // 
+            this.giaTriHienTaiDataGridViewTextBoxColumn.DataPropertyName = "GiaTriHienTai";
+            this.giaTriHienTaiDataGridViewTextBoxColumn.HeaderText = "Giá trị";
+            this.giaTriHienTaiDataGridViewTextBoxColumn.Name = "giaTriHienTaiDataGridViewTextBoxColumn";
+            this.giaTriHienTaiDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // ngayThietLapDataGridViewTextBoxColumn
+            // 
+            this.ngayThietLapDataGridViewTextBoxColumn.DataPropertyName = "NgayThietLap";
+            this.ngayThietLapDataGridViewTextBoxColumn.HeaderText = "Ngày thiết lập";
+            this.ngayThietLapDataGridViewTextBoxColumn.Name = "ngayThietLapDataGridViewTextBoxColumn";
+            this.ngayThietLapDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // laiSuatDataGridViewTextBoxColumn
+            // 
+            this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
+            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "Lãi suất";
+            this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
+            this.laiSuatDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // kiHanDataGridViewTextBoxColumn
+            // 
+            this.kiHanDataGridViewTextBoxColumn.DataPropertyName = "KiHan";
+            this.kiHanDataGridViewTextBoxColumn.HeaderText = "Kì hạn";
+            this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
+            this.kiHanDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // hopDongVayExtBindingSource
+            // 
+            this.hopDongVayExtBindingSource.DataMember = "HopDongVayExt";
+            this.hopDongVayExtBindingSource.DataSource = this.quanLyNganHangDataSet;
+            // 
+            // quanLyNganHangDataSet
+            // 
+            this.quanLyNganHangDataSet.DataSetName = "QuanLyNganHangDataSet";
+            this.quanLyNganHangDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // hopDongVayExtTableAdapter
+            // 
+            this.hopDongVayExtTableAdapter.ClearBeforeFill = true;
+            // 
             // KiemTraHopDongQuaHan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -645,25 +645,25 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "KiemTraHopDongQuaHan";
-            this.Text = "KiemTraHopDongQuaHan";
+            this.Text = "Kiểm tra hợp đồng quá hạn";
             this.Load += new System.EventHandler(this.KiemTraHopDongQuaHan_Load);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
             this.tableLayoutPanel8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.hopDongVayExtBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNganHangDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -694,13 +694,6 @@
         private QuanLyNganHangDataSet quanLyNganHangDataSet;
         private System.Windows.Forms.BindingSource hopDongVayExtBindingSource;
         private QuanLyNganHangDataSetTableAdapters.HopDongVayExtTableAdapter hopDongVayExtTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maHopDongDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn giaTriHienTaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maTrangThaiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngayThietLapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn laiSuatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn kiHanDataGridViewTextBoxColumn;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label6;
@@ -715,5 +708,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maHopDongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoTenDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn giaTriHienTaiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngayThietLapDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn laiSuatDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kiHanDataGridViewTextBoxColumn;
     }
 }

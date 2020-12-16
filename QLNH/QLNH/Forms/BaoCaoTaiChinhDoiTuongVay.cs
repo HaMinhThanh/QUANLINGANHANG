@@ -31,7 +31,7 @@ namespace QLNH.Forms
                 
                 selectedKH = newForm.result;
                 textBox2.Text = selectedKH.MaKH;
-                this.baoCaoDoiTuongVayTableAdapter.Fill(this.quanLyNganHangDataSet.BaoCaoDoiTuongVay);
+                this.danhGiaTaiChinhExtTableAdapter.Fill(this.quanLyNganHangDataSet1.DanhGiaTaiChinhExt);
             }
         }
 
@@ -52,7 +52,7 @@ namespace QLNH.Forms
             {
                 busObj.AddBaoCaoDoiTuongVay(entry);
                 MessageBox.Show("Thêm báo cáo tài chính khách hàng thành công", "Thông báo");
-                this.baoCaoDoiTuongVayTableAdapter.Fill(this.quanLyNganHangDataSet.BaoCaoDoiTuongVay);
+                this.danhGiaTaiChinhExtTableAdapter.Fill(this.quanLyNganHangDataSet1.DanhGiaTaiChinhExt);
             }
             catch (Exception ex)
             {
@@ -67,6 +67,8 @@ namespace QLNH.Forms
 
         private void BaoCaoTaiChinhDoiTuongVay_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyNganHangDataSet1.DanhGiaTaiChinhExt' table. You can move, or remove it, as needed.
+            
         }
     }
 }

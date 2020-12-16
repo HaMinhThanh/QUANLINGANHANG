@@ -66,6 +66,9 @@
             this.numericUpDown11 = new System.Windows.Forms.NumericUpDown();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
@@ -87,6 +90,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
+            this.tableLayoutPanel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -136,6 +140,11 @@
             this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown3.Location = new System.Drawing.Point(70, 10);
             this.numericUpDown3.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(64, 20);
             this.numericUpDown3.TabIndex = 1;
@@ -171,6 +180,11 @@
             this.numericUpDown10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown10.Location = new System.Drawing.Point(70, 10);
             this.numericUpDown10.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown10.Maximum = new decimal(new int[] {
+            360,
+            0,
+            0,
+            0});
             this.numericUpDown10.Name = "numericUpDown10";
             this.numericUpDown10.Size = new System.Drawing.Size(65, 20);
             this.numericUpDown10.TabIndex = 1;
@@ -222,6 +236,11 @@
             this.numericUpDown8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown8.Location = new System.Drawing.Point(70, 10);
             this.numericUpDown8.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown8.Maximum = new decimal(new int[] {
+            365,
+            0,
+            0,
+            0});
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(64, 20);
             this.numericUpDown8.TabIndex = 1;
@@ -257,6 +276,11 @@
             this.numericUpDown9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown9.Location = new System.Drawing.Point(70, 10);
             this.numericUpDown9.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown9.Maximum = new decimal(new int[] {
+            365,
+            0,
+            0,
+            0});
             this.numericUpDown9.Name = "numericUpDown9";
             this.numericUpDown9.Size = new System.Drawing.Size(65, 20);
             this.numericUpDown9.TabIndex = 1;
@@ -306,6 +330,7 @@
             // numericUpDown6
             // 
             this.numericUpDown6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown6.DecimalPlaces = 2;
             this.numericUpDown6.Location = new System.Drawing.Point(70, 10);
             this.numericUpDown6.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown6.Name = "numericUpDown6";
@@ -341,6 +366,7 @@
             // numericUpDown7
             // 
             this.numericUpDown7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown7.DecimalPlaces = 2;
             this.numericUpDown7.Location = new System.Drawing.Point(70, 10);
             this.numericUpDown7.Margin = new System.Windows.Forms.Padding(2);
             this.numericUpDown7.Name = "numericUpDown7";
@@ -350,8 +376,18 @@
             // numericUpDown5
             // 
             this.numericUpDown5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown5.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown5.Location = new System.Drawing.Point(214, 251);
             this.numericUpDown5.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown5.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown5.TabIndex = 15;
@@ -361,6 +397,11 @@
             this.numericUpDown4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDown4.Location = new System.Drawing.Point(214, 193);
             this.numericUpDown4.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown4.TabIndex = 14;
@@ -368,8 +409,18 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown2.Location = new System.Drawing.Point(214, 77);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown2.TabIndex = 12;
@@ -377,8 +428,18 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.numericUpDown1.Location = new System.Drawing.Point(214, 19);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown1.TabIndex = 11;
@@ -489,8 +550,9 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label14, 0, 7);
             this.tableLayoutPanel1.Controls.Add(this.numericUpDown11, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.button4, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.button4, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel11, 1, 8);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -539,8 +601,14 @@
             // numericUpDown11
             // 
             this.numericUpDown11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericUpDown11.DecimalPlaces = 2;
             this.numericUpDown11.Location = new System.Drawing.Point(214, 425);
             this.numericUpDown11.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown11.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(284, 20);
             this.numericUpDown11.TabIndex = 24;
@@ -550,10 +618,10 @@
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.Image = global::QLNH.Properties.Resources.Go_back_icon;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(214, 524);
+            this.button4.Location = new System.Drawing.Point(2, 524);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(284, 47);
+            this.button4.Size = new System.Drawing.Size(208, 47);
             this.button4.TabIndex = 26;
             this.button4.Text = "Thoát";
             this.button4.UseVisualStyleBackColor = true;
@@ -564,14 +632,51 @@
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Image = global::QLNH.Properties.Resources.Gear_icon;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(214, 466);
+            this.button2.Location = new System.Drawing.Point(214, 524);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(284, 54);
+            this.button2.Size = new System.Drawing.Size(284, 47);
             this.button2.TabIndex = 27;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // tableLayoutPanel11
+            // 
+            this.tableLayoutPanel11.ColumnCount = 2;
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Controls.Add(this.button3, 0, 0);
+            this.tableLayoutPanel11.Controls.Add(this.button5, 1, 0);
+            this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(215, 467);
+            this.tableLayoutPanel11.Name = "tableLayoutPanel11";
+            this.tableLayoutPanel11.RowCount = 1;
+            this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(282, 52);
+            this.tableLayoutPanel11.TabIndex = 28;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(3, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(135, 46);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Quản lý lãi suất";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.Location = new System.Drawing.Point(144, 3);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(135, 46);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Quản lý điều khoản";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // QuyDinhForm
             // 
@@ -581,7 +686,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "QuyDinhForm";
-            this.Text = "QuyDinhForm";
+            this.Text = "Điều chỉnh quy định";
             this.Load += new System.EventHandler(this.QuyDinhForm_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
@@ -611,6 +716,7 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
+            this.tableLayoutPanel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -655,5 +761,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDown11;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button5;
     }
 }

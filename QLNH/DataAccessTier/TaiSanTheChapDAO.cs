@@ -32,7 +32,10 @@ namespace DataAccessTier
                 {
                     result.MaTSTC = reader.GetString(0);
                     result.MoTa = reader.GetString(2);
-                    result.DinhGia = (Double) reader.GetDecimal(3);
+                    if (reader[3] == DBNull.Value)
+                        result.DinhGia = 0;
+                    else
+                        result.DinhGia = (Double) reader.GetDecimal(3);
                     matrangthai = reader.GetString(4);
                 }
                 reader.Close();
@@ -78,7 +81,10 @@ namespace DataAccessTier
                     string matrangthai = "";
                     taiSanTheChap.MaTSTC = reader.GetString(0);
                     taiSanTheChap.MoTa = reader.GetString(2);
-                    taiSanTheChap.DinhGia = (Double) reader.GetDecimal(3);
+                    if (reader[3] == DBNull.Value)
+                        taiSanTheChap.DinhGia = 0;
+                    else
+                        taiSanTheChap.DinhGia = (Double) reader.GetDecimal(3);
                     matrangthai = reader.GetString(4);
 
                     results.Add(taiSanTheChap);

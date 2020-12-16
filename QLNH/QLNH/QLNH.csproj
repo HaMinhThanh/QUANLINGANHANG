@@ -51,6 +51,9 @@
   <PropertyGroup>
     <StartupObject>QLNH.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Hopstarter-Sleek-Xp-Basic-Money.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -386,12 +389,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Hopstarter-Sleek-Xp-Basic-Money.ico" />
     <Content Include="QuanLyNganHang.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="QuanLyNganHang_log.ldf">
       <DependentUpon>QuanLyNganHang.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Programming-Show-Property-icon.png" />
     <None Include="Resources\Loupe-icon1.png" />

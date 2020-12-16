@@ -123,6 +123,8 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Enabled = false;
+            this.button1.Image = global::QLNH.Properties.Resources.add_icon;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(3, 270);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(224, 52);
@@ -135,6 +137,8 @@
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Enabled = false;
+            this.button2.Image = global::QLNH.Properties.Resources.floppy_icon;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(3, 328);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(224, 52);
@@ -147,6 +151,8 @@
             // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Enabled = false;
+            this.button3.Image = global::QLNH.Properties.Resources.delete_icon;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(3, 386);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(224, 55);
@@ -238,6 +244,7 @@
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maDieuKhoanDataGridViewTextBoxColumn,
@@ -253,13 +260,14 @@
             // maDieuKhoanDataGridViewTextBoxColumn
             // 
             this.maDieuKhoanDataGridViewTextBoxColumn.DataPropertyName = "MaDieuKhoan";
-            this.maDieuKhoanDataGridViewTextBoxColumn.HeaderText = "MaDieuKhoan";
+            this.maDieuKhoanDataGridViewTextBoxColumn.HeaderText = "Mã điều khoản";
             this.maDieuKhoanDataGridViewTextBoxColumn.Name = "maDieuKhoanDataGridViewTextBoxColumn";
             // 
             // moTaDataGridViewTextBoxColumn
             // 
             this.moTaDataGridViewTextBoxColumn.DataPropertyName = "MoTa";
-            this.moTaDataGridViewTextBoxColumn.HeaderText = "MoTa";
+            this.moTaDataGridViewTextBoxColumn.FillWeight = 500F;
+            this.moTaDataGridViewTextBoxColumn.HeaderText = "Mô tả";
             this.moTaDataGridViewTextBoxColumn.Name = "moTaDataGridViewTextBoxColumn";
             // 
             // dieuKhoanBindingSource
@@ -283,7 +291,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DanhSachDieuKhoan";
-            this.Text = "DanhSachDieuKhoan";
+            this.Text = "Danh sách điều khoản";
             this.Load += new System.EventHandler(this.DanhSachDieuKhoan_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

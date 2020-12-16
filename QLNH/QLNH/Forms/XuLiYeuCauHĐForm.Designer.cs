@@ -165,7 +165,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "XuLiYeuCauHĐForm";
-            this.Text = "XuLiYeuCauHĐForm";
+            this.Text = "Quản lý điều khoản hợp đồng";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

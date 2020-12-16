@@ -198,6 +198,7 @@
             this.listView1.Size = new System.Drawing.Size(396, 312);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // groupBox1
@@ -419,7 +420,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TaiSanTheChapForm";
-            this.Text = "TaiSanTheChapForm";
+            this.Text = "Nhập tài sản thế chấp";
             this.Load += new System.EventHandler(this.TaiSanTheChapForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);

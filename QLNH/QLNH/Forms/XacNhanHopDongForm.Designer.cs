@@ -41,12 +41,12 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button5 = new System.Windows.Forms.Button();
@@ -141,6 +141,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(2, 15);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(299, 387);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -263,29 +264,17 @@
             this.textBox6.Size = new System.Drawing.Size(196, 20);
             this.textBox6.TabIndex = 20;
             // 
-            // label6
+            // label4
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 189);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Lãi suất (%)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(2, 133);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Kỳ hạn (tháng)";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(2, 71);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 26);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Số tiền vay (VNĐ)";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // numericUpDown1
             // 
@@ -306,6 +295,18 @@
             this.numericUpDown1.TabIndex = 23;
             this.numericUpDown1.ThousandsSeparator = true;
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(2, 133);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Kỳ hạn (tháng)";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // numericUpDown2
             // 
             this.numericUpDown2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -319,6 +320,18 @@
             this.numericUpDown2.Size = new System.Drawing.Size(194, 20);
             this.numericUpDown2.TabIndex = 24;
             // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(2, 189);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Lãi suất (%)";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // numericUpDown3
             // 
             this.numericUpDown3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -327,18 +340,6 @@
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(194, 20);
             this.numericUpDown3.TabIndex = 25;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(2, 71);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 26);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Số tiền vay (VNĐ)";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tableLayoutPanel6
             // 
@@ -567,37 +568,37 @@
             // 
             this.maYeuCauDataGridViewTextBoxColumn.DataPropertyName = "MaYeuCau";
             this.maYeuCauDataGridViewTextBoxColumn.FillWeight = 40F;
-            this.maYeuCauDataGridViewTextBoxColumn.HeaderText = "MaYeuCau";
+            this.maYeuCauDataGridViewTextBoxColumn.HeaderText = "Mã yêu cầu";
             this.maYeuCauDataGridViewTextBoxColumn.Name = "maYeuCauDataGridViewTextBoxColumn";
             this.maYeuCauDataGridViewTextBoxColumn.ReadOnly = true;
-            this.maYeuCauDataGridViewTextBoxColumn.Width = 85;
+            this.maYeuCauDataGridViewTextBoxColumn.Width = 88;
             // 
             // soTienVayDataGridViewTextBoxColumn
             // 
             this.soTienVayDataGridViewTextBoxColumn.DataPropertyName = "SoTienVay";
             this.soTienVayDataGridViewTextBoxColumn.FillWeight = 40F;
-            this.soTienVayDataGridViewTextBoxColumn.HeaderText = "SoTienVay";
+            this.soTienVayDataGridViewTextBoxColumn.HeaderText = "Số tiền vay";
             this.soTienVayDataGridViewTextBoxColumn.Name = "soTienVayDataGridViewTextBoxColumn";
             this.soTienVayDataGridViewTextBoxColumn.ReadOnly = true;
-            this.soTienVayDataGridViewTextBoxColumn.Width = 84;
+            this.soTienVayDataGridViewTextBoxColumn.Width = 85;
             // 
             // laiSuatDataGridViewTextBoxColumn
             // 
             this.laiSuatDataGridViewTextBoxColumn.DataPropertyName = "LaiSuat";
             this.laiSuatDataGridViewTextBoxColumn.FillWeight = 20F;
-            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "LaiSuat";
+            this.laiSuatDataGridViewTextBoxColumn.HeaderText = "Lãi suất";
             this.laiSuatDataGridViewTextBoxColumn.Name = "laiSuatDataGridViewTextBoxColumn";
             this.laiSuatDataGridViewTextBoxColumn.ReadOnly = true;
-            this.laiSuatDataGridViewTextBoxColumn.Width = 68;
+            this.laiSuatDataGridViewTextBoxColumn.Width = 69;
             // 
             // kiHanDataGridViewTextBoxColumn
             // 
             this.kiHanDataGridViewTextBoxColumn.DataPropertyName = "KiHan";
             this.kiHanDataGridViewTextBoxColumn.FillWeight = 20F;
-            this.kiHanDataGridViewTextBoxColumn.HeaderText = "KiHan";
+            this.kiHanDataGridViewTextBoxColumn.HeaderText = "Kì hạn";
             this.kiHanDataGridViewTextBoxColumn.Name = "kiHanDataGridViewTextBoxColumn";
             this.kiHanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.kiHanDataGridViewTextBoxColumn.Width = 61;
+            this.kiHanDataGridViewTextBoxColumn.Width = 62;
             // 
             // maKQXetDuyetDataGridViewTextBoxColumn
             // 
@@ -606,16 +607,17 @@
             this.maKQXetDuyetDataGridViewTextBoxColumn.HeaderText = "MaKQXetDuyet";
             this.maKQXetDuyetDataGridViewTextBoxColumn.Name = "maKQXetDuyetDataGridViewTextBoxColumn";
             this.maKQXetDuyetDataGridViewTextBoxColumn.ReadOnly = true;
+            this.maKQXetDuyetDataGridViewTextBoxColumn.Visible = false;
             this.maKQXetDuyetDataGridViewTextBoxColumn.Width = 106;
             // 
             // thoiDiemTiepNhanDataGridViewTextBoxColumn
             // 
             this.thoiDiemTiepNhanDataGridViewTextBoxColumn.DataPropertyName = "ThoiDiemTiepNhan";
             this.thoiDiemTiepNhanDataGridViewTextBoxColumn.FillWeight = 20F;
-            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.HeaderText = "ThoiDiemTiepNhan";
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.HeaderText = "Thời điểm nhận";
             this.thoiDiemTiepNhanDataGridViewTextBoxColumn.Name = "thoiDiemTiepNhanDataGridViewTextBoxColumn";
             this.thoiDiemTiepNhanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.Width = 124;
+            this.thoiDiemTiepNhanDataGridViewTextBoxColumn.Width = 97;
             // 
             // MaHopDong
             // 
@@ -624,6 +626,7 @@
             this.MaHopDong.HeaderText = "MaHopDong";
             this.MaHopDong.Name = "MaHopDong";
             this.MaHopDong.ReadOnly = true;
+            this.MaHopDong.Visible = false;
             this.MaHopDong.Width = 93;
             // 
             // XacNhanHopDongForm
@@ -634,7 +637,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "XacNhanHopDongForm";
-            this.Text = "XacNhanHopDongForm";
+            this.Text = "Xác nhận hợp đồng";
             this.Load += new System.EventHandler(this.XacNhanHopDongForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

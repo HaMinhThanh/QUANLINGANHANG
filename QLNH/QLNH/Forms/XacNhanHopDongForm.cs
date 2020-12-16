@@ -59,9 +59,16 @@ namespace QLNH
                 entry.TrangThai = busObjTT.GetTrangThaiByMaTrangThai("00000000-0000-0000-0000-000000000001");
                 entry.NVThietLap = (NhanVienTinDung)SessionState.NVDangNhap;
 
-                busObj.AddHopDongVay(entry);
+                string MaHopDong = busObj.AddHopDongVay(entry);
                 MessageBox.Show("Thêm hợp đồng thành công", "Thông báo");
                 this.yeuCauVayExtRightTableAdapter.Fill(this.quanLyNganHangDataSet.YeuCauVayExtRight);
+
+                //logging
+                DataModel.HoatDong action = new DataModel.HoatDong();
+                action.NhanVienThucHien = SessionState.NVDangNhap;
+                action.ThoiDiem = DateTime.Now;
+                action.MoTa = "Thiết lập hợp đồng " + MaHopDong;
+                new BusinessLogicTier.HoatDongBUS().AddHoatDong(action);
             }
             catch (Exception ex)
             {

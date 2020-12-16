@@ -597,7 +597,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "PhieuThuNoLaiForm";
-            this.Text = "PhieuThuNoLaiForm";
+            this.Text = "Phiếu thu nợ lãi";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);

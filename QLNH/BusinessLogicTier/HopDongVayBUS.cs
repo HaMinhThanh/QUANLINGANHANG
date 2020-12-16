@@ -22,7 +22,7 @@ namespace BusinessLogicTier
                 throw ex;
             }
         }
-        public bool AddHopDongVay(HopDongChoVay entry)
+        public string AddHopDongVay(HopDongChoVay entry)
         {
             try
             {
